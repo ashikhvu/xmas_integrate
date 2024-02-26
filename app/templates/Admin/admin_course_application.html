@@ -1,0 +1,103 @@
+{% extends 'Admin/adminbase.html' %}
+{% load static %}
+{% block body %}
+<head>
+    <!-- Custom styles for this page -->
+    <link href="static/adminfiles/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <style>
+        .table
+      {
+        font-size: 13px;
+      }
+    </style>
+  
+    
+</head>
+
+
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-4 text-gray-800"> Course Applications</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+      class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+
+
+
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <!-- <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email id</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Place</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th>No</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                        <th>Course Name</th>
+                        <th>Vacancy</th>
+                        <th>Rating</th>
+                       
+                    </tr>
+                </tfoot>
+                <tbody>
+                    {% for i in course %}
+                    <tr>
+                      <th scope="row">{{forloop.counter}}</th>
+                      <td>{{i.apply_date}}</td>
+                      <td>{{i.Name}}</td>
+                      <td>{{i.Email}}</td>
+                      <td>{{i.Phone}}</td>
+                      <td>{{i.place}}</td>
+                      <td>{{i.course}}</td>
+                      <td>
+                        {% if i.status == 1 %}
+                        <p style="color: rgb(83, 222, 8);">Approved</p>
+                        {% elif i.status == 2 %}
+                        <p style="color: rgb(241, 17, 17);">Rejected</p>
+                        {% else %}
+                        <a href="{% url 'appl_approve' i.id %}" style="color: rgb(93, 242, 12);">Approve</a>&nbsp;
+                        <a href="{% url 'appl_reject' i.id %}" style="color: rgb(241, 17, 17);">Reject</a>
+                        {% endif %}
+                      </td>
+                      <td><a href="{% url 'delete_apply' i.id %}">Delete</a></td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+  {% endblock %}

@@ -1,0 +1,773 @@
+{% extends 'base.html' %}
+{% load static %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% block body %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond&family=Heebo:wght@600;700&family=Josefin+Sans:wght@300;500&family=Montserrat:wght@100;200;300;400&family=Mulish:wght@200&family=Poppins:wght@200;300&family=Raleway:wght@200&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@100;300&family=Sofia+Sans:wght@100;200&family=Source+Sans+Pro:wght@200;300;600&family=Work+Sans:wght@200&display=swap');
+</style>
+<style>
+  .container-fluid
+  {
+      margin: 0;
+      padding: 0;
+      background: url("static/img/bg1.gif") top center;
+      background-size:fill;
+      position: relative; 
+   
+  }
+  .counts .image {
+    background: url('static/img/3.jpg')  no-repeat;
+    background-size: cover;
+    
+  }
+  @media(max-width:832px)
+  {
+  
+    .container-fluid
+    {
+      background-size: auto;
+    }
+  }
+   section h1{
+    font-size: 2.5em;
+   }
+   #about-us section
+   {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    background:#00000099;
+   padding-top: 10em;
+   
+    
+   
+   }
+ 
+   #about-us h3{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Mulish;
+    line-height: 1.7em;
+    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+   }
+   
+   #about-us  .fst-normal
+   {
+   
+    line-height: 1.8em;
+   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:0.91.5em !important;
+    color: rgb(232, 234, 235);
+    padding: 0.01em 1.4em;
+   }
+   #about_box .container h4{
+    font-weight: 900;
+    color: #f3f3f3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.40em;
+    margin-bottom: 1em;
+   }
+   ion-icon {
+    font-size: 36px;
+  }
+  .counts .content .count-box p
+  {
+   padding: 1em 0em;
+    margin:0px;
+  }
+  #counts .sub-head
+  {
+    margin-top: 1em;
+    font-size: 0.95em;
+  }
+  
+   @media(max-width:832px)
+   {
+    #about-us section
+    {
+     
+    padding-top: 6.5em;
+    }
+    #about-us  .container h4{
+    
+     font-weight: 1000;
+     text-align: center;
+     }
+     #about-us .fst-normal
+     {
+     text-align: start;
+      font-size: 0.91.5em !important;
+      color: #c7c7c7;
+      font-weight: 500;
+      
+      letter-spacing: 0.03em;
+
+     }
+     #about-us section
+     {
+      height: auto;
+     
+     }
+     .counts .content .count-box
+     {
+      text-align: center;
+      padding-top: 30px;
+     }
+     .counts .content .count-box p
+     {
+      padding: 3px 0px;
+       margin:0px;
+     }
+     ion-icon {
+      font-size: 32px;
+    }
+     
+   
+   }
+   #counts  p{
+    color: #c5c6c6;
+   }
+   
+</style>
+
+<style>
+  .corner_width{
+    width: 4.5rem;
+  }
+  .top_right_top{
+    margin-right: -2rem;
+    margin-top: -2rem;
+  }
+  .top_left_top{
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+  .bottom_left_top{
+    margin-left: -2rem;
+    margin-bottom: -2rem;
+  }
+  .bottom_right_top{
+    margin-right: -2rem;
+    margin-bottom: -2rem;
+  }
+  @media screen and (min-width:593px) and (max-width:991px) {
+    .corner_width{
+      width: 2.5rem;
+    }
+    .top_right_top{
+      margin-right: -2rem;
+      margin-top: -2rem;
+    }
+    .top_left_top{
+      margin-left: -2rem;
+      margin-top: -2rem;
+    }
+    .bottom_left_top{
+      margin-left: -2rem;
+      margin-bottom: -2rem;
+    }
+    .bottom_right_top{
+      margin-right: -2rem;
+      margin-bottom: -2rem;
+    }
+    .mob_margin_top{
+      margin-top: 4rem;
+    }
+  }
+
+  @media screen and (max-width:592px) {
+    .corner_width{
+      width: 2rem;
+    }
+    .top_right_top{
+      margin-right: -0.5rem;
+      margin-top: -0.5rem;
+    }
+    .top_left_top{
+      margin-left: -0.5rem;
+      margin-top: -0.5rem;
+    }
+    .bottom_left_top{
+      margin-left: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+    .bottom_right_top{
+      margin-right: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+    .mob_margin_top{
+      margin-top: 4rem;
+    }
+  }
+  .pongal_text_theme{
+    background-image: url('/static/pongal/bg/bg_fire.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .pongal_text_theme1{
+    background-image: url('/static/pongal/bg/bg_fire1.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+</style>
+
+{% if current_theme == 'pongal' %}
+<style>
+
+#navbar .abot{
+  background-image: url('/static/pongal/bg/bg_fire.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+font-weight: 800;
+}
+</style>
+{% elif current_theme == 'vishu' %}
+<style>
+  #navbar .abot{
+ color: yellow;
+ text-shadow: 0px 0px 10px black;
+}
+</style>
+{% elif current_theme == 'easter' %}
+<style>
+  #navbar .abot{
+    background-image: url('/static/easter/bg/text_bg1.png');
+    /* background-image: linear-gradient(45deg,rgb(194, 63, 255),rgb(71, 71, 255),rgb(181, 83, 255),rgb(65, 65, 255),rgb(160, 83, 255)); */
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    color: transparent;
+ text-shadow: 0px 0px 10px black;
+}
+</style>
+{% else %}
+<style>
+
+#navbar .abot{
+  color: #189aa6;
+  font-weight: 800;
+}
+</style>
+{% endif %}
+
+<!-- vishu -->
+<style>
+  .vishu_frame_top{
+    width: 0rem;
+  }
+  .vishu_frame_top_top{
+    margin-left: -1rem;
+    margin-top: -3rem;
+  }
+  .vishu_frame_bottom{
+    width: 12rem;
+  }
+  .vishu_frame_bottom_top{
+    margin-left: -1rem;
+    margin-bottom: -3rem;
+  }
+  .vishu_text_bg1{
+    background-image: url('/static/vishu/bg/text_bg1.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+</style>
+
+<!-- easter -->
+
+<style>
+  .about_decor{
+    width: 22rem;
+  }
+  .about_decor_top{
+    margin-top: -2rem;
+    margin-right: 0rem;
+  }
+  @media screen and (max-width:991px) {
+    .about_decor{
+      width: 17rem;
+    }
+    .about_decor_top{
+      margin-right: -4rem;
+    }
+  }
+  @media screen and (max-width:932px) {
+    .about_decor{
+      width: 15rem;
+    }
+    .about_decor_top{
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    .about_decor{
+      width: 12rem;
+    }
+    .about_decor_top{
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    .about_decor{
+      width: 7rem;
+    }
+    .about_decor_top{
+      margin-top: 1rem;
+      margin-right: -0rem;
+    }
+  }
+  @media screen and (max-width:385px) {
+    .about_decor{
+      width: 5rem;
+    }
+    .about_decor_top{
+      margin-top: 2rem;
+      margin-right: 50%;
+      transform: translate(50%,50%);
+    }
+  }
+  .easter_corner_width{
+    width: 4.5rem;
+  }
+  @media screen and (max-width:592px) {
+    .easter_corner_width{
+      margin: -1rem;
+    }
+  }
+  @media screen and (min-width:593px) {
+    .easter_corner_width{
+      margin: 0rem;
+    }
+  }
+</style>
+
+  <main id="main">
+    <div class="container-fluid" id="about-us">
+        <section id="about_box">
+          <div class="container" >
+
+            {% if current_theme == 'easter' %}
+            <div class="position-relative">
+              <div class="position-absolute end-0 top-0 about_decor_top">
+                <img draggable="false" class="about_decor" src="{% static 'easter/decor/about_decor/about_decor1.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
+
+            <div class="row">
+              <div class="col-lg-5 col-sm-12 col-md-8">
+                {% if current_theme == 'pongal' %}
+                <h4 class="pongal_text_theme" style="color: transparent;">About Us</h4>
+                {% elif current_theme == 'vishu' %}
+                <h4 class="vishu_text_bg1" style="color: transparent;">About Us</h4>
+                {% elif current_theme == 'easter' %}
+                <h4 class="easter_text_bg1" style="color: transparent;">About Us</h4>
+                {% else %}
+                <h4 style="color: white;">About Us</h4>
+                {% endif %}
+               
+                {% if current_theme == 'pongal' %}
+                  <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                  
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                  </div>
+                 </div>
+                 {% elif current_theme == 'vishu' %}
+                 <div class="position-relative">
+
+                  <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
+                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                  </div> -->
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+
+                  <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
+                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                  </div>
+                  
+                </div>
+
+                {% elif current_theme == 'easter' %}
+                 <div class="position-relative">
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                  </div>
+                  
+                </div>
+                  
+                 {% else %}
+                 <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                 {% endif %}
+                
+                 
+              </div>
+              <div class="col-lg-5 col-sm-12 col-md-8"></div>
+              <div class="col-lg-7 col-sm-12 col-md-8"></div>
+              <div class="col-lg-4 col-sm-12 col-md-8">
+            
+                {% if current_theme == 'pongal' %}
+                <div class="position-relative">
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                  data-aos-duration="2000">
+                  Our expertise lies in website and software development, 
+                  where we have gained extensive experience by delivering a 
+                  wide range of projects, including websites, web applications, 
+                  mobile applications, 3D modeling services, and digital marketing 
+                  services, to clients across different industries and of varying sizes.
+                  
+                  </p>
+
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                  </div>
+            
+               
+              </div>
+              {% elif current_theme == 'easter' %}
+              <div class="position-relative">
+
+                <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
+
+                
+                <div class="position-absolute top-0 end-0 top_right_top">
+                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute top-0 start-0 top_left_top">
+                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                </div>
+          
+             
+            </div>
+              {% elif current_theme == 'vishu' %}
+                 <div class="position-relative">
+
+                  <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
+                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                  </div> -->
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+
+                  <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
+                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                  </div>
+                  
+                </div>
+                  
+              {% else %}
+              <p class="fst-normal mob_margin_top" data-aos="fade-up"
+              data-aos-duration="2000">
+              Our expertise lies in website and software development, 
+              where we have gained extensive experience by delivering a 
+              wide range of projects, including websites, web applications, 
+              mobile applications, 3D modeling services, and digital marketing 
+              services, to clients across different industries and of varying sizes.
+              
+              </p>
+              {% endif %}
+
+              </div>
+              <div class="col-lg-2 col-sm-12 col-md-8"></div>
+              <div class="col-lg-4 col-sm-12 col-md-8">
+                
+                {% if current_theme == 'pongal' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-right"
+                    data-aos-duration="2000">
+                    At ALTOS Technologies, we understand the critical role that user 
+                    experience plays in the success of your website or software. That's 
+                    why we put a strong emphasis on designing and developing products 
+                    that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                    your customers or employees have a seamless experience.
+
+                  </p>
+
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                  </div>
+                 
+
+            </div>
+            {% elif current_theme == 'vishu' %}
+                 <div class="position-relative">
+
+                  <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
+                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                  </div> -->
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+
+                  <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
+                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                  </div>
+                  
+                </div>
+                {% elif current_theme == 'easter' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-right"
+                    data-aos-duration="2000">
+                    At ALTOS Technologies, we understand the critical role that user 
+                    experience plays in the success of your website or software. That's 
+                    why we put a strong emphasis on designing and developing products 
+                    that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                    your customers or employees have a seamless experience.
+
+                  </p>
+
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                  </div>
+                 
+
+            </div>
+            {% else %}
+            <p class="fst-normal mob_margin_top" data-aos="fade-right"
+              data-aos-duration="2000">
+              At ALTOS Technologies, we understand the critical role that user 
+              experience plays in the success of your website or software. That's 
+              why we put a strong emphasis on designing and developing products 
+              that are user-friendly, intuitive, and enjoyable to use, ensuring 
+              your customers or employees have a seamless experience.
+
+            </p>
+            {% endif %}
+           
+           
+              </div>
+            </div>
+                   
+         <br>
+          </div>
+        </section>
+      </div>
+
+      {% if current_theme == "easter" %}
+      <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+        <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      </div>
+    {% endif %}
+
+          <!-- ======= Counts Section ======= -->
+   <section id="counts" class="counts" style="background: #151515;">
+    <div class="container" data-aos="fade-up">
+      <div class="row no-gutters p-3">
+        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
+        <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
+          <div class="content d-flex flex-column justify-content-center">
+            <h4 style="color: rgb(243, 243, 243);">//Why Choose Us</h4>
+              <h3 style="color: #ffff;">Some Of The Reason For Choosing 
+              <span style="color: #0fa49b;">Our  IT Solutions</span></h3>
+            <p class="sub-head">
+              Discover why ALTOS Technologies is the premier choice for IT solutions 
+            </p>
+            <div class="row">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="happy-outline" style="color: #0fa49b;"></ion-icon>
+                  <p><strong> 	Experienced Professionals</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 d-md-flex align-items-md-stretch ">
+                <div class="count-box">
+                  <ion-icon name="layers-outline"  style="color: #0fa49b;"></ion-icon>
+               
+                  <p><strong>Unique Designs</strong></p>
+                </div>
+              </div>
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="hourglass-outline" style="color: #0fa49b;"></ion-icon>
+                  
+                  <p><strong>On-time Delivery</strong> </p>
+                </div>
+              </div>
+               <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="people-outline" style="color: #0fa49b;"> </ion-icon>
+                  <p><strong>Customized Services</strong>  </p>
+                </div>
+              </div> 
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+              
+                  <ion-icon name="receipt-outline" style="color: #0fa49b;"></ion-icon>
+                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
+                  <p><strong>Faster Responses</strong>  </p>
+                </div>
+              </div> 
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="headset-outline"  style="color: #0fa49b;"></ion-icon>
+                 
+                  <p><strong>Dedicated Client Support</strong> </p>
+                </div>
+              </div> 
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>  
+  <!-- End Counts Section -->
+
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+{% endblock %}

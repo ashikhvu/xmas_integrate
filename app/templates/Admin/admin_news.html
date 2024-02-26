@@ -1,0 +1,178 @@
+
+{% extends 'Admin/adminbase.html' %}
+{% load static %}
+{% block body %}
+
+  
+    <style>
+      .course-img
+      {
+        width:60px;
+        height: 30px;
+      }
+      .table
+      {
+        font-size: 13px;
+      }
+     .event-form
+      {
+        padding: 1em 2em;
+       
+      }
+      .input-group
+      {
+        margin: 1em;
+      }
+      .input-group label
+      {
+        font-size: 13px;
+      }
+      .input-group input, textarea
+      {
+        padding: 0.75em;
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid rgb(174, 174, 175);
+      }
+      .input-group textarea
+      {
+        width: 100%;
+      }
+      .input-group .news-save{
+        border: none;
+        outline: none;
+        background: rgb(35, 4, 94);
+        color: #ffff;
+        border-radius: 10px;
+        padding: 0.40em 2em;
+        font-size: 0.85em;
+      }
+      
+      #hideDiv p{
+        font-size: 14px;
+        color: rgb(12, 2, 53);
+        font-weight: 700;
+
+      }
+      .card 
+      {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+      }
+      .card .card-body, .card-footer 
+      {
+        border: none;
+      }
+    
+
+    </style>
+
+
+
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-4 text-gray-800">News</h1>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+
+        <!-- Collapsable Card Example -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+                role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">Add News</h6>
+            </a>
+            
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardExample">
+                <div class="card-body">
+
+
+                  <form action="{% url 'add_news' %}" class="event-form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="row g-3">
+                      <div class="col-lg-12 col-md-6 col-sm-12">
+                        <div class="input-group">
+                          <label>Write Down</label>
+                          <input type="text" name="news_txt" required>
+                        </div>
+                       
+                      <div class="input-group">
+                        <button type="submit" class="news-save">Save</button>
+                      </div>
+                  </div>
+                </form>
+                    
+                </div>
+                <div class="card-footer text-center">
+                  
+                  {% if messages %}
+                <div class="error text-center" id="hideDiv">
+                          
+                  {% for message in messages %}
+                  <p>{{ message }}</p>
+                  {% endfor %}
+
+                </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <!-- <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">News</th>
+                    <th scope="col">Action</th>
+     
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">News</th>
+                    <th scope="col">Action</th>
+     
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for i in allnews %}
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{i.news_cre_date}}</td>
+                <td>{{i.news_text}}</td>
+                <td><a href="{% url 'remove_news' i.id %}">Remove</a></td>
+              </tr>
+             {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
+
+
+{% endblock %}
+
+

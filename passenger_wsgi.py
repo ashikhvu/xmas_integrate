@@ -1,0 +1,1 @@
+from Altots.wsgi import application

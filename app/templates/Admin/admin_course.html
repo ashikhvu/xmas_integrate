@@ -1,0 +1,288 @@
+{% extends 'Admin/adminbase.html' %}
+{% load static %}
+{% block body %}
+<head>
+    <!-- Custom styles for this page -->
+    <link href="static/adminfiles/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  
+    <style>
+      .course-img
+      {
+        width:60px;
+        height: 30px;
+      }
+      .table
+      {
+        font-size: 13px;
+      }
+     .course-form
+      {
+        padding: 1em 2em;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        font-size: 13px;
+      }
+      .input-group
+      {
+        margin: 1em;
+      }
+      .input-group label
+      {
+        font-size: 13px;
+      }
+      .input-group input, textarea
+      {
+        padding: 0.75em;
+        border: none;
+        border-bottom: 2px solid rgb(174, 174, 175);
+        width: 100%;
+      }
+      
+      .input-group .course-edit-save{
+        border: none;
+        outline: none;
+        background: rgb(35, 4, 94);
+        color: #ffff;
+        border-radius: 10px;
+        padding: 0.40em 2em;
+        font-size: 0.85em;
+      }
+      .input-group .course-edit-cancel{
+        border: none;
+        outline: none;
+        background: rgb(215, 2, 2);
+        color: #ffff;
+        border-radius: 10px;
+        padding: 0.40em 2em;
+        font-size: 0.85em;
+      }
+      #hideDiv p{
+        font-size: 14px;
+        color: rgb(12, 2, 53);
+        font-weight: 700;
+
+      }
+    </style>
+</head>
+
+
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-4 text-gray-800">Courses</h1>
+
+
+  <div class="row">
+
+   
+
+    <div class="col-lg-12">
+
+        <!-- Collapsable Card Example -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+                role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-primary">Add Course</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardExample">
+                <div class="card-body">
+
+                  <form action="{% url 'add_course' %}" class="course-form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% if messages %}
+                    <div class="error text-center" id="hideDiv">
+                              
+                      {% for message in messages %}
+                      <p>{{ message }}</p>
+                      {% endfor %}
+    
+                    </div>
+                    {% endif %}
+                    <div class="row g-3">
+                      <div class="col-lg-3">
+                        <div class="input-group">
+                          <label>Course Name</label>
+                          <input type="text" name="course_name" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input-group">
+                          <label>Course Vaccancy</label>
+                          <input type="number" name="course_vacancy">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input-group">
+                          <label>Course Rating</label>
+                          <input type="number" name="course_rating">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="input-group">
+                          <label>Course Image</label>
+                          <input type="file" name="course_img" required>
+                        </div>
+                      </div>
+              
+                      <div class="col-lg-12">
+                        <div class="input-group">
+                          <label>Course Desicription</label>
+                          <textarea type="text" name="course_dese" required></textarea>
+                        </div>
+                      </div>
+                      <div class="input-group">
+                        <button type="submit" class="course-edit-save">Save</button>
+                      </div>
+                  </div>
+                </form>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+  <div class="card shadow mb-4">
+    <!-- <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                      <th></th>
+                      <th>No</th>
+                      <th>Date</th>
+                      <th>Image</th>
+                      <th>Course Name</th>
+                      <th>Vacancy</th>
+                      <th>Rating</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th>No</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                        <th>Course Name</th>
+                        <th>Vacancy</th>
+                        <th>Rating</th>
+                       
+                    </tr>
+                </tfoot>
+                <tbody>
+                  {% for i in cour %}
+                    <tr>
+                      <td><a href="" data-toggle="modal" data-target="#logoutModal{{i.id}}">Edit</a>&nbsp;&nbsp;
+                        <a href="{% url 'remove_course' i.id %}" style="color: rgb(247, 40, 9);">Remove</a></td>
+                      <th scope="row">{{forloop.counter}}</th>
+                      <td>{{i.course_cre_date}}</td>
+                      <td>
+                          {% if i.course_img %}
+                              <img src="{{i.course_img.url}}" class="course-img" alt="{{i.course_name}}">
+      
+                          {% endif %}
+                      </td>
+                      <td>{{i.course_name}}</td>
+                      <td>{{i.course_vacancy}}</td>
+                      <td>{{i.rating}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+
+
+ <!-- Edit-course Modal-->
+
+ {% for i in cour %}
+ <div class="modal fade" id="logoutModal{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Ready to edit?</h5>
+             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">×</span>
+             </button>
+         </div>
+         <div class="modal-body">
+
+          <form action="{% url 'edit_course_save' i.id %}" class="course-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if msg %}
+            
+              <div class="massage" id="successMessage">
+                <strong>{{msg}}!</strong> 
+                
+              </div>
+            
+            {% endif %}
+            <div class="row g-3">
+              <div class="col-lg-12">
+                <div class="input-group">
+                  <label>Course Name</label>
+                  <input type="text" name="edit_course_name" value="{{i.course_name}}">
+                </div>
+                <div class="input-group">
+                  <label>Course Vaccancy</label>
+                  <input type="number" name="edit_course_vacancy" value="{{i.course_vacancy}}">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="input-group">
+                  <label>Course Rating</label>
+                  <input type="number" name="edit_course_rating" value="{{i.rating}}">
+                </div>
+                <div class="input-group">
+                  <label>Course Image</label>
+                  <input type="file" name="edit_course_img">
+                </div>
+              </div>
+      
+              <div class="col-lg-12">
+                <div class="input-group">
+                  <label>Course Desicription</label>
+                  <textarea type="text" name="edit_course_dese" >{{i.course_des}}</textarea>
+                </div>
+              </div>
+              <div class="input-group">
+                <button  type="button" class="course-edit-cancel" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="course-edit-save">Save</button>
+              </div>
+          </div>
+        </form>
+
+         </div>
+         <!-- <div class="modal-footer">
+             <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+             <a class="btn btn-success" href="{% url 'logout' %}">Logout</a>
+         </div> -->
+     </div>
+ </div>
+</div>
+{% endfor %}
+
+
+
+
+  {% endblock %}
