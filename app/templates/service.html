@@ -284,6 +284,159 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- xmas -->
+
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.5rem;
+    margin-top: 1.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  .xmas_star_gif_top{
+    margin-top: -4rem;
+    margin-right: 8rem;
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+  #new_year{
+    width: 20rem;
+  }
+  .new_year_top{
+    margin-bottom: 5.8rem;
+  }
+  @media screen and (min-width:368px) and (max-width:600px){
+    #new_year{
+      width: 10rem;
+    }
+    .new_year_top{
+      margin-bottom: 5.8rem;
+    }
+  }
+  @media screen and (max-width:367px){
+    #new_year{
+      width: 5rem;
+    }
+    .new_year_top{
+      margin-bottom: 7rem;
+    }
+  }
+  #red_top{
+    width: 10rem;
+  }
+  .red_top_top{
+    margin-left: -2rem;
+    margin-top: -1.45rem;
+  }
+  #red_bottom{
+    width: 10rem;
+  }
+  .red_bottom_top{
+    margin-left: 6.6rem;
+    margin-top: 17.5rem;
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.xmas_nav_text {
+    color: red;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -345,64 +498,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
   {% elif current_theme == 'vishu' %}
-      <div class="position-relative" style="z-index: -1;">
-        <div class="position-absolute start-0 top-0 top_decor_top">
-          <div class="d-flex">
-            <img draggable="false"style="width: 30rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-            <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
-          </div>
-        </div>
-      </div>
-    {% elif current_theme == 'easter' %}
     <div class="position-relative" style="z-index: -1;">
-      <div class="position-absolute end-0 top-0 top_decor_top" style="margin-top: -2rem;">
+      <div class="position-absolute start-0 top-0 top_decor_top">
         <div class="d-flex">
-          <img draggable="false" id="navbar_left" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
+          <img draggable="false"style="width: 30rem;margin-left: -1rem;" draggable="false" src="{% static 'vishu/decor/footer_vishu.png' %}" alt="">
         </div>
       </div>
     </div>
-    <div class="position-relative" style="z-index: -1;">
-      <div class="position-absolute start-0 top-0 top_decor_top" style="margin-top: -2rem;">
+  {% elif current_theme == 'easter' %}
+  <div class="position-relative" style="z-index: -1;">
+    <div class="position-absolute end-0 top-0 top_decor_top" style="margin-top: -2rem;">
+      <div class="d-flex">
+        <img draggable="false" id="navbar_left" draggable="false" src="{% static 'easter/decor/easter_nav_left.png' %}" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="position-relative" style="z-index: -1;">
+    <div class="position-absolute start-0 top-0 top_decor_top" style="margin-top: -2rem;">
+      <div class="d-flex">
+        <img draggable="false" id="navbar_right" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
+      </div>
+    </div>
+  </div>
+  {% elif current_theme == 'xmas' %}
+    <div class="position-relative" style="z-index: 998;">
+      <div class="position-absolute start-0 top-0 top_tree_effect">
         <div class="d-flex">
-          <img draggable="false" id="navbar_right" draggable="false" src="{% static 'easter/decor/easter_nav_right.png' %}" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
         </div>
       </div>
     </div>
@@ -420,7 +592,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
+    <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 999;">
       <ul>
         <li>
           <a 
@@ -430,6 +602,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto hom easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto hom xmas_nav_text"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
           {% endif %} 
@@ -445,6 +619,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto abot hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto abot easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                class="nav-link scrollto abot xmas_nav_text"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -460,6 +636,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto serv " style="color: yellow;text-shadow: 0px 0px 10px black;"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto serv easter_text_sm_bg1" style="color: transparent;"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto serv text-danger"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
           {% endif %}
@@ -475,6 +653,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cor hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cor easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cor xmas_nav_text"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
           {% endif %}
@@ -490,6 +670,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cors hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cors easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cors xmas_nav_text"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -506,6 +688,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto event hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto event easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto event xmas_nav_text"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -521,6 +705,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cont hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cont easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cont xmas_nav_text"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -714,6 +900,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="vishu_text_bg1" style="color: transparent;">Check our Services</p>
         {% elif current_theme == 'easter' %}
         <p class="easter_text_bg1" style="color: transparent;"><span class="text-light" style="text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.577);">Check our</span> Services</p>
+        {% elif current_theme == 'xmas' %}
+        <p class="text-danger" style="text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.525);" ><span class="text-light" style="text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.269);">Check our</span> Services</p>
         {% else %}
         <p>Check our <span style="color: rgb(39, 112, 141);">Services</span></p>
         {% endif %}
@@ -759,6 +947,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div>   -->
               {% endif %}
   
               <div class="icon"> <ion-icon name="search" style="color: #ffb700"></ion-icon></div>
@@ -799,6 +998,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               
               <div class="icon"> <i class="bx bx-tachometer" style="color: #ffb700"></i></div>
@@ -837,6 +1047,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/green_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon"><ion-icon name="phone-portrait" style="color: #ffb700"></ion-icon></div>
   
@@ -875,6 +1096,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame5.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="archive" style="color: #ffb700"></ion-icon></div>
   
@@ -913,6 +1145,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame6.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="chatbox-outline" style="color: #ffb700"></ion-icon></div>
               <h4 style="color: #ffb700">SMS Marketing</span> </h4>
@@ -950,6 +1193,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame4.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="chatbubbles-outline" style="color: #ffb700"></ion-icon></div>
               <h4 style="color: #ffb700">WhatsApp Marketing</h4>
@@ -987,6 +1241,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame8.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="share-social-outline" style="color: #ffb700"></ion-icon>
@@ -1027,6 +1292,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="logo-linkedin" style="color: #ffb700"></ion-icon>
@@ -1066,6 +1342,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="logo-youtube" style="color:#ffb700"></ion-icon>
@@ -1106,6 +1393,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="archive" style="color: #ffb700"></ion-icon>
@@ -1148,6 +1446,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="grid" style="color:#ffb700"></ion-icon>
@@ -1452,6 +1761,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame5.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="grid" style="color:#ffb700"></ion-icon>
@@ -1492,6 +1812,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
             {% endif %}
 
             <div class="icon">
@@ -1535,6 +1866,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame6.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="grid" style="color:#ffb700"></ion-icon>
@@ -1577,6 +1919,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
             {% endif %}
 
             <div class="icon">
@@ -1622,6 +1975,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame8.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="analytics-outline" style="color:#ffb700"></ion-icon>
@@ -1666,6 +2030,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="logo-web-component" style="color:#ffb700"></ion-icon>
@@ -1984,6 +2359,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
     <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
   </div>
+  {% elif current_theme == "xmas" %}
+  <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    
+  </div>
   {% endif %}
 
 <!-- ======= Footer ======= -->
@@ -2084,6 +2488,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
   </div>  
 </div>
+{% elif current_theme == "xmas" %}
+<!-- <div class="position-relative">
+  <div class="position-absolute bottom-0 end-0 new_year_top">
+      <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
+  </div>
+</div> -->
 {% endif %}
 
 <!-- <div id="preloader"></div> -->

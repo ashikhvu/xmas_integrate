@@ -253,6 +253,12 @@ font-weight: 800;
  text-shadow: 0px 0px 10px black;
 }
 </style>
+{% elif current_theme == 'xmas' %}
+<style>
+  #navbar .abot{
+    color: red;
+  }
+</style>
 {% else %}
 <style>
 
@@ -356,6 +362,8 @@ font-weight: 800;
   }
 </style>
 
+<!-- xmas -->
+
   <main id="main">
     <div class="container-fluid" id="about-us">
         <section id="about_box">
@@ -367,6 +375,24 @@ font-weight: 800;
                 <img draggable="false" class="about_decor" src="{% static 'easter/decor/about_decor/about_decor1.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'xmas' %}
+            <div id="new_year_left" class="position-relative" style="z-index: 1;">
+              <div class="position-absolute end-0 xmas_new_year_gif_top">
+                <img id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
+             </div>
+             </div>
+             
+            <div id="new_year_right" class="position-relative" style="z-index: 1;">
+              <div class="position-absolute start-0 xmas_new_year_gif_top">
+                <img id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
+             </div>
+             </div>
+
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute end-0 xmas_star_gif_top">
+                <img id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
+             </div>
+             </div>
             {% endif %}
 
             <div class="row">
@@ -377,6 +403,8 @@ font-weight: 800;
                 <h4 class="vishu_text_bg1" style="color: transparent;">About Us</h4>
                 {% elif current_theme == 'easter' %}
                 <h4 class="easter_text_bg1" style="color: transparent;">About Us</h4>
+                {% elif current_theme == 'xmas' %}
+                <h4 class="pb-4 mt-5 mb-5">About Us</h4>
                 {% else %}
                 <h4 style="color: white;">About Us</h4>
                 {% endif %}
@@ -457,7 +485,32 @@ font-weight: 800;
                   </div>
                   
                 </div>
+                {% elif current_theme == 'xmas' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
                   
+                  
+                  <div class="position-absolute end-0 top-0" style="margin-right: -1.5rem;margin-top: -3.8rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute start-0 top-0" style="margin-left: -2.1rem;margin-top: -3.8rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.1rem;margin-bottom: -3.8rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 bottom-0" style="margin-right: -1.5rem;margin-bottom: -3.8rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                  </div>
+
+               </div>
                  {% else %}
                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
                   data-aos-duration="2000">
@@ -506,38 +559,6 @@ font-weight: 800;
             
                
               </div>
-              {% elif current_theme == 'easter' %}
-              <div class="position-relative">
-
-                <p class="fst-normal mob_margin_top" data-aos="fade-up"
-                data-aos-duration="2000">
-                Our expertise lies in website and software development, 
-                where we have gained extensive experience by delivering a 
-                wide range of projects, including websites, web applications, 
-                mobile applications, 3D modeling services, and digital marketing 
-                services, to clients across different industries and of varying sizes.
-                
-                </p>
-
-                
-                <div class="position-absolute top-0 end-0 top_right_top">
-                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
-                </div>
-
-                <div class="position-absolute top-0 start-0 top_left_top">
-                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
-                </div>
-
-                <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
-                </div>
-
-                <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                  <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
-                </div>
-          
-             
-            </div>
               {% elif current_theme == 'vishu' %}
                  <div class="position-relative">
 
@@ -558,17 +579,75 @@ font-weight: 800;
                   </div>
                   
                 </div>
+                {% elif current_theme == 'easter' %}
+                <div class="position-relative">
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                  data-aos-duration="2000">
+                  Our expertise lies in website and software development, 
+                  where we have gained extensive experience by delivering a 
+                  wide range of projects, including websites, web applications, 
+                  mobile applications, 3D modeling services, and digital marketing 
+                  services, to clients across different industries and of varying sizes.
                   
-              {% else %}
-              <p class="fst-normal mob_margin_top" data-aos="fade-up"
-              data-aos-duration="2000">
-              Our expertise lies in website and software development, 
-              where we have gained extensive experience by delivering a 
-              wide range of projects, including websites, web applications, 
-              mobile applications, 3D modeling services, and digital marketing 
-              services, to clients across different industries and of varying sizes.
+                  </p>
+
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                  </div>
               
-              </p>
+              </div>
+                {% elif current_theme == 'xmas' %}
+                <div class="position-relative">
+
+                  <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                  data-aos-duration="2000">
+                  Our expertise lies in website and software development, 
+                  where we have gained extensive experience by delivering a 
+                  wide range of projects, including websites, web applications, 
+                  mobile applications, 3D modeling services, and digital marketing 
+                  services, to clients across different industries and of varying sizes.
+                  
+                  </p>
+
+                  
+                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                  </div>
+            
+              </div>
+              {% else %}
+                <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
               {% endif %}
 
               </div>
@@ -605,8 +684,8 @@ font-weight: 800;
                   </div>
                  
 
-            </div>
-            {% elif current_theme == 'vishu' %}
+                </div>
+                {% elif current_theme == 'vishu' %}
                  <div class="position-relative">
 
                   <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
@@ -656,18 +735,46 @@ font-weight: 800;
                   </div>
                  
 
-            </div>
-            {% else %}
-            <p class="fst-normal mob_margin_top" data-aos="fade-right"
-              data-aos-duration="2000">
-              At ALTOS Technologies, we understand the critical role that user 
-              experience plays in the success of your website or software. That's 
-              why we put a strong emphasis on designing and developing products 
-              that are user-friendly, intuitive, and enjoyable to use, ensuring 
-              your customers or employees have a seamless experience.
+              </div>
+              {% elif current_theme == 'xmas' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-right"
+                    data-aos-duration="2000">
+                    At ALTOS Technologies, we understand the critical role that user 
+                    experience plays in the success of your website or software. That's 
+                    why we put a strong emphasis on designing and developing products 
+                    that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                    your customers or employees have a seamless experience.
 
-            </p>
-            {% endif %}
+                  </p>
+
+                  
+                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                  </div>
+                 
+              </div>
+              {% else %}
+              <p class="fst-normal mob_margin_top" data-aos="fade-right"
+                data-aos-duration="2000">
+                At ALTOS Technologies, we understand the critical role that user 
+                experience plays in the success of your website or software. That's 
+                why we put a strong emphasis on designing and developing products 
+                that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                your customers or employees have a seamless experience.
+
+              </p>
+              {% endif %}
            
            
               </div>
@@ -696,6 +803,35 @@ font-weight: 800;
         <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
         <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
         <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+      </div>
+      {% elif current_theme == "xmas" %}
+      <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        
       </div>
     {% endif %}
 

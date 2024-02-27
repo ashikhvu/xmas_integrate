@@ -915,6 +915,226 @@ h5 {
   }
 </style>
 
+<!-- xmas -->
+
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.5rem;
+    margin-top: 1.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  .xmas_star_gif_top{
+    margin-top: -4rem;
+    margin-right: 8rem;
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  .background_img{
+    background-image: url('{% static "xmas/bg/card_bg1.png" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .background_img1{
+    /* background-image: radial-gradient(white,rgba(255, 255, 255, 0.531),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.245)); */
+  }
+  #santa_peek11{
+    width: 10rem;
+  }
+  .santa_peek11_top{
+    margin-left: -6.5rem;
+    margin-top: 6rem;
+  }
+  #santa_peek22{
+    width: 10rem;
+  }
+  .santa_peek22_top{
+    margin-right: -5.8rem;
+    margin-top: 7.5rem;
+  }
+  #snowman_peek11{
+    width: 7rem;
+  }
+  .snowman_peek11_top{
+    margin-left: -8rem;
+    margin-top: 5rem;
+  }
+  #snowman_peek22{
+    width: 7rem;
+  }
+  .snowman_peek22_top{
+    margin-right: -7.5rem;
+    margin-top: 5rem;
+  }
+  @media screen and (max-width:768px) {
+    .hide_for_mob{
+      display: block;
+    }
+    .hide_this_for_desk{
+      display: none;
+    }
+  }
+  @media screen and (min-width:769px) {
+    .hide_for_mob{
+      display: none;
+    }
+    .hide_this_for_desk{
+      display: block;
+    }
+  }
+  #new_year{
+    width: 20rem;
+  }
+  .new_year_top{
+    margin-bottom: 5.8rem;
+  }
+  @media screen and (min-width:368px) and (max-width:600px){
+      #new_year{
+        width: 10rem;
+      }
+      .new_year_top{
+        margin-bottom: 5.8rem;
+      }
+    }
+    @media screen and (max-width:367px){
+      #new_year{
+        width: 5rem;
+      }
+      .new_year_top{
+        margin-bottom: 7rem;
+      }
+    }
+    #container_text .request-box .circle4 {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      width: 100%;
+      height: 2.5rem;
+      background: linear-gradient(
+        45deg,
+        #840000,
+        rgb(187, 0, 0),
+        #5c0404 100%
+      );
+      border-radius: 1.625rem;
+      transition: all 0.4s ease-in-out;
+    }
+    #container_text .request-box .circle4 .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+    }
+    #container_text .request-box .req-btn:hover .circle4 {
+      width: 100%;
+    }
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>.xmas_nav_text {
+      color: red;
+      text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    }
+</style>
+
  <!-- ======= Header ======= -->
  <header id="header" class="fixed-top green-blue pb-0" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);">
 
@@ -1027,7 +1247,26 @@ h5 {
         </div>
       </div>
     </div>
-  {% endif %}
+  {% elif current_theme == 'xmas' %}
+    <div class="position-relative" style="z-index: 998;">
+      <div class="position-absolute start-0 top-0 top_tree_effect">
+        <div class="d-flex">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        </div>
+      </div>
+    </div>
+{% endif %}
   <div class="container d-flex align-items-center justify-content-lg-between">
 
     <h1 class="logo me-auto me-lg-0">
@@ -1039,7 +1278,7 @@ h5 {
     </h1> 
    
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
+    <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 999;">
       <ul>
         <li>
           <a 
@@ -1049,6 +1288,8 @@ h5 {
           class="nav-link scrollto hom hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto hom easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto hom xmas_nav_text"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
           {% endif %} 
@@ -1064,6 +1305,8 @@ h5 {
               class="nav-link scrollto abot hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto abot easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                class="nav-link scrollto abot xmas_nav_text"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -1079,6 +1322,8 @@ h5 {
           class="nav-link scrollto serv hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto serv easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto serv xmas_nav_text"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
           {% endif %}
@@ -1094,6 +1339,8 @@ h5 {
             class="nav-link scrollto cor " style="color: yellow;text-shadow: 0px 0px 10px black;"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cor easter_text_sm_bg1" style="color: transparent;"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cor text-danger"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
           {% endif %}
@@ -1109,6 +1356,8 @@ h5 {
           class="nav-link scrollto cors hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cors easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cors xmas_nav_text"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -1125,6 +1374,8 @@ h5 {
           class="nav-link scrollto event hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto event easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto event xmas_nav_text"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -1140,6 +1391,8 @@ h5 {
           class="nav-link scrollto cont hover_anchor_vishu"
           {% elif current_theme == 'easter' %}
             class="nav-link scrollto cont easter_text_sm_bg1_hover"
+          {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cont xmas_nav_text"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -1162,6 +1415,15 @@ h5 {
   <section class="pb-0">
     <div class="container mt-3">
       <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+
+        {% if current_theme == 'xmas' %}
+        <div class="position-relative hide_this_for_desk" style="z-index: 1;">
+          <div class="position-absolute santa_peek11_top">
+            <img id="santa_peek11" draggable="false" src="{% static 'xmas/decor/xmaspap_peek.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
+
         <div class="col-lg-6 col-sm-12 col-md-6 px-3">
           <div class="content-boxs border-0 rounded-4">
             {% if current_theme == 'pongal' %}
@@ -1170,6 +1432,8 @@ h5 {
             <h2 class="vishu_text_bg1" style="color: transparent;">ERP </h2>
             {% elif current_theme == 'easter' %}
             <h2 class="easter_text_bg1" style="color: transparent;">ERP </h2>
+            {% elif current_theme == 'xmas' %}
+            <h2 class="xmas_text text-light">ERP </h2>
             {% else %}
             <h2>ERP </h2>
             {% endif %}
@@ -1180,6 +1444,13 @@ h5 {
               <img src="static/vishu/img/erp.png" alt="ERP" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <img src="static/img/team/erp.png" alt="ERP" />
+                <div class="position-absolute bottom-0">
+                  <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+              </div>
+              </div>
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -1189,6 +1460,15 @@ h5 {
             <p>Moreover, your staff will have no trouble using and navigating our ERP software because of its user-friendly design. With the help of our software, you may automate routine processes, lower error rates, and boost productivity.
           </p>
           </div>
+
+          {% if current_theme == 'xmas' %}
+          <div class="position-relative hide_for_mob">
+            <div class="position-absolute" style="margin-left: 5.4rem;margin-top: 0.2rem;">
+              <img width="100rem" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+            </div>
+          </div>
+          {% endif %}
+
           <div class="km-button my-5"><a role="button" href="/contact" 
             {% if current_theme == 'pongal' %}
              class="knowmore-button1" 
@@ -1211,6 +1491,13 @@ h5 {
               <img src="static/vishu/img/erp.png" alt="ERP" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/erp.png" alt="ERP" /> 
+            {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <img src="static/img/team/erp.png" alt="ERP" />
+                <div class="position-absolute bottom-0">
+                  <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+              </div>
+              </div>
             {% else %}
             <img src="static/img/team/erp.png" alt="ERP"/>
             {% endif %}
@@ -1251,6 +1538,15 @@ h5 {
           </div>
           
         </div> -->
+
+        {% if current_theme == 'xmas' %}
+        <div class="position-relative hide_this_for_desk" style="z-index: 1;">
+          <div class="position-absolute end-0 santa_peek22_top">
+            <img id="santa_peek22" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
+
         <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
           <div class="img-box-tech image-visible">
             <!-- <h4 class="hide-head">CRM</h4> -->
@@ -1273,6 +1569,8 @@ h5 {
           <h2 class="vishu_text_bg1" style="color: transparent;">CRM </h2>
           {% elif current_theme == 'easter' %}
           <h2 class="easter_text_bg1" style="color: transparent;">CRM </h2>
+          {% elif current_theme == 'xmas' %}
+          <h2 class="xmas_text text-light">CRM </h2>
           {% else %}
           <h2>CRM </h2>
           {% endif %}
@@ -1301,6 +1599,15 @@ h5 {
             
           </p>
           </div>
+
+          {% if current_theme == 'xmas' %}
+          <div class="position-relative hide_for_mob">
+            <div class="position-absolute" style="margin-left: 5.4rem;margin-top: 0.2rem;">
+              <img width="100rem" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+            </div>
+          </div>
+          {% endif %}
+          
           <div class="km-button my-4"><a role="button" href="/contact" 
             {% if current_theme == 'pongal' %}
              class="knowmore-button1" 
