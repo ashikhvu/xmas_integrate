@@ -1133,6 +1133,95 @@ h5 {
       color: red;
       text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
     }
+    .knowmore-button4{
+      font-size: 1em;
+      padding: 1em;
+      /* background: #29d5e5c9; */
+      background: linear-gradient(
+          45deg,
+          #840000,
+          rgb(187, 0, 0),
+          #5c0404 100%
+          );
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .go-corner5 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      background-color: #ae0202;
+      border-radius: 0 4px 0 32px;
+    }
+    
+    .go-arrow5 {
+      margin-top: -4px;
+      margin-right: -4px;
+      color: white;
+      font-family: courier, sans;
+    }
+    .card5 {
+      display: block;
+      position: relative;
+      max-width: 262px;
+      background-color: #f2f8f9;
+      border-radius: 4px;
+      padding: 32px 24px;
+      margin: 12px;
+      text-decoration: none;
+      z-index: 0;
+      overflow: hidden;
+      
+    }
+  
+    .card5 :before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #ce4545;
+      height: 32px;
+      width: 32px;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+  
+    .card5 :hover:before {
+      transform: scale(21);
+    }
+  
+  
+    .card5:hover p {
+        transition: all 0.3s ease-out;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .card5:hover h5 {
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+      }
+
+      .card5:hover .go-arrow5 {
+        color: black;
+        transition: all 0.3s ease-out;
+      }
+
+      .card5:hover .go-corner5 {
+        background-color: white;
+        box-shadow: 3px 3px 3px 3px black;
+        transition: all 0.3s ease-out;
+      }
 </style>
 
  <!-- ======= Header ======= -->
@@ -1476,6 +1565,8 @@ h5 {
               class="knowmore-button2"
             {% elif current_theme == 'easter' %}
               class="knowmore-button3"
+            {% elif current_theme == 'xmas' %}
+              class="knowmore-button4"
             {% else %}
               class="knowmore-button text-white" 
             {% endif %} >
@@ -1556,6 +1647,13 @@ h5 {
               <img src="static/vishu/img/crm.png" alt="CRM" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/crm.png" alt="CRM" /> 
+            {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <img src="static/img/team/crm.png" alt="CRM" />
+                <div class="position-absolute bottom-0">
+                  <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+              </div>
+              </div>
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1581,6 +1679,13 @@ h5 {
               <img src="static/vishu/img/crm.png" alt="CRM" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/crm.png" alt="CRM" /> 
+            {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <img src="static/img/team/crm.png" alt="CRM" />
+                <div class="position-absolute bottom-0">
+                  <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+              </div>
+              </div>
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1602,7 +1707,7 @@ h5 {
 
           {% if current_theme == 'xmas' %}
           <div class="position-relative hide_for_mob">
-            <div class="position-absolute" style="margin-left: 5.4rem;margin-top: 0.2rem;">
+            <div class="position-absolute" style="margin-left: 5.4rem;margin-top: -1.5rem;">
               <img width="100rem" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
             </div>
           </div>
@@ -1615,6 +1720,8 @@ h5 {
               class="knowmore-button2"
             {% elif current_theme == 'easter' %}
                class="knowmore-button3"
+            {% elif current_theme == 'xmas' %}
+              class="knowmore-button4"
             {% else %} 
              class="knowmore-button text-white" 
             {% endif %}>
@@ -1635,6 +1742,8 @@ h5 {
         <h4 class="vishu_text_bg1 mb-5" style="color: transparent;">//Smart CORE Software for Businesses</h4>
         {% elif current_theme == 'easter' %}
         <h4 class="easter_text_bg1 mb-5" style="color: transparent;">//Smart CORE Software for Businesses</h4>
+        {% elif current_theme == 'xmas' %}
+        <h4 class="text-light xmas_text mb-5">//Smart CORE Software for Businesses</h4>
         {% else %}
         <h4 class="mb-5" style="color: #df0559;">//Smart CORE Software for Businesses</h4>
         {% endif %}
@@ -1692,6 +1801,8 @@ h5 {
           <h4 class="vishu_text_bg1" style="color: transparent;">//Ease of Work, Easy Work</h4>
           {% elif current_theme == 'easter' %}
           <h4 class="easter_text_bg1" style="color: transparent;">//Ease of Work, Easy Work</h4>
+          {% elif current_theme == 'xmas' %}
+          <h4 class="xmas_text text-light">//Ease of Work, Easy Work</h4>
           {% else %}
           <h4 style="color: #df0559;">//Ease of Work, Easy Work</h4>
           {% endif %}
@@ -1725,6 +1836,8 @@ h5 {
       <h4 class="pongal_text_theme mt-3 text-start" style="color: transparent;"><b>//What is a CORE Software ..?</b></h4>
       {% elif current_theme == 'vishu' %}
       <h4 class="vishu_text_bg1 mt-3 text-start" style="color: transparent;"><b>//What is a CORE Software ..?</b></h4>
+      {% elif current_theme == 'xmas' %}
+      <h4 class="xmas_text text-light mt-3 text-start"><b>//What is a CORE Software ..?</b></h4>
       {% else %}
       <h4 class="text-start mt-3" style=" color: #e3e3e3;"><b>//What is a CORE Software ..?</b></h4>
       {% endif %}
@@ -1741,6 +1854,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4"
+        {% elif current_theme == 'xmas' %} 
+        class="card5"
         {% else %} 
         class="card1" 
         {% endif %} >
@@ -1755,6 +1870,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1765,6 +1882,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1772,6 +1891,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1779,6 +1905,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1793,6 +1921,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1803,6 +1933,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1810,6 +1942,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1817,6 +1956,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1831,6 +1972,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1841,6 +1984,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1848,6 +1993,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1855,6 +2007,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1868,6 +2022,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1878,6 +2034,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1885,7 +2043,13 @@ h5 {
               </div>
             </div>
         </a>
-
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1893,6 +2057,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1906,6 +2072,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1916,6 +2084,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1923,7 +2093,13 @@ h5 {
               </div>
             </div>
         </a>
-
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1931,6 +2107,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1944,6 +2122,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1954,6 +2134,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1961,7 +2143,13 @@ h5 {
               </div>
             </div>
         </a>
-
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -1969,6 +2157,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1982,6 +2172,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1992,6 +2184,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1999,7 +2193,13 @@ h5 {
               </div>
             </div>
         </a>
-
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -2007,6 +2207,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2020,6 +2222,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2030,6 +2234,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2037,7 +2243,13 @@ h5 {
               </div>
             </div>
         </a>
-
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -2045,6 +2257,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2058,6 +2272,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2068,6 +2284,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2075,6 +2293,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -2082,6 +2307,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2095,6 +2322,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2105,6 +2334,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2112,6 +2343,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
         <a 
         {% if current_theme == 'pongal' %} 
         class="card2" style="color: transparent;" 
@@ -2119,6 +2357,8 @@ h5 {
         class="card3" style="color: transparent;" 
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
+        {% elif current_theme == 'xmas' %} 
+        class="card5" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2132,6 +2372,8 @@ h5 {
             class="go-corner3" style="color: transparent;" 
             {% elif current_theme == 'easter' %} 
             class="go-corner4"
+            {% elif current_theme == 'xmas' %} 
+            class="go-corner5"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2142,6 +2384,8 @@ h5 {
               class="go-arrow3" 
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
+              {% elif current_theme == 'xmas' %} 
+              class="go-arrow5" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2149,6 +2393,13 @@ h5 {
               </div>
             </div>
         </a>
+        {% if current_theme == 'xmas' %} 
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
     </div>
  
 </section>
@@ -2157,6 +2408,15 @@ h5 {
 <section class="pb-0">
   <div class="container mt-3">
     <div class="row  g-3 content-boxs-parent">
+
+      {% if current_theme == 'xmas' %}
+      <div class="position-relative hide_this_for_desk" style="z-index: 1;">
+        <div class="position-absolute snowman_peek11_top">
+          <img id="snowman_peek11" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror.png' %}" alt="">
+      </div>
+      </div>
+      {% endif %}
+
       <div class="col-lg-7 col-sm-12 col-md-7 px-1">
         <div class="content-boxs border-0 rounded-4">
           {% if current_theme == 'pongal' %}
@@ -2165,6 +2425,8 @@ h5 {
           <h2 class="vishu_text_bg1" style="color: transparent;">HRMS  </h2>
           {% elif current_theme == 'easter' %}
           <h2 class="easter_text_bg1" style="color: transparent;">HRMS  </h2>
+          {% elif current_theme == 'xmas' %}
+          <h2 class="xmas_text text-light">HRMS  </h2>
           {% else %}
           <h2>HRMS  </h2>
           {% endif %}
@@ -2175,6 +2437,13 @@ h5 {
               <img src="static/vishu/img/hrms.png" alt="HRMS" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/hrms.png" alt="HRMS" /> 
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <img src="static/img/team/erp.png" alt="ERP" />
+              <div class="position-absolute bottom-0">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -2198,6 +2467,16 @@ h5 {
           their employment information.
         </p>
         </div>
+
+        {% if current_theme == 'xmas' %}
+        <div class="position-relative hide_for_mob">
+          <div class="position-absolute" style="margin-left: 8.5rem;margin-top: -1.5rem;">
+            <img width="70rem" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror_right.png' %}" alt="">
+          </div>
+        </div>
+        {% endif %}
+        
+
         <div class="km-button my-4"><a role="button" href="/contact" 
           {% if current_theme == 'pongal' %}
            class="knowmore-button1" 
@@ -2205,10 +2484,12 @@ h5 {
             class="knowmore-button2"
           {% elif current_theme == 'easter' %}
           class="knowmore-button3"
-           {% else %}
-            class="knowmore-button text-white"
-             {% endif %}>
-             Know More</a>
+          {% elif current_theme == 'xmas' %}
+          class="knowmore-button4"
+          {% else %}
+          class="knowmore-button text-white"
+          {% endif %}>
+          Know More</a>
             </div>
       </div>
       <div class="col-lg-5 col-sm-12 col-md-5 px-4 d-flex align-items-center">
@@ -2220,6 +2501,13 @@ h5 {
             <img src="static/vishu/img/hrms.png" alt="HRMS" /> 
           {% elif current_theme == 'easter' %}
             <img src="static/easter/img/hrms.png" alt="HRMS" /> 
+          {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <img src="static/img/team/erp.png" alt="ERP" />
+              <div class="position-absolute bottom-0">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
           {% else %}
           <img src="static/img/team/hrms.png" alt="HRMS" />
           {% endif %}
@@ -2304,6 +2592,15 @@ h5 {
         </div>
         
       </div> -->
+
+      {% if current_theme == 'xmas' %}
+      <div class="position-relative hide_this_for_desk" style="z-index: 1;">
+        <div class="position-absolute end-0 snowman_peek22_top">
+          <img id="snowman_peek22" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror_right.png' %}" alt="">
+      </div>
+      </div>
+      {% endif %}
+
       <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
         <div class="img-box-tech image-visible">
           <!-- <h4 class="hide-head">ERP</h4> -->
@@ -2313,6 +2610,13 @@ h5 {
             <img src="static/vishu/img/account.png" alt="ACCOUNTING" /> 
           {% elif current_theme == 'easter' %}
             <img src="static/easter/img/account.png" alt="ACCOUNTING" /> 
+          {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <img src="static/img/team/account.png" alt="ACCOUNTING" />
+              <div class="position-absolute bottom-0">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -2326,6 +2630,8 @@ h5 {
         <h2 class="vishu_text_bg1" style="color: transparent;">Accounting software  </h2>
         {% elif current_theme == 'easter' %}
         <h2 class="easter_text_bg1" style="color: transparent;">Accounting software  </h2>
+        {% elif current_theme == 'xmas' %}
+        <h2 class="xmas_text text-light">Accounting software  </h2>
         {% else %}
         <h2>Accounting software  </h2>
         {% endif %}
@@ -2336,6 +2642,13 @@ h5 {
             <img src="static/vishu/img/account.png" alt="ACCOUNTING" /> 
           {% elif current_theme == 'easter' %}
             <img src="static/easter/img/account.png" alt="ACCOUNTING" /> 
+          {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <img src="static/img/team/account.png" alt="ACCOUNTING" />
+              <div class="position-absolute bottom-0">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -2359,6 +2672,16 @@ h5 {
 
         </p>
         </div>
+
+        {% if current_theme == 'xmas' %}
+        <div class="position-relative hide_for_mob">
+          <div class="position-absolute" style="margin-left: 8.5rem;margin-top: -1.5rem;">
+            <img width="70rem" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror_right.png' %}" alt="">
+          </div>
+        </div>
+        {% endif %}
+
+
         <div class="km-button my-4"><a role="button" href="/contact" 
           {% if current_theme == 'pongal' %}
            class="knowmore-button1" 
@@ -2366,6 +2689,8 @@ h5 {
             class="knowmore-button2"
           {% elif current_theme == 'easter' %}
             class="knowmore-button3"
+          {% elif current_theme == 'xmas' %}
+            class="knowmore-button4"
           {% else %}
             class="knowmore-button text-white" 
           {% endif %}>
@@ -2519,6 +2844,35 @@ h5 {
       <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
       <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
     </div>
+    {% elif current_theme == "xmas" %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      
+    </div>
     {% endif %}
 
 <!-- ======= Footer ======= -->
@@ -2608,6 +2962,12 @@ h5 {
     <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
   </div>  
 </div>
+{% elif current_theme == "xmas" %}
+<!-- <div class="position-relative">
+  <div class="position-absolute bottom-0 end-0 new_year_top">
+      <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
+  </div>
+</div> -->
 {% endif %}
 
 <!-- <div id="preloader"></div> -->

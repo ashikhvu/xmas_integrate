@@ -704,6 +704,184 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- xmas -->
+
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.5rem;
+    margin-top: 1.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  .xmas_star_gif_top{
+    margin-top: -4rem;
+    margin-right: 8rem;
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+  #new_year{
+    width: 20rem;
+  }
+  .new_year_top{
+    margin-bottom: 5.8rem;
+  }
+  @media screen and (min-width:368px) and (max-width:600px){
+    #new_year{
+      width: 10rem;
+    }
+    .new_year_top{
+      margin-bottom: 5.8rem;
+    }
+  }
+  @media screen and (max-width:367px){
+    #new_year{
+      width: 5rem;
+    }
+    .new_year_top{
+      margin-bottom: 7rem;
+    }
+  }
+  #xmas_elf2{
+      width: 8.5rem;
+  }
+  .xmas_elf2_top{
+    margin-top: -8rem;
+    margin-right: 8rem;
+  }
+  @media screen and (max-width:420px) {
+    #xmas_elf2{
+      width: 4rem;
+    }
+    .xmas_elf2_top{
+      margin-top: -4rem;
+      margin-right: 2rem;
+    }
+  }
+  @media screen and (min-width:421px) and (max-width:767px) {
+    #xmas_elf2{
+      width: 6rem;
+    }
+    .xmas_elf2_top{
+      margin-top: -6rem;
+      margin-right: 5rem;
+    }
+  }
+  @media screen and (min-width:992px) and (max-width:1199px) {
+    #xmas_elf2{
+      width: 6rem;
+    }
+    .xmas_elf2_top{
+      margin-top: -6rem;
+      margin-right: 15rem;
+    }
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.xmas_nav_text {
+    color: red;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  
+</style>
+
     </head>
 
 <!-- Google tag (gtag.js) -->
@@ -829,6 +1007,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+    {% elif current_theme == 'xmas' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_tree_effect">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          </div>
+        </div>
+      </div>
     {% endif %}
 
     <div class="container d-flex align-items-center justify-content-lg-between">
@@ -844,7 +1041,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 999;">
         <ul>
           <li>
             <a 
@@ -854,6 +1051,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto hom easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto hom xmas_nav_text"
             {% else %} 
             class="nav-link scrollto hom hover_anchor" 
             {% endif %} 
@@ -869,6 +1068,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto abot hover_anchor_vishu"
                 {% elif current_theme == 'easter' %}
                 class="nav-link scrollto abot easter_text_sm_bg1_hover"
+                {% elif current_theme == 'xmas' %}
+                class="nav-link scrollto abot xmas_nav_text"
                 {% else %} 
                   class="nav-link scrollto abot hover_anchor" 
                 {% endif %} 
@@ -884,6 +1085,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto serv hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto serv easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto serv xmas_nav_text"
             {% else %}
             class="nav-link scrollto serv hover_anchor" 
             {% endif %}
@@ -899,6 +1102,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cor hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto cor easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cor xmas_nav_text"
             {% else %}
             class="nav-link scrollto cor hover_anchor" 
             {% endif %}
@@ -914,6 +1119,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cors hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto cors easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cors xmas_nav_text"
             {% else %}
             class="nav-link scrollto cors hover_anchor" 
             {% endif %}
@@ -930,6 +1137,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto event " style="color: yellow;text-shadow: 0px 0px 10px black;"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto event easter_text_sm_bg1" style="color: transparent;"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto event text-danger"
             {% else %}
             class="nav-link scrollto event hover_anchor" 
             {% endif %}
@@ -945,6 +1154,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cont hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
             class="nav-link scrollto cont easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+            class="nav-link scrollto cont xmas_nav_text"
             {% else %}
             class="nav-link scrollto cont hover_anchor" 
             {% endif %}
@@ -1107,6 +1318,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p class="pongal_text_theme" style="color: transparent;">Check our Events</p>
           {% elif current_theme == 'vishu' %}
           <p class="vishu_text_bg1" style="color: transparent;">Check our Events</p>
+          {% elif current_theme == 'xmas' %}
+          <p class="xmas_text text-light">Check our Events</p>
           {% else %}
           <p>Check our Events</p>
           {% endif %}
@@ -1128,6 +1341,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="position-relative">
           <div class="position-absolute end-0 easter_ballon1_top">
             <img id="easter_ballon1" src="{% static 'easter/decor/ballons1.png' %}" alt="">
+          </div>
+        </div>
+        {% elif current_theme == 'xmas' %}
+        <div class="position-relative">
+          <div class="position-absolute top-0 end-0 xmas_elf2_top">
+            <img id="xmas_elf2" src="{% static 'xmas/decor/xmas_elf2_low.png' %}" alt="">
           </div>
         </div>
         {% endif %}
@@ -1169,6 +1388,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative" style="z-index: 10;">
                     <div class="position-absolute top-0 end-0 gallery_frame2_top">
                       <img id="gallery_frame2" src="{% static 'vishu/decor/frame_decor/gallery_frame2.png' %}" alt="">
+                    </div>
+                  </div>
+                  {% elif current_theme == 'xmas' %} 
+                  <div class="position-relative">
+                    <div class="position-absolute end-0" style="margin-top: -0.1rem;margin-right: -0.1rem;">
+                      <img draggable="false" width="100rem" src="{% static 'xmas/decor/xmas_ball3.png' %}" alt="">
                     </div>
                   </div>
                   {% endif %}
@@ -1281,6 +1506,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img draggable="false" style="width: 18.5rem;" src="{% static 'easter/decor/frame/photo_frame.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative">
+              <div class="position-absolute bottom-0 start-0">
+                <img draggable="false" style="height: 13.9rem;width: 17rem;" src="{% static 'xmas/decor/event_image_frame.png' %}" alt="">
+              </div>
+            </div>
             {% endif %}
             
             {% endif %}
@@ -1320,6 +1551,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
       <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
     </div>
+  {% elif current_theme == "xmas" %}
+  <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    
+  </div>
     {% endif %}
 
  <!-- ======= Footer ======= -->
@@ -1417,6 +1677,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
       </div>  
     </div>
+{% elif current_theme == "xmas" %}
+<!-- <div class="position-relative">
+    <div class="position-absolute bottom-0 end-0 new_year_top">
+        <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
+    </div>
+  </div> -->
 {% endif %}
 
 <!-- <div id="preloader"></div> -->
