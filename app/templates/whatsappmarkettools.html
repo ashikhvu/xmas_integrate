@@ -354,6 +354,96 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- xmas -->
+
+<style>
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.xmas_nav_text {
+    color: red;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  .color-button4{
+    font-size: 1em;
+
+    background: linear-gradient(
+            45deg,
+            #840000,
+            rgb(187, 0, 0),
+            #5c0404 100%
+          );
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 100px;
+    width: 35vh;
+  }
+
+  @media (max-width: 768px) {
+    .color-button4{
+      margin: 20px 20px;
+    }
+  }
+  #santa_peek11{
+    width: 10rem;
+  }
+
+  .santa_peek11_top{
+    margin-left: -6.5rem;
+    margin-top: 28vh;
+  }
+  #santa_peek22{
+    width: 10rem;
+  }
+
+  .santa_peek22_top{
+    margin-right: -6.5rem;
+  }
+  @media screen and (max-width:768px) {
+    .santa_peek11_top{
+        display: none;
+    }  
+    .santa_peek22_top{
+      display: none;
+    }
+  }
+  #red_top{
+    width: 7rem;
+  }
+
+  .red_top_top{
+    margin-left: -0.2rem;
+    margin-top: -1.45rem;
+  }
+  #blue_top{
+    width: 7rem;
+  }
+
+  .blue_top_top{
+    margin-left: -2rem;
+    margin-top: -1.45rem;
+  }
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -476,6 +566,25 @@ gtag('config', 'G-3RLTXDEGMP');
         </div>
       </div>
     </div>
+    {% elif current_theme == 'xmas' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_tree_effect">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          </div>
+        </div>
+      </div>
     {% endif %}
 
 <div class="container d-flex align-items-center justify-content-lg-between">
@@ -491,7 +600,7 @@ gtag('config', 'G-3RLTXDEGMP');
   <!-- Uncomment below if you prefer to use an image logo -->
   <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-  <nav id="navbar" class="navbar order-last order-lg-0">
+  <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 999;">
     <ul>
       <li>
         <a 
@@ -501,6 +610,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu"
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto hom easter_text_sm_bg1_hover"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto hom xmas_nav_text"
         {% else %} 
         class="nav-link scrollto hom hover_anchor" 
         {% endif %} 
@@ -516,6 +627,8 @@ gtag('config', 'G-3RLTXDEGMP');
             class="nav-link scrollto hom hover_anchor_vishu"
             {% elif current_theme == 'easter' %}
               class="nav-link scrollto abot easter_text_sm_bg1_hover"
+            {% elif current_theme == 'xmas' %}
+              class="nav-link scrollto abot xmas_nav_text"
             {% else %} 
               class="nav-link scrollto abot hover_anchor" 
             {% endif %} 
@@ -531,6 +644,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu" style="color: yellow;"
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto serv easter_text_sm_bg1" style="color: transparent"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto serv text-danger"
         {% else %}
         class="nav-link scrollto serv hover_anchor" 
         {% endif %}
@@ -546,6 +661,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu"
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto cor easter_text_sm_bg1_hover"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto cor xmas_nav_text"
         {% else %}
         class="nav-link scrollto cor hover_anchor" 
         {% endif %}
@@ -561,6 +678,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu"
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto cors easter_text_sm_bg1_hover"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto cors xmas_nav_text"
         {% else %}
         class="nav-link scrollto cors hover_anchor" 
         {% endif %}
@@ -577,6 +696,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu" 
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto event easter_text_sm_bg1_hover"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto event xmas_nav_text"
         {% else %}
         class="nav-link scrollto event hover_anchor" 
         {% endif %}
@@ -592,6 +713,8 @@ gtag('config', 'G-3RLTXDEGMP');
         class="nav-link scrollto hom hover_anchor_vishu"
         {% elif current_theme == 'easter' %}
           class="nav-link scrollto cont easter_text_sm_bg1_hover"
+        {% elif current_theme == 'xmas' %}
+          class="nav-link scrollto cont xmas_nav_text"
         {% else %}
         class="nav-link scrollto cont hover_anchor" 
         {% endif %}
@@ -712,15 +835,6 @@ gtag('config', 'G-3RLTXDEGMP');
 
   #whatsapp_market .section-title p {
     font-size: 3rem;
-  }
-
-  #red_top{
-    width: 10rem;
-  }
-
-  .red_top_top{
-    margin-left: -2rem;
-    margin-top: -1.45rem;
   }
 
   .color-button{
@@ -979,6 +1093,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'easter' %} 
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span >Improve Your Audience with</span> <br> <span class="easter_text_bg1" style="font-size: 10vh;color: transparent;"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none">Improve Your Audience with</span> <br> <span class="easter_text_bg1" style="color:transparent"> ALT Whatsapp Module </span></p>
+        {% elif current_theme == 'xmas' %} 
+        <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block xmas_text text-light"> <span >Improve Your Audience with</span> <br> <span style="font-size: 10vh;"> ALT Whatsapp Module </span></p>
+        <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none xmas_text text-light">Improve Your Audience with</span> <br> <span > ALT Whatsapp Module </span></p>
         {% else %}
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">Improve Your Audience with</span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none" >Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
@@ -998,6 +1115,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'easter' %} 
         <a role="button" href="#" class="color-button3 text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button3 text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
+        {% elif current_theme == 'xmas' %} 
+        <a role="button" href="#" class="color-button4 text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
+        <a role="button" href="#" class="color-button4 text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
         {% else %}
         <a role="button" href="#" class="color-button text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
@@ -1022,6 +1142,15 @@ window.addEventListener('resize', handleResize);
       <section class="pb-0">
         <div class="container mt-5">
           <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 9999;">
+              <div class="position-absolute santa_peek11_top">
+                <img id="santa_peek11" draggable="false" src="{% static 'xmas/decor/xmaspap_peek.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
+
             <div class="section-title ">  
               {% if current_theme == 'pongal' %}
               <p class="pongal_text_theme" style="color: transparent;">Any best points to highlight <br> about module</p>
@@ -1029,6 +1158,8 @@ window.addEventListener('resize', handleResize);
               <p class="vishu_text_bg1" style="color: transparent;">Any best points to highlight <br> about module</p>
               {% elif current_theme == 'easter' %} 
               <p class="easter_text_bg1" style="color: transparent;">Any best points to highlight <br> about module</p>
+              {% elif current_theme == 'xmas' %} 
+              <p class="xmas_text text-light">Any best points to highlight <br> about module</p>
               {% else %}
               <p>Any best points to highlight <br> about module</p>
               {% endif %}
@@ -1072,6 +1203,15 @@ window.addEventListener('resize', handleResize);
       <section class="pt-0">
         <div class="container mt-3">
           <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute end-0 santa_peek22_top">
+                <img id="santa_peek22" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
+            
             <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
               <div class="img-box-tech image-visible" style="height: 75%; margin-top: -10vh;">
                 {% if current_theme == 'pongal' %}
@@ -1113,24 +1253,59 @@ window.addEventListener('resize', handleResize);
       <div class="container mt-5" style="background-color: #00000099;"  >
         <div class="service-box" >
           <div class="box-service" >
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
             <div class="box-contents">
               <h4 style="color:rgb(62, 199, 206)"> Marketing </span> </h4>
             </div>
           </div>
   
           <div class="box-service">
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
             <div class="box-contents">
+              {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
               <h4 style="color:rgb(62, 199, 206)">Marketing</span> </h4>
             </div>
           </div>
   
           <div class="box-service">
             <div class="box-contents">
+              {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
               <h4 style="color:rgb(62, 199, 206)">Marketing </span> </h4>
             </div>
           </div>
   
           <div class="box-service">
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            {% endif %}
             <div class="box-contents">
               <h4 style="color:rgb(62, 199, 206)">Marketing</span> </h4>
             </div>
@@ -1186,6 +1361,9 @@ window.addEventListener('resize', handleResize);
             {% elif current_theme == 'easter' %} 
             <p class=" more-head text- d-none d-sm-none easter_text_bg1"  style="font-size: 1.7em;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
             <p  class=" more-head text- d-lg-block easter_text_bg1"  style="font-size: 3rem;color: transparent;"><b>Revolutionizing Business Marketing </b></p>
+            {% elif current_theme == 'xmas' %} 
+            <p class=" more-head text- d-none d-sm-none xmas_text text-light"  style="font-size: 1.7em;"><b>Revolutionizing Business Marketing </b></p>
+            <p  class=" more-head text- d-lg-block xmas_text text-light"  style="font-size: 3rem;"><b>Revolutionizing Business Marketing </b></p>
             {% else %}
             <p class=" more-head text-white d-none d-sm-none"  style="font-size: 1.7em;"><b>Revolutionizing Business Marketing </b></p>
             <p  class=" more-head text-white d-lg-block"  style="font-size: 3rem;"><b>Revolutionizing Business Marketing </b></p>
@@ -1214,6 +1392,8 @@ window.addEventListener('resize', handleResize);
           <p class="text- mb-3 vishu_text_bg1" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% elif current_theme == 'easter' %} 
           <p class="text- mb-3 easter_text_bg1" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
+          {% elif current_theme == 'xmas' %} 
+          <p class="text- mb-3 xmas_text text-light" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% else %}
           <p class="text-white mb-3 pongal_text_theme" style="color: transparent;" id="price-head"><b>Plan and Pricing</b></p>
           {% endif %}
@@ -1243,6 +1423,13 @@ window.addEventListener('resize', handleResize);
             {% endif %}
             
             <div class="box-contents" style="height: 50%;">
+              {% if current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute blue_top_top">
+                  <img id="blue_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              {% endif %}
               <h4 style="color:rgb(62, 199, 206)">1</span> </h4>
               <p style="text-align: justify;"> Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. 
                 A great description gets readers in the mood, and makes them more likely to go ahead and book.
@@ -1273,6 +1460,13 @@ window.addEventListener('resize', handleResize);
             {% endif %}
 
             <div class="box-contents" style="height: 50%;">
+              {% if current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute blue_top_top">
+                  <img id="blue_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              {% endif %}
               <h4 style="color:rgb(62, 199, 206)">2 </span> </h4>
               <p style="text-align: justify;">
                 Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive.
@@ -1304,6 +1498,13 @@ window.addEventListener('resize', handleResize);
             {% endif %}
 
             <div class="box-contents" style="height: 50%;" >
+              {% if current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute blue_top_top">
+                  <img id="blue_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              {% endif %}
               <h4 style="color:rgb(62, 199, 206)">3</span> </h4>
               <p style="text-align: justify;">
                 Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. 
@@ -1317,25 +1518,54 @@ window.addEventListener('resize', handleResize);
 </div>
 
 {% if current_theme == "easter" %}
-    <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
-      <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-      <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-    </div>
-    {% endif %}
+  <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+    <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+    <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+  </div>
+{% elif current_theme == "xmas" %}
+  <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+    
+  </div>
+{% endif %}
 
 <footer id="footer">
   <div class="footer-top">
@@ -1445,6 +1675,12 @@ window.addEventListener('resize', handleResize);
         <img draggable="false"id="footer_decor_easter" src="{% static 'easter/decor/footer_decor_easter.png' %}" alt="">
       </div>  
     </div>
+{% elif current_theme == "xmas" %}
+<!-- <div class="position-relative">
+    <div class="position-absolute bottom-0 end-0 new_year_top">
+        <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
+    </div>
+  </div> -->
 {% endif %}
 
 <!-- <div id="preloader"></div> -->

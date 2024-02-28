@@ -241,6 +241,26 @@
     font-weight: 800;
     
   }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  #santapen{
+    width: 15rem;
+  }
+  .santapen_top{
+    margin-top: -7.8rem;
+    margin-left: 30rem;
+  }
+  @media screen and (max-width:540px){
+    #santapen{
+      width: 7rem;
+    }
+    .santapen_top{
+      margin-top: -4.8rem;
+      margin-left: 30rem;
+    }
+  }
 </style>
 {% else %}
 <style>
@@ -275,6 +295,8 @@
           <p class="vishu_text_bg1" style="color: transparent;">Contact Us</p>
           {% elif current_theme == 'easter' %} 
           <p class="easter_text_bg1" style="color: transparent;">Contact Us</p>
+          {% elif current_theme == 'xmas' %} 
+          <p class="xmas_text text-light">Contact Us</p>
           {% else %}
           <p style="color: rgb(39, 112, 141);">Contact Us</p>
           {% endif %}
@@ -302,6 +324,15 @@
       {% endif %}
 
       <div id="contact-form-section" class="row mb-0">
+
+        {% if current_theme == "xmas" %}
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute santapen_top end-0">
+            <img id="santapen" draggable="false" src="{% static 'xmas/decor/santa_with_pen.png' %}" alt="">
+        </div>
+        </div>
+        {% endif %}
+
         <div class="col-lg-12 col-md-12 mt-5 mb-3 mt-lg-0 d-flex justify-content-center">
 
           <form action="{% url 'meeasges_send' %}" method="post"  class="email-form">
@@ -355,6 +386,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-geo-alt me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -388,6 +421,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-envelope me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -414,6 +449,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-phone me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-phone me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -450,6 +487,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-geo-alt me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -481,6 +520,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-envelope me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -505,6 +546,8 @@
                 style="background-image: url('static/easter/bg/text_bg1_sm.png');
                 background-size: cover;
                 background-repeat: no-repeat;"
+                {% elif current_theme == 'xmas' %} 
+                class="bi bi-phone me-2 text-light bg-danger"
                 {% else %}
                 class="bi bi-phone me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"

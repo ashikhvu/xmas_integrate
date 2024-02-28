@@ -103,6 +103,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+
+    <!-- xmas Theme -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+    <script src="{% static 'js/xmas.js' %}"></script>
+
+    <!-- xmas them2 -->
+    <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
+    <script src="{% static 'js/xmas2.js' %}"></script>
+
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -980,6 +991,449 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- xmas -->
+
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.9rem;
+    margin-top: -8.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  #xmas_silk_gif{
+      width: 10rem;
+    }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  .xmas_star_gif_top{
+    margin-top: -4rem;
+    margin-right: 8rem;
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+  @media screen and (max-width:280px) {
+    .img-box-tech img{
+      width: 70%;
+    }
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.xmas_nav_text {
+    color: red;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  #red_top{
+    width: 10rem;
+  }
+  .red_top_top{
+    margin-left: -0.75rem;
+    margin-top: -1.3rem;
+  }
+  #red_bottom{
+    width: 10rem;
+  }
+  .red_bottom_top{
+    margin-left: 9.5rem;
+    margin-top: 17.1rem;
+  }
+  #popper{
+    width: 7rem;
+  }
+  .popper_top{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .popper_top1{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  #xmas_peek2{
+    width: auto;
+  }
+  .xmas_peek2_top{
+    margin-right: -14rem;
+  }
+
+  #xmas_cap1{
+    width: 7rem;
+  }
+  .xmas_cap_top1{
+    margin-left: -14rem;
+    margin-top: -1rem;
+  }
+  @media screen and (max-width:280px) {
+    #xmas_cap1{
+      width: 5rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -4rem;
+      margin-top: 0.5rem;
+    }
+    #xmas_santa_gif{
+      width: 7rem;
+    }
+    .xmas_santa_gif_top{
+      margin-left: 3.5rem;
+    }
+  }
+  @media screen and (min-width:281px) and (max-width:366px) {
+    #xmas_cap1{
+      width: 5rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -4.7rem;
+      margin-top: 0.4rem;
+    }
+    #xmas_santa_gif{
+      width: 7rem;
+    }
+    .xmas_santa_gif_top{
+      margin-left: 5.5rem;
+    }
+  }
+  @media screen and (min-width:361px) and (max-width:366px) {
+
+    #xmas_santa_gif{
+      width: 7rem;
+    }
+    .xmas_santa_gif_top{
+      margin-left: 5.7rem;
+    }
+  }
+  @media screen and (min-width:367px) and (max-width:437px) {
+    #xmas_cap1{
+      width: 5rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -10.5rem;
+      margin-top: 0.7rem;
+    }
+  }
+  @media screen and (max-width:750px) {
+    #xmas_cap1{
+      width: 4rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -8rem;
+      margin-top: 0.7rem;
+    }
+  }
+  @media screen and (max-width:550px) {
+    #xmas_cap1{
+      width: 3.8rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -7.5rem;
+      margin-top: 1.3rem;
+    }
+  }
+  @media screen and (max-width:300px) {
+    #xmas_cap1{
+      width: 3.3rem;
+    }
+    .xmas_cap_top1{
+      margin-left: -6.5rem;
+      margin-top: 1.5rem;
+    }
+  }
+  @media screen and (max-width:247px) {
+    #xmas_cap1{
+      width: 3.3rem;
+    }
+    .xmas_cap_top1{
+      margin-left: 1%;
+      transform: translate(-50%,50%);
+      margin-top: -0.5rem;
+    }
+  }
+  @media screen and (max-width:768px) {
+    #xmas_peek2{
+      width: 7rem;
+    }
+    .xmas_peek2_top{
+      margin-right: -5rem;
+    }
+  }
+  .decor_light2_full{
+    margin-top: -8rem;
+  }
+  @media screen and (max-width:932px){
+    .decor_light2_full{
+      margin-top: -5rem;
+    }
+  }
+  @media screen and (min-width:280px) and (max-width:374px) {
+    #xmas_silk_gif{
+      width: 3rem;
+    }
+    .xmas_silk_gif{
+      margin-top: -0.5rem;
+      margin-left: -0.5rem;
+      transform: rotate(-35deg);
+    }
+  }
+  @media screen and (min-width:375px) and (max-width:520px) {
+    #xmas_silk_gif{
+      width: 5rem;
+    }
+    .xmas_silk_gif{
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      transform: rotate(-35deg);
+    }
+  }
+  @media screen and (min-width:521px) and (max-width:920px) {
+    #xmas_silk_gif{
+      width: 7rem;
+    }
+    .xmas_silk_gif{
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      transform: rotate(-35deg);
+    }
+  }
+  @media screen and (max-width:280px) {
+    #xmas_silk_gif{
+      width: 3rem;
+    }
+    .xmas_silk_gif{
+      margin-top: -0.5rem;
+      margin-left: -0.5rem;
+      transform: rotate(-35deg);
+    }
+  }
+  .xmas_elff2_top{
+    margin-top: -4rem;
+    margin-left: -2rem;
+  }
+  .unq_top{
+    margin-top: 0rem;
+  }
+  @media screen and (max-width:991px) {
+    .xmas_elff2_top{
+      margin-top: -1rem;
+      margin-left: -2rem;
+    }
+    .unq_top{
+      margin-top: 5rem;
+    }
+  }
+  #img_card_tree{
+    /* width: 7rem; */
+    transition: all 0.2s linear;
+  }
+  .img_card_tree_top{
+    /* margin-top: -100px; */
+    /* margin-right: -10px; */
+    transition: all 0.2s linear;
+  }
+  @media screen and (max-width:767px)
+  {
+    #img_card_tree{
+        width: 7rem;
+      }
+      .img_card_tree_top{
+        margin-top: -100px;
+        margin-right: -10px;
+      }
+  }
+  @media screen and (min-width:540px) and (max-width:768px){
+    #img_card_tree{
+      width: 10rem;
+    }
+    .img_card_tree_top{
+      margin-top: -230px;
+      margin-right: -10px;
+    }
+  }
+  @media screen and (min-width:248px) and (max-width:280px) {
+    #img_card_tree{
+      width: 5rem;
+    }
+    .img_card_tree_top{
+      margin-top: -5rem;
+      margin-right: -10px;
+    }
+  }
+  @media screen and (min-width:768px) and (max-width:932px) {
+    #img_card_tree{
+      width: 20rem;
+    }
+    .img_card_tree_top{
+      margin-top: -20rem;
+      margin-right: -10px;
+    }
+  }
+  @media screen and (min-width:933px) and (max-width:1700PX) {
+    #img_card_tree{
+      width: 20rem;
+    }
+    .img_card_tree_top{
+      margin-top: -14rem;
+      margin-right: -10px;
+    }
+  }
+  #new_year1{
+    width: 10rem;
+  }
+  .new_year1_top{
+    margin-top: -0.5rem;
+  }
+  @media screen and (min-width:500px) and (max-width:920px) {
+    #new_year1{
+      width: 5rem;
+    }
+    .new_year1_top{
+      margin-top: -0.5rem;
+    }
+  }
+
+  /* #new_year_bottomm{
+      display: block;
+    }
+    #new_year_topp{
+      display:none;
+    } */
+  @media screen and (max-width:499px) {
+    #new_year1{
+      width: 3.5rem;
+    }
+    .new_year1_top{
+      margin-top: -0.5rem;
+    }
+    /* #new_year_topp{
+      display: block;
+    }
+    #new_year_bottomm{
+      display:none;
+    } */
+  }
+  #container_text .request-box .circle5 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: 2.5rem;
+    
+    background: linear-gradient(
+          45deg,
+          #840000,
+          rgb(187, 0, 0),
+          #5c0404 100%
+        );
+
+    border-radius: 1.625rem;
+    transition: all 0.4s ease-in-out;
+  }
+  #container_text .request-box .req-btn:hover .circle5 {
+    width: 100%;
+  }
+  
+  #container_text .request-box .circle5 .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+</style>
+
   </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -1103,6 +1557,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+      {% elif current_theme == 'xmas' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_tree_effect">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          </div>
+        </div>
+      </div>
       {% endif %}
 
       <div class="container d-flex align-items-center justify-content-lg-between">
@@ -1113,7 +1586,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </a>
         </h1>
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
+        <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 999;">
           <ul>
             <li>
               <a 
@@ -1123,6 +1596,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto hom hover_anchor_vishu" 
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto hom easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto hom xmas_nav_text"
               {% else %} 
               class="nav-link scrollto hom hover_anchor" 
               {% endif %} 
@@ -1136,8 +1611,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="nav-link scrollto abot hover_anchor_pongal" 
                   {% elif current_theme == 'vishu' %}
                     class="nav-link scrollto abot hover_anchor_vishu"
-                    {% elif current_theme == 'easter' %}
-                      class="nav-link scrollto abot easter_text_sm_bg1_hover"
+                  {% elif current_theme == 'easter' %}
+                    class="nav-link scrollto abot easter_text_sm_bg1_hover"
+                  {% elif current_theme == 'xmas' %}
+                      class="nav-link scrollto abot xmas_nav_text"
                   {% else %} 
                     class="nav-link scrollto abot hover_anchor" 
                   {% endif %} 
@@ -1153,6 +1630,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto serv hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto serv easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto serv xmas_nav_text"
               {% else %}
               class="nav-link scrollto serv hover_anchor" 
               {% endif %}
@@ -1168,6 +1647,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cor hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto cor easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto cor xmas_nav_text"
               {% else %}
               class="nav-link scrollto cor hover_anchor" 
               {% endif %}
@@ -1183,6 +1664,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cors hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto cors easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto cors xmas_nav_text"
               {% else %}
               class="nav-link scrollto cors hover_anchor" 
               {% endif %}
@@ -1199,6 +1682,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto events hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto event easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto event xmas_nav_text"
               {% else %}
               class="nav-link scrollto event hover_anchor" 
               {% endif %}
@@ -1214,6 +1699,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cont hover_anchor_vishu"
               {% elif current_theme == 'easter' %}
                 class="nav-link scrollto cont easter_text_sm_bg1_hover"
+              {% elif current_theme == 'xmas' %}
+                  class="nav-link scrollto cont xmas_nav_text"
               {% else %}
               class="nav-link scrollto cont hover_anchor" 
               {% endif %}
@@ -2109,7 +2596,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {% endif %}
       
       <section id="readmore1">
-        <div class="content pt-2">
+        <div {% if current_theme == "xmas" %} class="content card_xmas p-2 rounded" {% else %} class="content pt-2" {% endif %}>
           {% if current_theme == 'pongal' %}
           <div class="position-relative" style="z-index: 1;">
             <div class="position-absolute start-50 translate-middle-x top-100 pongal_gif1_top">
@@ -2156,6 +2643,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               >Professional IT Solutions</span
             >
           </h3>
+          {% elif current_theme == "xmas" %}
+          <!-- <div  id="new_year_topp" class="position-relative" style="z-index: 1;">
+            <div class="position-absolute end-0 translate-middle-x top-100 new_year1_top">
+              <img id="new_year1" src="{% static 'xmas/decor/2024_swing.png' %}" alt="">
+            </div>
+          </div> -->
+
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute xmas_silk_gif">
+              <img id="xmas_silk_gif" draggable="false" src="{% static 'xmas/gifs/xmas-silk.gif' %}" alt="">
+          </div>
+          </div>
+          <h1 class="main-head text-light text-center pt-5"><b>ALTOS Technologies</b></h3>
+          <h3 class="mt-3 sub-head text-danger text-center">
+            We Deal With The Aspects Of
+            <span class="text-light"
+              >Professional IT Solutions</span
+            >
+          </h3>
           {% else %}
           <h1 class="mb-4 main-head" style="color: rgb(22, 125, 165)"><b>ALTOS TECHNOLOGIES</b></h1>
           <h3 class="mb-4 sub-head">
@@ -2179,6 +2685,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <span class="text-conte">Read More</span>
             </a>
           </div> -->
+          {% if current_theme == "xmas" %}
+          <br><br><br><br>
+          {% endif %}
         </div>
       </section>
 
@@ -2230,7 +2739,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 Altos Technologies Success Story of 2023 
             </h5>
             <div class='ResponsiveYTPlayer'>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
               
             </div>
 
@@ -2255,7 +2764,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-
+      {% elif current_theme == 'xmas' %}
+      <div class="position-relative" style="z-index: 1;">
+        <div class="position-absolute end-0 mob img_card_tree_top">
+          <img id="img_card_tree" class="img_card_hover" draggable="false" src="{% static 'xmas/tree/tree_edited1.png' %}" alt="">
+       </div>
+       </div>
        {% endif %}
 
       <section id="why-choose-us" class="">
@@ -2278,6 +2792,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h4 class="section-head" style="color: rgb(243, 243, 243);padding-left: 3.5rem;">Why Choose Us</h4>
             {% elif current_theme == 'easter' %}
             <h4 class="section-head easter_text_bg1" style="color: transparent">Why Choose Us</h4>
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute start-50 xmas_cap_top1">
+                <img id="xmas_cap1" draggable="false" src="{% static 'xmas/decor/cap.png' %}" alt="">
+             </div>
+             </div>
+            <h4 class="section-head pt-5" style="color: rgb(243, 243, 243)">Why Choose Us</h4>
             {% else %}
             <h4 class="section-head" style="color: rgb(243, 243, 243)">//Why Choose Us</h4>
             {% endif %}
@@ -2315,6 +2836,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-support" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'xmas' %} 
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute" style="margin-top: -4rem;margin-left: -2.5rem;">
+                      <img width="145rem" draggable="false" src="{% static 'xmas/decor/snow_man1.png' %}" alt="">
+                   </div>
+                   </div>
+                  
+                   <i style="visibility: hidden;" class="bx bx-receipt" style="color: #0fa49b"></i>
                   {% else %}
                   <i class="bx bx-receipt" style="color: #0fa49b"></i>
                   {% endif %}
@@ -2351,6 +2880,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'xmas' %}
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute xmas_elff2_top">
+                      <img width="100rem" draggable="false" src="{% static 'xmas/decor/xmas_elf_no_bg.png' %}" alt="">
+                   </div>
+                   </div>
+
+                  <ion-icon style="visibility: hidden;"
+                    name="layers-outline"
+                    style="color: #0fa49b"
+                  ></ion-icon>
                   {% else %}
                   <ion-icon
                     name="layers-outline"
@@ -2359,7 +2899,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   {% endif %}
                 </div>
 
-                <div class="other-content">
+                <div class="other-content unq_top">
                   <h4>Unique Designs</h4>
                   <p>
                     Discover a World of Unparalleled Creativity - Our Unique
@@ -2388,6 +2928,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'xmas' %}
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute" style="margin-top: -4rem;margin-left: -2rem;">
+                      <img width="100rem" draggable="false" src="{% static 'xmas/decor/xams_deer2.png' %}" alt="">
+                   </div>
+                   </div>
+                   
+                  <i style="visibility: hidden;" class="bx bx-cube-alt" style="color: #0fa49b"></i>
                   {% else %}
                   <i class="bx bx-cube-alt" style="color: #0fa49b"></i>
                   {% endif %}
@@ -2424,6 +2972,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
                   <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
+                  {% elif current_theme == 'xmas' %}
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute" style="margin-top: -2.5rem;margin-left: -2rem;">
+                      <img width="100rem" draggable="false" src="{% static 'xmas/decor/present.png' %}" alt="">
+                   </div>
+                   </div>
+                   
+                  <!-- <i class="bx bx-cube-alt" style="color: #0fa49b"></i> -->
+                  <ion-icon style="visibility: hidden;" name="people-outline" style="color: #0fa49b">
+                  </ion-icon>
                   {% else %}
                   <ion-icon name="people-outline" style="color: #0fa49b">
                   </ion-icon>
@@ -2455,12 +3013,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p class="vishu_text_bg1" style="color: transparent;">With Us</p>
               {% elif current_theme == 'easter' %} 
               <p class="easter_text_bg1" style="color: transparent;">With Us</p>
+              {% elif current_theme == 'easter' %} 
+              <p class="xmas_text text-light">With Us</p>
+              {% elif current_theme == 'xmas' %} 
+              <p class="xmas_text text-light">With Us</p>
               {% else %}
               <p style="color: rgb(39, 112, 141);">With Us</p>
               {% endif %}
             </div>
           </div>
           <div class="contact-form mx-auto">
+
+            {% if current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+            {% endif %}
+
             <form 
                   id="theme_fade_effect"
                   class="form py-4 px-5"
@@ -2559,6 +3126,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <span class="fa fa-envelope-o"></span> contact@company.com
                 </div> -->
                 </form>
+
+                {% if current_theme == 'xmas' %}
+                  <div class="position-absolute end-0 bottom-0 xmas_peek2_top">
+                      <img id="xmas_peek2" draggable="false" src="{% static 'xmas/decor/xmaspap_peek2_left.png' %}" alt="">
+                  </div>
+                </div>
+                {% endif %}
           </div>
         </div>
       </section>
@@ -2595,6 +3169,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="vishu_text_bg1" style="color: transparent;">SERVICES</p>
             {% elif current_theme == 'easter' %} 
             <p class="easter_text_bg1" style="color: transparent;">SERVICES</p>
+            {% elif current_theme == 'xmas' %} 
+            <p class="xmas_text text-light">SERVICES</p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">SERVICES</p>
             {% endif %}
@@ -2612,6 +3188,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img class="easter_ribbon" draggable="false" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
             {% endif %}
               <div class="card-header">
                 <ion-icon name="desktop" style="color: #ffb700"></ion-icon>
@@ -2636,6 +3218,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle3"
                     {% elif current_theme == 'easter' %} 
                     class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                     {% else %} 
                     class="circle" 
                     {% endif %}>
@@ -2654,6 +3238,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="position-absolute top-0 start-0 easter_ribbon_top">
                   <img class="easter_ribbon" draggable="false" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
                 </div>
+              </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
               </div>
               {% endif %}
 
@@ -2678,6 +3268,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                    class="circle3"
                    {% elif current_theme == 'easter' %} 
                    class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                    {% else %} 
                    class="circle" 
                    {% endif %}>
@@ -2695,6 +3287,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="position-absolute top-0 start-0 easter_ribbon_top">
                   <img class="easter_ribbon" draggable="false" src="{% static 'easter/decor/frame/service_frame8.png' %}" alt="">
                 </div>
+              </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_top.png' %}" alt="">
+              </div>
               </div>
               {% endif %}
               <div class="card-header">
@@ -2718,6 +3316,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle3"
                     {% elif current_theme == 'easter' %} 
                     class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                     {% else %} 
                     class="circle" 
                     {% endif %}>
@@ -2735,6 +3335,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="position-absolute top-0 start-0 easter_ribbon_top">
                   <img class="easter_ribbon" draggable="false" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
                 </div>
+              </div>
+              {% elif current_theme == 'xmas' %}
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/green_ribbon_top.png' %}" alt="">
+              </div>
               </div>
               {% endif %}
               <div class="card-header">
@@ -2758,6 +3364,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                    class="circle3"
                    {% elif current_theme == 'easter' %} 
                    class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                    {% else %} 
                    class="circle" 
                    {% endif %}>
@@ -2774,6 +3382,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </section>
 
 
+      {% if current_theme == 'xmas' %}
+      <div class="position-relative" style="z-index: 1;">
+        <div class="position-absolute start-0 top-0 top_light_effect" style="margin-top: -2rem;">
+          <ul class="wire">
+            
+          </ul>
+        </div>
+      </div>
+      {% endif %}
             <!-- <section id="aboutus-section" class="pb-0">
         <div class="container section-title d-flex justify-content-start px-4 py-2">
           <div class="contact-head">
@@ -2816,6 +3433,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 class="vishu_text_bg1" style="color: transparent;">Our Technologies</h1>
             {% elif current_theme == 'easter' %} 
             <h1 class="easter_text_bg1" style="color: transparent;">Our Technologies</h1>
+            {% elif current_theme == 'xmas' %} 
+            <h1 class="xmas_text text-light">Our <span class="text-danger">Technologies</span></h1>
             {% else %}
             <h1 class="">
               Our<span style="color: rgb(39, 112, 141)"> Technologies</span>
@@ -2850,6 +3469,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -2898,6 +3519,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <img src="static/vishu/img/erp.png" alt="ERP" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute decor_light2_full">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
+            <img src="static/img/team/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -2915,6 +3543,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <img src="static/vishu/img/hrms.png" alt="HRMS" /> 
             {% elif current_theme == 'easter' %}
               <img src="static/easter/img/hrms.png" alt="ERP" />
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute decor_light2_full">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
+            <img src="static/img/team/hrms.png" alt="HRMS" />
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -2943,6 +3578,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -2982,6 +3619,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -3016,6 +3655,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -3059,6 +3700,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -3106,6 +3749,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/vishu/img/3D.png" alt="3D" />
             {% elif current_theme == 'easter' %}
             <img src="static/easter/img/3d.png" alt="3D" />
+            {% elif current_theme == 'xmas' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute decor_light2_full">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
+            <img src="static/img/portfolio/3d.png" alt="3D Modeling" />
             {% else %}
             <img src="static/img/team/3d.png" alt="3D" />
             {% endif %}
@@ -3123,6 +3773,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/vishu/img/arvr.png" alt="ARVR" />
             {% elif current_theme == 'easter' %} 
             <img src="static/easter/img/arvr.png" alt="ARVR" />
+            {% elif current_theme == 'xmas' %} 
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute decor_light2_full">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
+            <img src="static/img/team/arvr.jpg" alt="VR/AR" />
             {% else %}
             <img src="static/img/team/arvr.jpg" alt="ARVR" />
             {% endif %}
@@ -3150,6 +3807,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle3"
                 {% elif current_theme == 'easter' %} 
                 class="circle4"
+                {% elif current_theme == 'xmas' %} 
+                class="circle5"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -3171,6 +3830,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 class="vishu_text_bg1" style="color: transparent;">Other Branches</h1>
             {% elif current_theme == 'easter' %} 
             <h1 class="easter_text_bg1" style="color: transparent;">Other Branches</h1>
+            {% elif current_theme == 'xmas' %} 
+            <h1 class="xmas_text text-light">Other <span class="text-danger">Branches</span></h1>
             {% else %}
             <h1 class="">
               Other<span style="color: rgb(39, 112, 141)"> Branches</span>
@@ -3209,6 +3870,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="https://www.altoseduhub.com" target="_blank" class="button featured__button">Explore</a>
             </div>
           </div>
+
+          {% if current_theme == 'xmas' %}
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute start-0 bottom-0 popper_top">
+              <img id="popper" draggable="false" src="{% static 'xmas/gifs/popper1_no_bg_right.gif' %}" alt="">
+              <!-- <div class="party-popper">
+                <div class="party-popper__emoji">🎉</div>
+              </div> -->
+          </div>
+          </div>
+          {% endif %}
+
           </div>
 
           <div class="col-sm-12 col-md-6">
@@ -3239,6 +3912,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="https://www.altosthemes.com/" target="_blank" class="button featured__button">Explore</a>
             </div>
           </div>
+
+          {% if current_theme == 'xmas' %}
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute end-0 bottom-0 popper_top1">
+              <img id="popper" draggable="false" src="{% static 'xmas/gifs/popper1_no_bg.gif' %}" alt="">
+              <!-- <div class="party-popper">
+                <div class="party-popper__emoji">🎉</div>
+              </div> -->
+          </div>
+          </div>
+          {% endif %}
+
           </div>
 
         </div>
@@ -3254,6 +3939,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="vishu_text_bg1" style="color: transparent;">Locations</p>
             {% elif current_theme == 'easter' %} 
             <p class="easter_text_bg1" style="color: transparent;">Locations</p>
+            {% elif current_theme == 'xmas' %} 
+            <p class="xmas_text text-light">Locations</p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">Locations</p>
             {% endif %}
@@ -3286,6 +3973,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-geo-alt me-2 text-light bg-danger"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -3319,6 +4008,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-envelope me-2 text-light bg-danger"
                   {% else %}
                   class="bi bi-envelope me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -3345,8 +4036,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-phone me-2 text-light bg-danger"
                   {% else %}
-                  class="bi bi-geo-alt me-2 text-dark" 
+                  class="bi bi-phone me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
                   {% endif %}
                   ></i>
@@ -3382,6 +4075,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-geo-alt me-2 text-light bg-danger"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -3415,8 +4110,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-envelope me-2 text-light bg-danger"
                   {% else %}
-                  class="bi bi-geo-alt me-2 text-dark" 
+                  class="bi bi-envelope me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
                   {% endif %}
                   ></i>
@@ -3441,8 +4138,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   style="background-image: url('static/easter/bg/text_bg1_sm.png');
                   background-size: cover;
                   background-repeat: no-repeat;"
+                  {% elif current_theme == 'xmas' %} 
+                  class="bi bi-phone me-2 text-light bg-danger"
                   {% else %}
-                  class="bi bi-geo-alt me-2 text-dark" 
+                  class="bi bi-phone me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
                   {% endif %}
                   ></i>

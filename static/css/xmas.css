@@ -1,0 +1,159 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(20, 20, 25, 1);
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+}
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
+}
+
+
+/* xmas light start */
+
+/* body{
+    background:#111;
+    margin:0;
+  } */
+  
+  
+  body{
+    background: #111;
+    margin: 0;
+  }
+  
+  /* h2{
+      color: #fff;
+      position: relative;
+      margin-top: 200px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      font-size: 4em;
+      font-family: 'Mountains of Christmas';
+      text-shadow: 0px 0px 8px rgba(255,65,185,1);
+  } */
+  
+  .wire{
+      text-align: center;
+      white-space: nowrap;
+      position: absolute;
+      padding: 0;
+      width: 100%;
+      top: -80px;
+      border-bottom: 3px solid #222;
+      height: 100px;
+   }
+  
+   .wire li {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 5px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0px 15px;
+      top: 102px;
+      display: inline-block;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count:infinite;
+      animation-name: even-flash;
+  }
+  
+   .wire li:nth-child(odd){
+       animation-name: odd-flash;
+   }
+  
+  .wire li:before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 8px;
+      border-radius: 4px;
+      top: -5px;
+      left: 0px;
+      background: #444;
+  }
+  
+  @keyframes even-flash {
+      0%, 100% {
+          background: rgb(41, 218, 32);
+          box-shadow: 0px 2px 20px 4px rgb(65, 255, 65);
+      }
+      50% {
+          background: rgb(0, 255, 34);
+          box-shadow: 0px 2px 20px 4px rgba(255,230,65,0.3);
+      }
+  }
+  
+  @keyframes odd-flash {
+      50% {
+          background: rgb(255, 0, 0);
+          box-shadow: 0px 2px 20px 4px rgb(255, 65, 65);
+      }
+      0%,100% {
+          background: rgba(255, 65, 65, 0.5);
+          box-shadow: 0px 2px 20px 4px rgba(255, 65, 65, 0.3);
+      }
+  }
+
+/* xmas lght end */
+
+.dark_vision{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
