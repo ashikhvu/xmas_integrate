@@ -259,6 +259,13 @@ font-weight: 800;
     color: red;
   }
 </style>
+{% elif current_theme == 'republic' %}
+<style>
+    #navbar .abot{
+    color: rgb(255, 128, 10);
+    font-weight: 800;
+  }
+</style>
 {% else %}
 <style>
 
@@ -364,6 +371,179 @@ font-weight: 800;
 
 <!-- xmas -->
 
+
+<!-- republic -->
+<style>
+  .corner_width{
+    width: 4.5rem;
+  }
+  .top_right_top{
+    margin-right: -2rem;
+    margin-top: -2rem;
+  }
+  .top_left_top{
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+  .bottom_left_top{
+    margin-left: -2rem;
+    margin-bottom: -2rem;
+  }
+  .bottom_right_top{
+    margin-right: -2rem;
+    margin-bottom: -2rem;
+  }
+  @media screen and (min-width:593px) and (max-width:991px) {
+    .corner_width{
+      width: 2.5rem;
+    }
+    .top_right_top{
+      margin-right: -2rem;
+      margin-top: -2rem;
+    }
+    .top_left_top{
+      margin-left: -2rem;
+      margin-top: -2rem;
+    }
+    .bottom_left_top{
+      margin-left: -2rem;
+      margin-bottom: -2rem;
+    }
+    .bottom_right_top{
+      margin-right: -2rem;
+      margin-bottom: -2rem;
+    }
+    .mob_margin_top{
+      margin-top: 4rem;
+    }
+  }
+
+  @media screen and (max-width:592px) {
+    .corner_width{
+      width: 2rem;
+    }
+    .top_right_top{
+      margin-right: -0.5rem;
+      margin-top: -0.5rem;
+    }
+    .top_left_top{
+      margin-left: -0.5rem;
+      margin-top: -0.5rem;
+    }
+    .bottom_left_top{
+      margin-left: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+    .bottom_right_top{
+      margin-right: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+    .mob_margin_top{
+      margin-top: 4rem;
+    }
+  }
+  #about_design1{
+    width: 30rem;
+  }
+  .about_design1_top{
+    margin-top: -3rem;
+    margin-right: 5rem;
+  }
+  @media screen and (max-width:1400px) {
+    #about_design1{
+      width: 30rem;
+    }
+    .about_design1_top{
+      margin-top: -3rem;
+      margin-right: 1rem;
+    }
+  }
+  @media screen and (max-width:1199px) {
+    #about_design1{
+      width: 30rem;
+    }
+    .about_design1_top{
+      margin-top: -3rem;
+      margin-right: -1.5rem;
+    }
+  }
+  @media screen and (max-width:991px) {
+    #about_design1{
+      width: 25rem;
+    }
+    .about_design1_top{
+      margin-top: -3rem;
+      margin-right: -10rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #about_design1{
+      width: 18rem;
+    }
+    .about_design1_top{
+      margin-top: -2rem;
+      margin-right: -8rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    #about_design1{
+      width: 18rem;
+    }
+    .about_design1_top{
+      margin-top: -2rem;
+      margin-right: -5rem;
+    }
+  }
+  @media screen and (max-width:455px) {
+    #about_design1{
+      width: 10rem;
+    }
+    .about_design1_top{
+      margin-top: -1.5rem;
+      margin-right: -3rem;
+    }
+  }
+  @media screen and (max-width:332px) {
+    #display1{
+      visibility: hidden;
+    }
+    #display2{
+      visibility: visible;
+    }
+  }
+  @media screen and (min-width:333px) {
+    #display2{
+      visibility: hidden;
+    }
+    #display1{
+      visibility: visible;
+    }
+  }
+  #aboutus_text_republic{
+    width: 16.5rem;
+  }
+  .aboutus_text_republic_top{
+    margin-left: -3.5rem;
+  }
+  @media screen and (max-width:832px) {
+    #aboutus_text_republic{
+      width: 16.5rem;
+    }
+    .aboutus_text_republic_top{
+      margin-left: 6rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #aboutus_text_republic{
+      width: 16.5rem;
+    }
+    .aboutus_text_republic_top{
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+  }
+</style>
+
   <main id="main">
     <div class="container-fluid" id="about-us">
         <section id="about_box">
@@ -393,6 +573,18 @@ font-weight: 800;
                 <img id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
              </div>
              </div>
+             {% elif current_theme == 'republic' %}
+             <div class="position-relative" id="display1">
+              <div class="position-absolute about_design1_top end-0">
+                <img id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
+              </div>
+            </div>
+
+            <div class="position-relative" id="display2">
+              <div class="position-absolute about_design1_top start-50 translate-middle-x" style="margin-top: 2rem;">
+                <img width="140rem" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
+              </div>
+            </div>
             {% endif %}
 
             <div class="row">
@@ -405,6 +597,8 @@ font-weight: 800;
                 <h4 class="easter_text_bg1" style="color: transparent;">About Us</h4>
                 {% elif current_theme == 'xmas' %}
                 <h4 class="pb-4 mt-5 mb-5">About Us</h4>
+                {% elif current_theme == 'republic' %}
+                <h4 class="pb-4 mt-5 mb-5" style="color: transparent;"><span class="fg_republic">About</span> <span class="fg_republic">Us</span></h4>
                 {% else %}
                 <h4 style="color: white;">About Us</h4>
                 {% endif %}
@@ -511,6 +705,34 @@ font-weight: 800;
                   </div>
 
                </div>
+               {% elif current_theme == 'republic' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                  
+                  <div class="position-absolute top-0 end-0 top_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 top_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
+                  </div>
+
+
+                </div>
                  {% else %}
                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
                   data-aos-duration="2000">
@@ -638,6 +860,36 @@ font-weight: 800;
                   </div>
             
               </div>
+              {% elif current_theme == 'republic' %}
+              <div class="position-relative">
+
+                <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
+
+              <div class="position-absolute top-0 end-0 top_right_top">
+                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_right_corner.png' %}" alt="">
+              </div>
+
+              <div class="position-absolute top-0 start-0 top_left_top">
+                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_left_corner.png' %}" alt="">
+              </div>
+
+              <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_left_corner.png' %}" alt="">
+              </div>
+
+              <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_right_corner.png' %}" alt="">
+              </div>
+             
+            </div>
               {% else %}
                 <p class="fst-normal mob_margin_top" data-aos="fade-up"
                 data-aos-duration="2000">
@@ -764,6 +1016,35 @@ font-weight: 800;
                   </div>
                  
               </div>
+              {% elif current_theme == 'republic' %}
+              <div class="position-relative">
+                <p class="fst-normal mob_margin_top" data-aos="fade-right"
+                  data-aos-duration="2000">
+                  At ALTOS Technologies, we understand the critical role that user 
+                  experience plays in the success of your website or software. That's 
+                  why we put a strong emphasis on designing and developing products 
+                  that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                  your customers or employees have a seamless experience.
+
+                </p>
+
+                <div class="position-absolute top-0 end-0 top_right_top">
+                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute top-0 start-0 top_left_top">
+                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 start-0 bottom_left_top">
+                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 end-0 bottom_right_top">
+                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
+                </div>
+
+          </div>
               {% else %}
               <p class="fst-normal mob_margin_top" data-aos="fade-right"
                 data-aos-duration="2000">
@@ -832,6 +1113,59 @@ font-weight: 800;
         <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
         <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
         
+      </div>
+      {% elif current_theme == 'republic' %}
+      <div class="d-flex" style="overflow: auto;background-color: #151515">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
       </div>
     {% endif %}
 

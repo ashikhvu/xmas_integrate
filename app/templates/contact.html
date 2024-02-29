@@ -262,6 +262,51 @@
     }
   }
 </style>
+{% elif current_theme == 'republic' %}
+<style>
+  #navbar .cont{
+    color: orange;
+    font-weight: 800; 
+  }
+  #india_map{
+    width: 15rem;
+   }
+   .india_map_top{
+    margin-top: -8rem;
+   }
+   @media screen and (max-width:991px) {
+    #india_map{
+      width: 12rem;
+    }
+    .india_map_top{
+      margin-top: -6.5rem;
+    }
+   }
+   @media screen and (max-width:767px){
+    #india_map{
+      width: 10rem;
+    }
+    .india_map_top{
+      margin-top: -5.3rem;
+    }
+   }
+   @media screen and (max-width:575px){
+    #india_map{
+      width: 7rem;
+    }
+    .india_map_top{
+      margin-top: -3.75rem;
+    }
+   }
+   @media screen and (max-width:393px){
+    #india_map{
+      width: 5rem;
+    }
+    .india_map_top{
+      margin-top: -2.6rem;
+    }
+   }
+</style>
 {% else %}
 <style>
   #navbar .cont{
@@ -297,6 +342,8 @@
           <p class="easter_text_bg1" style="color: transparent;">Contact Us</p>
           {% elif current_theme == 'xmas' %} 
           <p class="xmas_text text-light">Contact Us</p>
+          {% elif current_theme == 'republic' %}
+          <p  style="color: transparent;" ><span class="fg_republic">Contact</span><span class="fg_republic"> Us</span></p>
           {% else %}
           <p style="color: rgb(39, 112, 141);">Contact Us</p>
           {% endif %}
@@ -319,6 +366,12 @@
       <div class="position-relative">
         <div class="position-absolute top-0 end-0 eater_balloon_top">
           <img id="eater_balloon" src="{% static 'easter/decor/ballons_all.png' %}" alt="">
+        </div>
+      </div>
+      {% elif current_theme == 'republic' %}
+      <div class="position-relative">
+        <div class="position-absolute top-0 end-0 india_map_top">
+          <img id="india_map" src="{% static 'republic/decor/india_map_croped.png' %}" alt="">
         </div>
       </div>
       {% endif %}
@@ -388,6 +441,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-geo-alt me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-geo-alt me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -423,6 +479,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-envelope me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-envelope me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -451,6 +510,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-phone me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-phone me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-phone me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -489,6 +551,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-geo-alt me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-geo-alt me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-geo-alt me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -522,6 +587,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-envelope me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-envelope me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-envelope me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -548,6 +616,9 @@
                 background-repeat: no-repeat;"
                 {% elif current_theme == 'xmas' %} 
                 class="bi bi-phone me-2 text-light bg-danger"
+                {% elif current_theme == 'republic' %}
+                class="bi bi-phone me-2"
+                style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                 {% else %}
                 class="bi bi-phone me-2 text-dark" 
                 style="background-color:#0fa49b; color:rgb(0, 0, 0)"

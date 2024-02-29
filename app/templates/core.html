@@ -57,6 +57,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"></script>
+  
+ <!-- xmas Theme -->
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+ <script src="{% static 'js/xmas.js' %}"></script>
+
+ <!-- xmas them2 -->
+ <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
+ <script src="{% static 'js/xmas2.js' %}"></script>
+ 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -1224,6 +1234,148 @@ h5 {
       }
 </style>
 
+<!-- republic -->
+
+<style>
+  .top_flag{
+    margin-top: -1.6rem;
+  }
+  @media screen and (max-width:240px) {
+    #footer_decor{
+      width: 5rem;
+    }
+    .footer_decor_top{
+      margin-top: -12.2rem;
+    }
+  }
+  @media screen and (min-width:241px) and (max-width:367px) {
+    #footer_decor{
+      width: 10rem;
+    }
+    .footer_decor_top{
+      margin-top: -15.2rem;
+    }
+  }
+  @media screen and (min-width:368px) and (max-width:429px) {
+    #footer_decor{
+      width: 10rem;
+    }
+    .footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  @media screen and (min-width:430px) {
+    #footer_decor{
+      width: 19rem;
+    }
+    .footer_decor_top{
+      margin-top: -21.2rem;
+    }
+  }
+  .knowmore-button5{
+    font-size: 1em;
+    padding: 1em;
+    /* background: #29d5e5c9; */
+    background-image: linear-gradient(135deg,rgb(255, 81, 0),white,green);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    color: black;
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.republic_nav_text {
+    color: orange;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .republic_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  .fg_republic{
+    background-image: url('/static/republic/decor/text_theme1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .card6 {
+    display: block;
+    position: relative;
+    max-width: 262px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+   
+  }
+  
+  .card6 :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background-image: linear-gradient(135deg,rgb(255, 81, 0),white,green) ;
+    color: black;
+    height: 32px;
+    width: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  .card6 :hover:before {
+    transform: scale(21);
+  }
+
+
+.card6:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card6:hover h5 {
+  transition: all 0.3s ease-out;
+  color: #000000;
+}
+.go-corner6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg,rgb(255, 81, 0),white,green);
+  border-radius: 0 4px 0 32px;
+  box-shadow: 2px 2px 3px 3px black;
+}
+
+.go-arrow6 {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: rgb(0, 0, 0);
+  font-family: courier, sans;
+}
+</style>
+
+<body>
+
+  {% if current_theme == 'xmas' %}
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
+  {% endif %}
+
  <!-- ======= Header ======= -->
  <header id="header" class="fixed-top green-blue pb-0" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);">
 
@@ -1355,6 +1507,25 @@ h5 {
         </div>
       </div>
     </div>
+    {% elif current_theme == 'republic' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+            <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          </div>
+        </div>
+      </div>
 {% endif %}
   <div class="container d-flex align-items-center justify-content-lg-between">
 
@@ -1379,9 +1550,11 @@ h5 {
             class="nav-link scrollto hom easter_text_sm_bg1_hover"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto hom xmas_nav_text"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto hom republic_nav_text"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
-          {% endif %} 
+          {% endif %}
           href="{% url 'text_page' %}">
           Home
         </a>
@@ -1396,6 +1569,8 @@ h5 {
                 class="nav-link scrollto abot easter_text_sm_bg1_hover"
               {% elif current_theme == 'xmas' %}
                 class="nav-link scrollto abot xmas_nav_text"
+              {% elif current_theme == 'republic' %}
+                class="nav-link scrollto abot republic_nav_text"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -1413,6 +1588,8 @@ h5 {
             class="nav-link scrollto serv easter_text_sm_bg1_hover"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto serv xmas_nav_text"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto serv republic_nav_text"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
           {% endif %}
@@ -1430,6 +1607,8 @@ h5 {
             class="nav-link scrollto cor easter_text_sm_bg1" style="color: transparent;"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cor text-danger"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cor" style="color: orange;"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
           {% endif %}
@@ -1447,6 +1626,8 @@ h5 {
             class="nav-link scrollto cors easter_text_sm_bg1_hover"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cors xmas_nav_text"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cors republic_nav_text"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -1465,6 +1646,8 @@ h5 {
             class="nav-link scrollto event easter_text_sm_bg1_hover"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto event xmas_nav_text"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto event republic_nav_text"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -1482,6 +1665,8 @@ h5 {
             class="nav-link scrollto cont easter_text_sm_bg1_hover"
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cont xmas_nav_text"
+          {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cont republic_nav_text"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -1540,6 +1725,8 @@ h5 {
                   <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
               </div>
               </div>
+            {% elif current_theme == 'republic' %}
+              <img src="static/republic/img/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -1567,6 +1754,8 @@ h5 {
               class="knowmore-button3"
             {% elif current_theme == 'xmas' %}
               class="knowmore-button4"
+            {% elif current_theme == 'republic' %}
+              class="knowmore-button5"
             {% else %}
               class="knowmore-button text-white" 
             {% endif %} >
@@ -1589,6 +1778,8 @@ h5 {
                   <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
               </div>
               </div>
+            {% elif current_theme == 'republic' %}
+              <img src="static/republic/img/erp.png" alt="ERP" />
             {% else %}
             <img src="static/img/team/erp.png" alt="ERP"/>
             {% endif %}
@@ -1654,6 +1845,8 @@ h5 {
                   <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
               </div>
               </div>
+            {% elif current_theme == 'republic' %}
+              <img src="static/republic/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1686,6 +1879,8 @@ h5 {
                   <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
               </div>
               </div>
+            {% elif current_theme == 'republic' %}
+              <img src="static/republic/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1722,6 +1917,8 @@ h5 {
                class="knowmore-button3"
             {% elif current_theme == 'xmas' %}
               class="knowmore-button4"
+            {% elif current_theme == 'republic' %}
+              class="knowmore-button5"
             {% else %} 
              class="knowmore-button text-white" 
             {% endif %}>
@@ -1856,6 +2053,8 @@ h5 {
         class="card4"
         {% elif current_theme == 'xmas' %} 
         class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6"
         {% else %} 
         class="card1" 
         {% endif %} >
@@ -1872,6 +2071,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1883,7 +2084,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1906,7 +2109,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1923,6 +2128,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1934,7 +2141,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -1957,7 +2166,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -1974,6 +2185,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -1985,7 +2198,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2008,7 +2223,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2024,6 +2241,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2035,7 +2254,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2058,7 +2279,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2074,6 +2297,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2085,7 +2310,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2108,7 +2335,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2124,6 +2353,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2135,7 +2366,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2158,7 +2391,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2174,6 +2409,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2185,7 +2422,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2208,7 +2447,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2224,6 +2465,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2235,7 +2478,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2258,7 +2503,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2274,6 +2521,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2285,7 +2534,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2308,7 +2559,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2324,6 +2577,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2335,7 +2590,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2358,7 +2615,9 @@ h5 {
         {% elif current_theme == 'easter' %} 
         class="card4" style="color: transparent;" 
         {% elif current_theme == 'xmas' %} 
-        class="card5" 
+        class="card5"
+        {% elif current_theme == 'republic' %} 
+        class="card6" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2374,6 +2633,8 @@ h5 {
             class="go-corner4"
             {% elif current_theme == 'xmas' %} 
             class="go-corner5"
+            {% elif current_theme == 'republic' %} 
+            class="go-corner6"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2385,7 +2646,9 @@ h5 {
               {% elif current_theme == 'easter' %} 
               class="go-arrow4" 
               {% elif current_theme == 'xmas' %} 
-              class="go-arrow5" 
+              class="go-arrow5"
+              {% elif current_theme == 'republic' %} 
+              class="go-arrow6" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2444,6 +2707,8 @@ h5 {
                 <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
             </div>
             </div>
+            {% elif current_theme == 'republic' %}
+              <img src="static/republic/img/hrms.png" alt="HRMS" /> 
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -2486,6 +2751,8 @@ h5 {
           class="knowmore-button3"
           {% elif current_theme == 'xmas' %}
           class="knowmore-button4"
+            {% elif current_theme == 'republic' %}
+              class="knowmore-button5"
           {% else %}
           class="knowmore-button text-white"
           {% endif %}>
@@ -2508,6 +2775,8 @@ h5 {
                 <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
             </div>
             </div>
+          {% elif current_theme == 'republic' %}
+            <img src="static/republic/img/hrms.png" alt="HRMS" /> 
           {% else %}
           <img src="static/img/team/hrms.png" alt="HRMS" />
           {% endif %}
@@ -2617,6 +2886,8 @@ h5 {
                 <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
             </div>
             </div>
+          {% elif current_theme == 'republic' %}
+            <img src="static/republic/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -2649,6 +2920,8 @@ h5 {
                 <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
             </div>
             </div>
+          {% elif current_theme == 'republic' %}
+            <img src="static/republic/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -2691,6 +2964,8 @@ h5 {
             class="knowmore-button3"
           {% elif current_theme == 'xmas' %}
             class="knowmore-button4"
+            {% elif current_theme == 'republic' %}
+              class="knowmore-button5"
           {% else %}
             class="knowmore-button text-white" 
           {% endif %}>
@@ -2873,6 +3148,59 @@ h5 {
       <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
       
     </div>
+    {% elif current_theme == 'republic' %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+    </div>
     {% endif %}
 
 <!-- ======= Footer ======= -->
@@ -2968,6 +3296,12 @@ h5 {
       <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
   </div>
 </div> -->
+{% elif current_theme == 'republic' %}
+<div class="position-relative">
+  <div class="position-absolute end-0 footer_decor_top">
+    <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+  </div>
+</div>
 {% endif %}
 
 <!-- <div id="preloader"></div> -->

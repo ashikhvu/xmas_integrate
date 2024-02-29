@@ -38,6 +38,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+  <!-- xmas Theme -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+  <script src="{% static 'js/xmas.js' %}"></script>
+
+  <!-- xmas them2 -->
+  <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
+  <script src="{% static 'js/xmas2.js' %}"></script>
+
 
 
   <style>
@@ -530,6 +539,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- republic -->
+
+<style>
+  .top_flag{
+    margin-top: -1.6rem;
+  }
+  @media screen and (max-width:240px) {
+      #footer_decor{
+        width: 5rem;
+      }
+      .footer_decor_top{
+        margin-top: -12.2rem;
+      }
+    }
+    @media screen and (min-width:241px) and (max-width:367px) {
+      #footer_decor{
+        width: 10rem;
+      }
+      .footer_decor_top{
+        margin-top: -15.2rem;
+      }
+    }
+    @media screen and (min-width:368px) and (max-width:429px) {
+      #footer_decor{
+        width: 10rem;
+      }
+      .footer_decor_top{
+        margin-top: -14rem;
+      }
+    }
+    @media screen and (min-width:430px) {
+      #footer_decor{
+        width: 19rem;
+      }
+      .footer_decor_top{
+        margin-top: -21.2rem;
+      }
+    }
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>.republic_nav_text {
+      color: orange;
+      text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+    }
+    .republic_text{
+      color: white;
+      text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+    }
+    .fg_republic{
+      background-image: url('/static/republic/decor/text_theme1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      }
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9279EQWMW1"></script>
@@ -542,6 +609,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <meta name="msvalidate.01" content="F7712C338CE3604FDD8BF76FC23584A5"/>
 <body>
+
+  {% if current_theme == 'xmas' %}
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
+  {% endif %}
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top green-blue pb-0" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);">
@@ -674,6 +749,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
+    {% elif current_theme == 'republic' %}
+    <div class="position-relative" style="z-index: 998;">
+      <div class="position-absolute start-0 top-0 top_flag">
+        <div class="d-flex">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'republic/decor/decor__top2.png' %}" width="500vw" alt="">
+        </div>
+      </div>
+    </div>
     {% endif %}
     <div class="container d-flex align-items-center justify-content-lg-between">
 
@@ -700,6 +794,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
             class="nav-link scrollto hom xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+            class="nav-link scrollto hom republic_nav_text"
             {% else %} 
             class="nav-link scrollto hom hover_anchor" 
             {% endif %} 
@@ -717,6 +813,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto abot easter_text_sm_bg1_hover"
                 {% elif current_theme == 'xmas' %}
                 class="nav-link scrollto abot xmas_nav_text"
+                {% elif current_theme == 'republic' %}
+                class="nav-link scrollto abot republic_nav_text"
                 {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
                 {% endif %} 
@@ -734,6 +832,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto serv easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
             class="nav-link scrollto serv xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+            class="nav-link scrollto serv republic_nav_text"
             {% else %}
             class="nav-link scrollto serv hover_anchor" 
             {% endif %}
@@ -751,6 +851,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cor easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
               class="nav-link scrollto cor xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+              class="nav-link scrollto cor republic_nav_text"
             {% else %}
             class="nav-link scrollto cor hover_anchor" 
             {% endif %}
@@ -768,6 +870,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cors easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cors xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cors republic_nav_text"
             {% else %}
             class="nav-link scrollto cors hover_anchor" 
             {% endif %}
@@ -786,6 +890,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto event easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
             class="nav-link scrollto event xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+            class="nav-link scrollto event republic_nav_text"
             {% else %}
             class="nav-link scrollto event hover_anchor" 
             {% endif %}
@@ -803,6 +909,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cont easter_text_sm_bg1_hover"
             {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cont xmas_nav_text"
+            {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cont republic_nav_text"
             {% else %}
             class="nav-link scrollto cont hover_anchor" 
             {% endif %}
@@ -874,6 +982,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
     
   </div>
+  {% elif current_theme == 'republic' %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+    </div>
   {% endif %}
 {% endif %}
 
@@ -978,6 +1139,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <img id="new_year" src="{% static 'xmas/decor/2024_02.png' %}" alt="">
       </div>
     </div> -->
+  {% elif current_theme == 'republic' %}
+  <div class="position-relative">
+    <div class="position-absolute end-0 footer_decor_top">
+      <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+    </div>
+  </div>
   {% endif %}
 
   <!-- <div id="preloader"></div> -->
