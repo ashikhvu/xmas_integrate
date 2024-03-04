@@ -266,6 +266,13 @@ font-weight: 800;
     font-weight: 800;
   }
 </style>
+{% elif current_theme == 'onam' %}
+<style>
+    #navbar .abot{
+    color: orange;
+    font-weight: 800;
+  }
+</style>
 {% else %}
 <style>
 
@@ -544,6 +551,31 @@ font-weight: 800;
   }
 </style>
 
+<!-- onam -->
+
+<style>
+  .onam_frame{
+    width: 7rem;
+  }
+  .onam_top_right_top{
+    margin-top: -2rem;
+    margin-right: -1rem;
+  }
+  .onam_top_left_top{
+    margin-top: -2rem;
+    margin-left: -2rem;
+  }
+  .onam_bottom_left_top{
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+  }
+  .onam_bottom_right_top{
+    margin-bottom: -2rem;
+    margin-right: -1rem;
+  }
+ 
+</style>
+
   <main id="main">
     <div class="container-fluid" id="about-us">
         <section id="about_box">
@@ -733,6 +765,34 @@ font-weight: 800;
 
 
                 </div>
+                {% elif current_theme == 'onam' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                  
+                  <div class="position-absolute top-0 end-0 onam_top_right_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 onam_top_left_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                  </div>
+
+
+                </div>
                  {% else %}
                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
                   data-aos-duration="2000">
@@ -890,7 +950,8 @@ font-weight: 800;
               </div>
              
             </div>
-              {% else %}
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
                 <p class="fst-normal mob_margin_top" data-aos="fade-up"
                 data-aos-duration="2000">
                 Our expertise lies in website and software development, 
@@ -900,7 +961,36 @@ font-weight: 800;
                 services, to clients across different industries and of varying sizes.
                 
                 </p>
-              {% endif %}
+                
+                <div class="position-absolute top-0 end-0 onam_top_right_top">
+                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute top-0 start-0 onam_top_left_top">
+                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
+                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
+                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                </div>
+
+
+              </div>
+            {% else %}
+              <p class="fst-normal mob_margin_top" data-aos="fade-up"
+              data-aos-duration="2000">
+              Our expertise lies in website and software development, 
+              where we have gained extensive experience by delivering a 
+              wide range of projects, including websites, web applications, 
+              mobile applications, 3D modeling services, and digital marketing 
+              services, to clients across different industries and of varying sizes.
+              
+              </p>
+            {% endif %}
 
               </div>
               <div class="col-lg-2 col-sm-12 col-md-8"></div>
@@ -1045,17 +1135,47 @@ font-weight: 800;
                 </div>
 
           </div>
-              {% else %}
-              <p class="fst-normal mob_margin_top" data-aos="fade-right"
-                data-aos-duration="2000">
-                At ALTOS Technologies, we understand the critical role that user 
-                experience plays in the success of your website or software. That's 
-                why we put a strong emphasis on designing and developing products 
-                that are user-friendly, intuitive, and enjoyable to use, ensuring 
-                your customers or employees have a seamless experience.
+          {% elif current_theme == 'onam' %}
+          <div class="position-relative">
+            <p class="fst-normal mob_margin_top" data-aos="fade-up"
+            data-aos-duration="2000">
+            Our expertise lies in website and software development, 
+            where we have gained extensive experience by delivering a 
+            wide range of projects, including websites, web applications, 
+            mobile applications, 3D modeling services, and digital marketing 
+            services, to clients across different industries and of varying sizes.
+            
+            </p>
+            
+            <div class="position-absolute top-0 end-0 onam_top_right_top">
+              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+            </div>
 
-              </p>
-              {% endif %}
+            <div class="position-absolute top-0 start-0 onam_top_left_top">
+              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
+              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
+              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+            </div>
+
+
+          </div>
+          {% else %}
+          <p class="fst-normal mob_margin_top" data-aos="fade-right"
+            data-aos-duration="2000">
+            At ALTOS Technologies, we understand the critical role that user 
+            experience plays in the success of your website or software. That's 
+            why we put a strong emphasis on designing and developing products 
+            that are user-friendly, intuitive, and enjoyable to use, ensuring 
+            your customers or employees have a seamless experience.
+
+          </p>
+          {% endif %}
            
            
               </div>

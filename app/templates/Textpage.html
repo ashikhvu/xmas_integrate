@@ -2081,11 +2081,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 10px;
     transition: all 0.2s linear;
   }
-  @media screen and (min-width:1722px) {
-    .card_onam{
-      background-size: cover;
-    }
-  }
+ 
   #happy_onam1{
     width: 14rem;
   }
@@ -2134,106 +2130,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-bottom:-1rem ;
     margin-right: 15rem;
   }
-  @media screen and (max-width:1090px) {
-    #onam_pookalam{
-      width: 22rem;
-    }
-    .onam_pookalam_top{
-      margin-bottom:-1rem ;
-      margin-right: 0rem;
-    }
+  #onam_footer_decor{
+    width: 30rem;
   }
-  @media screen and (max-width:630px) {
-    #onam_pookalam{
-      width: 15rem;
-    }
-    .onam_pookalam_top{
-      margin-bottom:-1rem ;
-      margin-right: 0rem;
-    }
+  .onam_footer_decor_top{
+    margin-top: -20rem;
   }
-  @media screen and (max-width:500px) {
-    #onam_pookalam{
-      width: 10rem;
-    }
-    .onam_pookalam_top{
-      margin-bottom:-1rem ;
-      margin-right: 0rem;
-    }
+  #onam_boat{
+    width: 28rem;
   }
-  @media screen and (max-width:420px) {
-    #onam_pookalam{
-      width: 7rem;
-    }
-    .onam_pookalam_top{
-      margin-bottom:-1rem ;
-      margin-right: 0rem;
-    }
+  .onam_boat_top{
+    margin-top: -13rem;
+    margin-left: 1rem;
+    transform: rotate(-3.5deg);
   }
-  @media screen and (max-width:1620px) {
-    #happy_onam1{
-      width: 12rem;
-    }
-    .happy_onam1_top{
-      margin-top: -3rem;
-      margin-left: -3rem;
-    }
+  .onam_ts{
+    text-shadow: 2px 2px 2px black;
   }
-  @media screen and (max-width:1190px) {
-    #happy_onam1{
-      width: 10rem;
-    }
-    .happy_onam1_top{
-      margin-top: -3rem;
-      margin-left: -3rem;
-    }
+  #maveli{
+    width: 18rem;
   }
-  @media screen and (max-width:1090px) {
-    #happy_onam1{
-      width: 7rem;
-    }
-    .happy_onam1_top{
-      margin-top: -3rem;
-      margin-left: -3rem;
-    }
+  .maveli_top{
+
   }
-  @media screen and (min-width:436px) and (max-width:600px)  {
-    #happy_onam1{
-      width: 5rem;
-    }
-    .happy_onam1_top{
-      margin-top: -2rem;
-      margin-left: -2rem;
-    }
-  }
-  @media screen and (max-width:750px)  {
-    #onam_cap1{
-      width: 5rem;
-    }
-    .onam_cap1_top{
-      margin-top: 1rem;
-      margin-left: -6rem;
-    }
-  }
-  @media screen and (max-width:550px)  {
-    #onam_cap1{
-      width: 5rem;
-    }
-    .onam_cap1_top{
-      margin-top: 0.5rem;
-      margin-left: -5rem;
-    }
-  }
-  @media screen and (max-width:932px)  {
-    #onam_icon{
-      width: 5rem;
-    }
-    .onam_icon_top{
-      margin-top: -5rem;
-      margin-left: 40%;
-      transform: translate(-50%,50%);
-    }
-  }
+  
 </style>
 
   </head>
@@ -3981,6 +3901,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 class="visible-head" style="color: transparent;">
               <span class="fg_republic">Our</span><span class="fg_republic"> Technologies</span>
             </h1>
+            {% elif current_theme == 'onam' %}
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute start-50 onam_boat_top"> 
+                <img draggable="false"id="onam_boat" src="{% static 'onam/decor/boat.png' %}" alt="">
+              </div>
+            </div>
+            <h1 class="visible-head pb-5 onam_ts">
+              Our<span style="color: orange"> Technologies</span>
+            </h1>
             {% else %}
             <h1 class="visible-head">
               Our<span style="color: rgb(39, 112, 141)"> Technologies</span>
@@ -4068,8 +3997,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
+                {% elif current_theme == 'republic' %} 
                 class="circle5" 
+                {% elif current_theme == 'onam' %} 
+                  class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4114,8 +4045,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
-                class="circle5" 
+                {% elif current_theme == 'republic' %} 
+                class="circle5"
+                {% elif current_theme == 'onam' %} 
+                class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4200,8 +4133,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
+                {% elif current_theme == 'republic' %} 
                 class="circle5" 
+                {% elif current_theme == 'onam' %} 
+                class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4246,8 +4181,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
+                {% elif current_theme == 'republic' %} 
                 class="circle5" 
+                {% elif current_theme == 'onam' %} 
+                class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4334,8 +4271,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
+                {% elif current_theme == 'republic' %} 
                 class="circle5" 
+                {% elif current_theme == 'onam' %} 
+                class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4379,8 +4318,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle3" 
                 {% elif current_theme == 'xmas' %} 
                   class="circle4"
-              {% elif current_theme == 'republic' %} 
+                {% elif current_theme == 'republic' %} 
                 class="circle5" 
+                {% elif current_theme == 'onam' %} 
+                class="circle6"
                 {% else %} 
                   class="circle" 
                 {% endif %}>
@@ -4441,6 +4382,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <p>Check our <span class="text-danger">Clients</span></p>
           {% elif current_theme == 'republic' %}
           <p style="color: transparent;"><span class="fg_republic">Check</span> <spa class="fg_republic"n>our</span> <span class="fg_republic">Clients</span></p>
+          {% elif current_theme == 'onam' %}
+          <p class="onam_ts">Check our <span style="color: orange">Clients</span></p>
           {% else %}
           <p>Check our <span style="color: rgb(39, 112, 141)">Clients</span></p>
           {% endif %}
@@ -4482,7 +4425,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   alt="Testimonial-image"
                   class="image"
                 />{% endif %}
-                <p style="background: radial-gradient(black,black,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0));">{{i.testi_desecri}}</p>
+                <p style="background: radial-gradient(black,black,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0));text-shadow: 2px 2px 2px black;color: white;">{{i.testi_desecri}}</p>
 
                 <i class="bx bxs-quote-alt-left quote-icon"></i>
 
@@ -4511,6 +4454,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="position-relative">
                     <div class="position-absolute bottom-0 bunny_top">
                       <img id="bunny" src="{% static 'easter/decor/bunny1.png' %}" alt="">
+                    </div>
+                  </div>
+                  {% elif current_theme == 'onam' %}
+                  <div class="position-relative">
+                    <div class="position-absolute bottom-0 maveli_top">
+                      <img id="maveli" src="{% static 'onam/decor/maveli.png' %}" alt="">
                     </div>
                   </div>
                   {% endif %}
@@ -5177,6 +5126,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="position-relative">
       <div class="position-absolute end-0 footer_decor_top">
         <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+      </div>
+    </div>
+    {% elif current_theme == 'onam' %}
+    <div class="position-relative">
+      <div class="position-absolute end-0 onam_footer_decor_top">
+        <img id="onam_footer_decor" draggable="false" src="{% static 'onam/decor/onam_footer_image.png' %}" alt="">
       </div>
     </div>
     {% endif %}

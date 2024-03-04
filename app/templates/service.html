@@ -551,6 +551,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- onam -->
+
+<style>
+  .onam_ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  #onam_footer_decor{
+    width: 30rem;
+  }
+  .onam_footer_decor_top{
+    margin-top: -20rem;
+  }
+</style>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -723,6 +736,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+    {% elif current_theme == 'onam' %}
+    <div class="position-relative" style="z-index: 998;">
+      <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -1.8rem;">
+        <div class="d-flex">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+        </div>
+      </div>
+    </div>
   {% endif %}
   <div class="container d-flex align-items-center justify-content-lg-between">
 
@@ -751,6 +783,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto hom republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto hom onam_hover"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
           {% endif %} 
@@ -770,6 +804,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto abot xmas_nav_text"
               {% elif current_theme == 'republic' %}
                 class="nav-link scrollto abot republic_nav_text"
+              {% elif current_theme == 'onam' %}
+                class="nav-link scrollto abot onam_hover"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -788,6 +824,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto serv text-danger"
           {% elif current_theme == 'republic' %}
+            class="nav-link scrollto serv" style="color: orange"
+          {% elif current_theme == 'onam' %}
             class="nav-link scrollto serv" style="color: orange"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
@@ -808,6 +846,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cor xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto cor republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto cor onam_hover"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
           {% endif %}
@@ -827,6 +867,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cors xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto cors republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto cors onam_hover"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -847,6 +889,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto event xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto event republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto event onam_hover"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -866,6 +910,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cont xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto cont republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto cont onam_hover"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -1063,6 +1109,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="text-danger" style="text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.525);" ><span class="text-light" style="text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.269);">Check our</span> Services</p>
         {% elif current_theme == 'republic' %}
         <p style="color: transparent;"><span class="fg_republic">Check</span> <span class="fg_republic">our</span> <span class="fg_republic">Services</span></p>
+        {% elif current_theme == 'onam' %}
+        <p class="onam_ts">Check our <span style="color: orange;">Services</span></p>
         {% else %}
         <p>Check our <span style="color: rgb(39, 112, 141);">Services</span></p>
         {% endif %}
@@ -1081,7 +1129,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               channels to reach a target audience, engage them, and drive desired actions.</p>
           </div>
 
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}
+          " style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1125,11 +1177,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
   
-              <div class="icon"> <ion-icon name="search" style="color: #ffb700"></ion-icon></div>
-              <h4 style="color: #ffb700">SEO Optimization</h4>
-              <p>The Process Of Improving Your Site To Increase Its Visibility When People
+              <div class="icon"> <ion-icon name="search"{% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %} ></ion-icon></div>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>SEO Optimization</h4>
+              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>The Process Of Improving Your Site To Increase Its Visibility When People
                 Search For Products Or Services
                 Related To Your Business In Google, Bing, And Other Search Engines.
               </p>
@@ -1138,13 +1196,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1182,24 +1243,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               
-              <div class="icon"> <i class="bx bx-tachometer" style="color: #ffb700"></i></div>
-              <h4 style="color: #ffb700">Content Marketing</span> </h4>
-              <p> Content marketing is a marketing strategy used to attract, engage, and retain an audience
+              <div class="icon"> <i class="bx bx-tachometer" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></i></div>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Content Marketing</span> </h4>
+              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Content marketing is a marketing strategy used to attract, engage, and retain an audience
                 by creating and sharing relevant articles, videos, podcasts, and other media.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1237,24 +1308,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
-              <div class="icon"><ion-icon name="phone-portrait" style="color: #ffb700"></ion-icon></div>
+              <div class="icon"><ion-icon name="phone-portrait" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
   
-              <h4 style="color: #ffb700">App store Optimization</span></h4>
-              <p>It is the process of optimizing mobile apps to rank higher in
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>App store Optimization</span></h4>
+              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>It is the process of optimizing mobile apps to rank higher in
                 an app store's search results. The higher your app ranks , the more visible it is to potential customers.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1292,24 +1373,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
-              <div class="icon"> <ion-icon name="archive" style="color: #ffb700"></ion-icon></div>
+              <div class="icon"> <ion-icon name="archive" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
   
-              <h4 style="color: #ffb700">Email Marketing</h4>
-              <p> Email marketing is a form of marketing that can make the
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Email Marketing</h4>
+              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Email marketing is a form of marketing that can make the
                 customers on your email list aware of new products, discounts, and other services.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1347,23 +1437,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
-              <div class="icon"> <ion-icon name="chatbox-outline" style="color: #ffb700"></ion-icon></div>
-              <h4 style="color: #ffb700">SMS Marketing</span> </h4>
-              <p>SMS is one of the most convenient channels for communicating
+              <div class="icon"> <ion-icon name="chatbox-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>SMS Marketing</span> </h4>
+              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>SMS is one of the most convenient channels for communicating
                 with your customers, and one of the most preferred mediums by customers themselves.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1401,23 +1500,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
-              <div class="icon"> <ion-icon name="chatbubbles-outline" style="color: #ffb700"></ion-icon></div>
-              <h4 style="color: #ffb700">WhatsApp Marketing</h4>
-              <p> You can use it to send reminders about abandoned shopping carts,
+              <div class="icon"> <ion-icon name="chatbubbles-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>WhatsApp Marketing</h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> You can use it to send reminders about abandoned shopping carts,
                 share special offers and coupons, or even answer customer questions in real time.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -1455,12 +1563,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <div class="icon">
-                <ion-icon name="share-social-outline" style="color: #ffb700"></ion-icon>
+                <ion-icon name="share-social-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
-              <h4 style="color: #ffb700">Social Media Marketing </span> </h4>
-              <p> Increase your brand awareness, drive more traffic to your website by creating &
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Social Media Marketing </span> </h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Increase your brand awareness, drive more traffic to your website by creating &
                 managing social media accounts, developing content strategies, running social media
                 advertising campaigns, and analyzing data to track your progress and make data-driven decisions.
               </p>
@@ -1468,13 +1582,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
@@ -1512,25 +1629,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <div class="icon">
-                <ion-icon name="logo-linkedin" style="color: #ffb700"></ion-icon>
+                <ion-icon name="logo-linkedin" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
-              <h4 style="color:#ffb700">LinkedIn Marketing</span> </h4>
-              <p> It is using the platform to market your business or company.
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>LinkedIn Marketing</span> </h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> It is using the platform to market your business or company.
                 It can be used as a marketing tool too as it allows you to easily segment your target audience.
               </p>
             </div>
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -1568,12 +1694,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <div class="icon">
-                <ion-icon name="logo-youtube" style="color:#ffb700"></ion-icon>
+                <ion-icon name="logo-youtube" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
-              <h4 style="color:#ffb700">YouTube Marketing </span> </h4>
-              <p> From creating a channel, content creation, paid promotion, etc, we work with a
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>YouTube Marketing </span> </h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> From creating a channel, content creation, paid promotion, etc, we work with a
                 variety of industries and can create customized strategies for each one. Let us
                 help you utilize this powerful platform for businesses to reach the targeted audience.
               </p>
@@ -1581,13 +1713,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -1625,12 +1760,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <div class="icon">
-                <ion-icon name="archive" style="color: #ffb700"></ion-icon>
+                <ion-icon name="archive" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
-              <h4 style="color:#ffb700">Email Marketing Tools </span> </h4>
-              <p>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Email Marketing Tools </span> </h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
                 Our email marketing tool is a powerful and easy-to-use platform designed to help you create,
                 send, and analyze email campaigns. Our customizable templates and segmentation tools make
                 it easy to target your audience and optimize your campaigns.
@@ -1640,13 +1781,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="box-service" style="height: 450px;">
+          <div class="box-service
+          {% if current_theme == 'onam' %}
+          bg-light rounded
+          {% endif %}" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -1684,12 +1828,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <div class="icon">
-                <ion-icon name="grid" style="color:#ffb700"></ion-icon>
+                <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
-              <h4 style="color:#ffb700">Whatsapp Marketing Tools </span> </h4>
-              <p>
+              <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Whatsapp Marketing Tools </span> </h4>
+              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
                 Our WhatsApp marketing tool allows you to connect with your audience on the world's most
                 popular messaging platform. Our customizable solutions allow you to send personalized
                 messages, manage your contacts, and track performance
@@ -1700,7 +1850,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
-                  <a href="{% url 'whatsappmarkettools' %}" >Know More </a>
+                  <a href="{% url 'whatsappmarkettools' %}" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
             </div>
@@ -1967,7 +2117,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div> -->
 
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -2005,12 +2158,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
             <div class="icon">
-              <ion-icon name="grid" style="color:#ffb700"></ion-icon>
+              <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
-            <h4 style="color:#ffb700">BPO </span> </h4>
-            <p> Our business process outsourcing services can help you streamline your operations, reduce
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>BPO </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Our business process outsourcing services can help you streamline your operations, reduce
               costs, and increase efficiency. We provide a range of services, including customer support, data
               entry, and back-office operations.
             </p>
@@ -2018,13 +2177,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           
           <div class="box-contents" style="height: 380px;">
             {% if current_theme == 'pongal' %}
@@ -2062,13 +2224,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
             {% endif %}
 
             <div class="icon">
-              <ion-icon name="grid" style="color:#ffb700"></ion-icon>
+              <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
-            <h4 style="color:#ffb700">CRM </span> </h4>
-            <p>
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>CRM </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our customer relationship management services are designed to help businesses build and
               maintain strong relationships with their clients. Our customizable solutions allow you to manage
               and analyze customer data, track sales, and automate processes.
@@ -2078,13 +2246,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -2122,12 +2293,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
             <div class="icon">
-              <ion-icon name="grid" style="color:#ffb700"></ion-icon>
+              <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
-            <h4 style="color:#ffb700">Data Entry </span> </h4>
-            <p>
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Entry </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data entry services can help you manage and organize large amounts of data quickly and
               accurately. We use advanced technology and experienced professionals to ensure that your
               data is handled with the utmost care and accuracy.
@@ -2138,13 +2315,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
             {% if current_theme == 'pongal' %}
             <div class="position-relative">
@@ -2181,13 +2361,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
             {% endif %}
 
             <div class="icon">
-              <ion-icon name="cloud-done-outline" style="color:#ffb700"></ion-icon>
+              <ion-icon name="cloud-done-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
-            <h4 style="color:#ffb700">Data Analysis </span> </h4>
-            <p>
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Analysis </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data analysis services provide valuable insights into your business operations, helping you
               make informed decisions and improve performance. We use advanced analytics tools and
               techniques to analyze your data and provide actionable recommendations.
@@ -2198,14 +2384,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -2243,13 +2432,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
             <div class="icon">
-              <ion-icon name="analytics-outline" style="color:#ffb700"></ion-icon>
+              <ion-icon name="analytics-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
 
             </div>
-            <h4 style="color:#ffb700">Data Analysis Tools </span> </h4>
-            <p>
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Analysis Tools </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data analysis tools are designed to help you extract valuable insights from your data quickly
               and easily. Our customizable solutions allow you to analyze data from multiple sources and
               generate reports and visualizations
@@ -2259,14 +2454,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="box-service" style="height: 450px;">
+        <div class="box-service
+        {% if current_theme == 'onam' %}
+        bg-light rounded
+        {% endif %}" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
@@ -2304,12 +2502,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
+                  <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
             <div class="icon">
-              <ion-icon name="logo-web-component" style="color:#ffb700"></ion-icon>
+              <ion-icon name="logo-web-component" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
-            <h4 style="color:#ffb700">Website Development </span> </h4>
-            <p>
+            <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Website Development </span> </h4>
+            <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our website development services can help you build a professional and effective online
               presence. We provide customized solutions to meet your unique needs, including design,
               development, and maintenance services.
@@ -2319,7 +2523,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
           </div>
@@ -2814,6 +3018,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="position-relative">
   <div class="position-absolute end-0 footer_decor_top">
     <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+  </div>
+</div>
+{% elif current_theme == 'onam' %}
+<div class="position-relative">
+  <div class="position-absolute end-0 onam_footer_decor_top">
+    <img id="onam_footer_decor" draggable="false" src="{% static 'onam/decor/onam_footer_image.png' %}" alt="">
   </div>
 </div>
 {% endif %}
