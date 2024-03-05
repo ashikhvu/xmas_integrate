@@ -114,6 +114,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
     <script src="{% static 'js/xmas2.js' %}"></script>
 
+    <!-- onam Theme -->
+    <link rel="stylesheet" href="{% static 'css/onam.css' %}">
+    <script src="{% static 'js/onam.js' %}"></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -2169,6 +2173,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body>
 
     {% if current_theme == 'xmas' %}
+    <div class="position-relative" style="z-index: 1;">
+      <div class="position-absolute" style="width: 100%;height: 100%;">
+        <div class="snow-container"></div>
+      </div>
+    </div>
+    {% elif current_theme == 'onam' %}
     <div class="position-relative" style="z-index: 1;">
       <div class="position-absolute" style="width: 100%;height: 100%;">
         <div class="snow-container"></div>

@@ -57,7 +57,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"></script>
-  
+{% if current_theme == 'xmas' %}
  <!-- xmas Theme -->
  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
  <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
@@ -66,7 +66,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <!-- xmas them2 -->
  <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
  <script src="{% static 'js/xmas2.js' %}"></script>
- 
+ {% elif current_theme == 'onam' %}
+  <!-- onam Theme -->
+  <link rel="stylesheet" href="{% static 'css/onam.css' %}">
+  <script src="{% static 'js/onam.js' %}"></script>
+  {% endif %}
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -1402,9 +1407,116 @@ h5 {
 }
 </style>
 
+<!-- onam -->
+
+<style>
+  .card7 {
+    display: block;
+    position: relative;
+    max-width: 262px;
+    background-color: rgba(117, 117, 117, 0.42);
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    z-index: 0;
+    overflow: hidden;
+    bottom: 0px;
+    right: 0px;
+  }
+  
+  .card7 :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    right: -2rem;
+    background-color: white;
+    background: url('static/onam/decor/frame3/product_frame1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+    text-shadow: none;
+    height: 32px;
+    width: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  .card7 :hover:before {
+    transform: scale(19);
+    bottom: 8.8rem;
+    right: 1rem;
+  }
+  .card7 p{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+
+.card7:hover p {
+  transition: all 0.3s ease-out;
+  color: black;
+  text-shadow: none;
+}
+.card7 h5 {
+  transition: all 0.3s ease-out;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.card7:hover h5 {
+  transition: all 0.3s ease-out;
+  color: #000000;
+  text-shadow: none;
+}
+.go-corner7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: url('static/onam/bg/corner_bg.png') ;
+  border-radius: 0 4px 0 32px;
+  box-shadow: 2px 2px 3px 3px black;
+}
+.go-arrow7 {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: rgb(0, 0, 0);
+  font-family: courier, sans;
+}
+.knowmore-button6{
+  font-size: 1em;
+  padding: 1em;
+  /* background: #29d5e5c9; */
+  background-image:linear-gradient(135deg,rgb(32, 84, 36),rgb(47, 133, 47),rgb(92, 252, 92));
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+#onam_footer_decor{
+  width: 30rem;
+}
+.onam_footer_decor_top{
+  margin-top: -20rem;
+}
+</style>
+
 <body>
 
   {% if current_theme == 'xmas' %}
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
+  {% elif current_theme == 'onam' %}
   <div class="position-relative" style="z-index: 1;">
     <div class="position-absolute" style="width: 100%;height: 100%;">
       <div class="snow-container"></div>
@@ -1562,7 +1674,26 @@ h5 {
           </div>
         </div>
       </div>
-{% endif %}
+      {% elif current_theme == 'onam' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -1.8rem;">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          </div>
+        </div>
+      </div>
+    {% endif %}
   <div class="container d-flex align-items-center justify-content-lg-between">
 
     <h1 class="logo me-auto me-lg-0">
@@ -1588,6 +1719,8 @@ h5 {
             class="nav-link scrollto hom xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto hom republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto hom onam_hover"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
           {% endif %}
@@ -1607,6 +1740,8 @@ h5 {
                 class="nav-link scrollto abot xmas_nav_text"
               {% elif current_theme == 'republic' %}
                 class="nav-link scrollto abot republic_nav_text"
+              {% elif current_theme == 'onam' %}
+                class="nav-link scrollto abot onam_hover"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -1626,6 +1761,8 @@ h5 {
             class="nav-link scrollto serv xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto serv republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto serv onam_hover"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
           {% endif %}
@@ -1644,6 +1781,8 @@ h5 {
           {% elif current_theme == 'xmas' %}
             class="nav-link scrollto cor text-danger"
           {% elif current_theme == 'republic' %}
+            class="nav-link scrollto cor" style="color: orange;"
+          {% elif current_theme == 'onam' %}
             class="nav-link scrollto cor" style="color: orange;"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
@@ -1664,6 +1803,8 @@ h5 {
             class="nav-link scrollto cors xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto cors republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto cors onam_hover"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -1684,6 +1825,8 @@ h5 {
             class="nav-link scrollto event xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto event republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto event onam_hover"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -1703,6 +1846,8 @@ h5 {
             class="nav-link scrollto cont xmas_nav_text"
           {% elif current_theme == 'republic' %}
             class="nav-link scrollto cont republic_nav_text"
+          {% elif current_theme == 'onam' %}
+            class="nav-link scrollto cont onam_hover"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -1744,6 +1889,8 @@ h5 {
             <h2 class="easter_text_bg1" style="color: transparent;">ERP </h2>
             {% elif current_theme == 'xmas' %}
             <h2 class="xmas_text text-light">ERP </h2>
+            {% elif current_theme == 'onam' %}
+            <h2 style="color: orange;">ERP </h2>
             {% else %}
             <h2>ERP </h2>
             {% endif %}
@@ -1763,6 +1910,8 @@ h5 {
               </div>
             {% elif current_theme == 'republic' %}
               <img src="static/republic/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'onam' %}
+              <img src="static/onam/img/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -1792,6 +1941,8 @@ h5 {
               class="knowmore-button4"
             {% elif current_theme == 'republic' %}
               class="knowmore-button5"
+            {% elif current_theme == 'onam' %}
+            class="knowmore-button6"
             {% else %}
               class="knowmore-button text-white" 
             {% endif %} >
@@ -1816,6 +1967,8 @@ h5 {
               </div>
             {% elif current_theme == 'republic' %}
               <img src="static/republic/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'onam' %}
+              <img src="static/onam/img/erp.png" alt="ERP" />
             {% else %}
             <img src="static/img/team/erp.png" alt="ERP"/>
             {% endif %}
@@ -1883,6 +2036,8 @@ h5 {
               </div>
             {% elif current_theme == 'republic' %}
               <img src="static/republic/img/crm.png" alt="CRM" /> 
+            {% elif current_theme == 'onam' %}
+              <img src="static/onam/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1898,6 +2053,8 @@ h5 {
           <h2 class="easter_text_bg1" style="color: transparent;">CRM </h2>
           {% elif current_theme == 'xmas' %}
           <h2 class="xmas_text text-light">CRM </h2>
+          {% elif current_theme == 'onam' %}
+          <h2 style="color: orange;">CRM </h2>
           {% else %}
           <h2>CRM </h2>
           {% endif %}
@@ -1917,6 +2074,8 @@ h5 {
               </div>
             {% elif current_theme == 'republic' %}
               <img src="static/republic/img/crm.png" alt="CRM" /> 
+            {% elif current_theme == 'onam' %}
+              <img src="static/onam/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -1955,6 +2114,8 @@ h5 {
               class="knowmore-button4"
             {% elif current_theme == 'republic' %}
               class="knowmore-button5"
+            {% elif current_theme == 'onam' %}
+              class="knowmore-button6"
             {% else %} 
              class="knowmore-button text-white" 
             {% endif %}>
@@ -1977,6 +2138,8 @@ h5 {
         <h4 class="easter_text_bg1 mb-5" style="color: transparent;">//Smart CORE Software for Businesses</h4>
         {% elif current_theme == 'xmas' %}
         <h4 class="text-light xmas_text mb-5">//Smart CORE Software for Businesses</h4>
+        {% elif current_theme == 'onam' %}
+        <h4 style="color: orange;">//Smart CORE Software for Businesses</h4>
         {% else %}
         <h4 class="mb-5" style="color: #df0559;">//Smart CORE Software for Businesses</h4>
         {% endif %}
@@ -2036,6 +2199,8 @@ h5 {
           <h4 class="easter_text_bg1" style="color: transparent;">//Ease of Work, Easy Work</h4>
           {% elif current_theme == 'xmas' %}
           <h4 class="xmas_text text-light">//Ease of Work, Easy Work</h4>
+          {% elif current_theme == 'onam' %}
+          <h4 style="color: orange;">//Ease of Work, Easy Work</h4>
           {% else %}
           <h4 style="color: #df0559;">//Ease of Work, Easy Work</h4>
           {% endif %}
@@ -2091,6 +2256,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6"
+        {% elif current_theme == 'onam' %} 
+        class="card7"
         {% else %} 
         class="card1" 
         {% endif %} >
@@ -2109,6 +2276,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2123,6 +2292,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7"
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2148,6 +2319,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7"
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2166,6 +2339,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2180,6 +2355,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2205,6 +2382,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2223,6 +2402,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2237,6 +2418,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2262,6 +2445,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2279,6 +2464,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2293,6 +2480,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2318,6 +2507,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2335,6 +2526,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2349,6 +2542,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2374,6 +2569,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2391,6 +2588,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2405,6 +2604,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2430,6 +2631,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2447,6 +2650,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2461,6 +2666,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2486,6 +2693,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2503,6 +2712,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2517,6 +2728,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2542,6 +2755,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2559,6 +2774,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2573,6 +2790,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2598,6 +2817,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2615,6 +2836,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2629,6 +2852,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2654,6 +2879,8 @@ h5 {
         class="card5"
         {% elif current_theme == 'republic' %} 
         class="card6" 
+        {% elif current_theme == 'onam' %} 
+        class="card7" 
         {% else %} 
         class="card1" 
         {% endif %}>
@@ -2671,6 +2898,8 @@ h5 {
             class="go-corner5"
             {% elif current_theme == 'republic' %} 
             class="go-corner6"
+            {% elif current_theme == 'onam' %} 
+            class="go-corner7"
             {% else %} 
             class="go-corner" 
             {% endif %}  href="#">
@@ -2685,6 +2914,8 @@ h5 {
               class="go-arrow5"
               {% elif current_theme == 'republic' %} 
               class="go-arrow6" 
+              {% elif current_theme == 'onam' %} 
+              class="go-arrow7" 
               {% else %} 
               class="go-arrow" 
               {% endif %}>
@@ -2726,6 +2957,8 @@ h5 {
           <h2 class="easter_text_bg1" style="color: transparent;">HRMS  </h2>
           {% elif current_theme == 'xmas' %}
           <h2 class="xmas_text text-light">HRMS  </h2>
+          {% elif current_theme == 'onam' %}
+          <h2 style="color: orange;">HRMS  </h2>
           {% else %}
           <h2>HRMS  </h2>
           {% endif %}
@@ -2745,6 +2978,8 @@ h5 {
             </div>
             {% elif current_theme == 'republic' %}
               <img src="static/republic/img/hrms.png" alt="HRMS" /> 
+            {% elif current_theme == 'onam' %}
+              <img src="static/onam/img/hrms.png" alt="HRMS" /> 
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -2787,8 +3022,10 @@ h5 {
           class="knowmore-button3"
           {% elif current_theme == 'xmas' %}
           class="knowmore-button4"
-            {% elif current_theme == 'republic' %}
-              class="knowmore-button5"
+          {% elif current_theme == 'republic' %}
+            class="knowmore-button5"
+          {% elif current_theme == 'onam' %}
+            class="knowmore-button6"
           {% else %}
           class="knowmore-button text-white"
           {% endif %}>
@@ -2813,6 +3050,8 @@ h5 {
             </div>
           {% elif current_theme == 'republic' %}
             <img src="static/republic/img/hrms.png" alt="HRMS" /> 
+          {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/hrms.png" alt="HRMS" /> 
           {% else %}
           <img src="static/img/team/hrms.png" alt="HRMS" />
           {% endif %}
@@ -2924,6 +3163,8 @@ h5 {
             </div>
           {% elif current_theme == 'republic' %}
             <img src="static/republic/img/account.png" alt="ACCOUNTING" /> 
+          {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -2939,6 +3180,8 @@ h5 {
         <h2 class="easter_text_bg1" style="color: transparent;">Accounting software  </h2>
         {% elif current_theme == 'xmas' %}
         <h2 class="xmas_text text-light">Accounting software  </h2>
+        {% elif current_theme == 'onam' %}
+        <h2 style="color: orange;">Accounting software  </h2>
         {% else %}
         <h2>Accounting software  </h2>
         {% endif %}
@@ -3002,6 +3245,8 @@ h5 {
             class="knowmore-button4"
             {% elif current_theme == 'republic' %}
               class="knowmore-button5"
+            {% elif current_theme == 'onam' %}
+            class="knowmore-button6"
           {% else %}
             class="knowmore-button text-white" 
           {% endif %}>
@@ -3336,6 +3581,12 @@ h5 {
 <div class="position-relative">
   <div class="position-absolute end-0 footer_decor_top">
     <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+  </div>
+</div>
+{% elif current_theme == 'onam' %}
+<div class="position-relative">
+  <div class="position-absolute end-0 onam_footer_decor_top">
+    <img id="onam_footer_decor" draggable="false" src="{% static 'onam/decor/onam_footer_image.png' %}" alt="">
   </div>
 </div>
 {% endif %}
