@@ -1038,6 +1038,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .onam_footer_decor_top{
     margin-top: -20rem;
   }
+  .onam_frame_corner{
+    width: 7rem;
+  }
+  .onam_frame_corner_top
+  {
+
+  }
+  #maveli_2{
+    width: 22rem;
+  }
+  .maveli_2_top{
+    margin-top: -10.5rem;
+    margin-right: 6rem;
+  }
+  
 </style>
 
 
@@ -1596,6 +1611,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img id="sathya" src="{% static 'republic/decor/backup/sathyagraha.png' %}" alt="">
           </div>
         </div>
+        {% elif current_theme == 'onam' %}
+        <div class="position-relative">
+          <div class="position-absolute end-0 maveli_2_top">
+            <img id="maveli_2" src="{% static 'onam/decor/maveli_2.png' %}" alt="">
+          </div>
+        </div>
         {% endif %}
 
         <div class="container events-box">
@@ -1671,6 +1692,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="position-relative" style="z-index: 10;">
                   <div class="position-absolute bottom-0 end-0 easter_frame_corner_top">
                     <img class="easter_frame_corner" src="{% static 'easter/decor/frame/photo_frame_corner.png' %}" alt="">
+                  </div>
+                </div>
+                {% elif current_theme == 'onam' and i.ps_img %} 
+                <div class="position-relative" style="z-index: 10;">
+                  <div class="position-absolute bottom-0 end-0 onam_frame_corner_top">
+                    <img class="onam_frame_corner" src="{% static 'onam/decor/frame5/frame_corner_onam.png' %}" alt="">
                   </div>
                 </div>
                 {% endif %}

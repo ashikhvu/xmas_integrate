@@ -846,6 +846,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 </style>
 
+<!-- onam -->
+
+<style>
+  .onam_text_sm_bg1{
+    background-image: url('/static/onam/bg/text_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .onam_ts{
+    text-shadow: 1px 1px 1px black; 
+  }
+  #onam_footer_decor{
+    width: 18rem;
+  }
+  .onam_footer_decor_top{
+    margin-top: -15rem;
+    margin-right: -0rem;
+  }
+  
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -1022,6 +1046,25 @@ gtag('config', 'G-3RLTXDEGMP');
           </div>
         </div>
       </div>
+      {% elif current_theme == 'onam' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -1.8rem;">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+            <img draggable="false" src="{% static 'onam/decor/header_top_decor.png' %}" width="200vw" alt="">
+          </div>
+        </div>
+      </div>
     {% endif %}
 
 <div class="container d-flex align-items-center justify-content-lg-between">
@@ -1051,6 +1094,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto hom xmas_nav_text"
         {% elif current_theme == 'republic' %}
           class="nav-link scrollto hom republic_nav_text"
+        {% elif current_theme == 'onam' %}
+          class="nav-link scrollto hom onam_hover"
         {% else %} 
         class="nav-link scrollto hom hover_anchor" 
         {% endif %} 
@@ -1070,6 +1115,8 @@ gtag('config', 'G-3RLTXDEGMP');
               class="nav-link scrollto abot xmas_nav_text"
             {% elif current_theme == 'republic' %}
               class="nav-link scrollto abot republic_nav_text"
+            {% elif current_theme == 'onam' %}
+              class="nav-link scrollto abot onam_hover"
             {% else %} 
               class="nav-link scrollto abot hover_anchor" 
             {% endif %} 
@@ -1088,6 +1135,8 @@ gtag('config', 'G-3RLTXDEGMP');
         {% elif current_theme == 'xmas' %}
           class="nav-link scrollto serv text-danger"
         {% elif current_theme == 'republic' %}
+          class="nav-link scrollto serv " style="color: orange"
+        {% elif current_theme == 'onam' %}
           class="nav-link scrollto serv " style="color: orange"
         {% else %}
         class="nav-link scrollto serv hover_anchor" 
@@ -1108,6 +1157,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cor xmas_nav_text"
         {% elif current_theme == 'republic' %}
           class="nav-link scrollto cor republic_nav_text"
+        {% elif current_theme == 'onam' %}
+          class="nav-link scrollto cor onam_hover"
         {% else %}
         class="nav-link scrollto cor hover_anchor" 
         {% endif %}
@@ -1127,6 +1178,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cors xmas_nav_text"
         {% elif current_theme == 'republic' %}
           class="nav-link scrollto cors republic_nav_text"
+        {% elif current_theme == 'onam' %}
+          class="nav-link scrollto cors onam_hover"
         {% else %}
         class="nav-link scrollto cors hover_anchor" 
         {% endif %}
@@ -1147,6 +1200,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto event xmas_nav_text"
         {% elif current_theme == 'republic' %}
           class="nav-link scrollto event republic_nav_text"
+        {% elif current_theme == 'onam' %}
+          class="nav-link scrollto event onam_hover"
         {% else %}
         class="nav-link scrollto event hover_anchor" 
         {% endif %}
@@ -1166,6 +1221,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cont xmas_nav_text"
         {% elif current_theme == 'republic' %}
           class="nav-link scrollto cont republic_nav_text"
+        {% elif current_theme == 'onam' %}
+          class="nav-link scrollto cont onam_hover"
         {% else %}
         class="nav-link scrollto cont hover_anchor" 
         {% endif %}
@@ -1573,6 +1630,13 @@ window.addEventListener('resize', handleResize);
           <span class="fg_republic" style="color: transparent;">Audience </span>
           <span class="fg_republic" style="color: transparent;">with </span>   </span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none" >Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
+        {% elif current_theme == 'onam' %}
+        <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">
+          <span class="onam_text_sm_bg1" style="color: transparent;">Improve </span>
+          <span class="onam_text_sm_bg1" style="color: transparent;">Your </span>
+          <span class="onam_text_sm_bg1" style="color: transparent;">Audience </span>
+          <span class="onam_text_sm_bg1" style="color: transparent;">with </span>   </span> <br> <span style="font-size: 10vh;" class="onam_text_sm_bg1"> ALT Whatsapp Module </span></p>
+        <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none onam_text_sm_bg1" style="color: transparent;">Improve Your Audience with</span> <br> <span class="text-light"> ALT Whatsapp Module </span></p>
         {% else %}
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">Improve Your Audience with</span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none" >Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
@@ -1598,6 +1662,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'republic' %}
         <a role="button" href="#" class="color-button text-dark" data-aos="fade-up" data-aos-duration="750" style="background: linear-gradient(130deg,rgb(255, 85, 0),white,green);color:black">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-dark"  data-aos="fade-up" data-aos-duration="750" style="background: linear-gradient(130deg,rgb(255, 85, 0),white,green);color:black">Get Started</a>
+        {% elif current_theme == 'onam' %}
+        <a role="button" href="#" class="color-button text-light onam_ts" data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(222, 162, 103),rgb(217, 144, 71),rgb(255, 115, 0));">Request Product Demo</a>
+        <a role="button" href="#" class="color-button text-light onam_ts"  data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(222, 162, 103),rgb(217, 144, 71),rgb(255, 115, 0));">Get Started</a>
         {% else %}
         <a role="button" href="#" class="color-button text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
@@ -1665,6 +1732,8 @@ window.addEventListener('resize', handleResize);
                   <img src="/static/easter/img/erp.png" alt="ERP" />
                   {% elif current_theme == 'republic' %} 
                   <img src="/static/republic/img/erp.png" alt="ERP" />
+                  {% elif current_theme == 'onam' %} 
+                  <img src="/static/onam/img/erp.png" alt="ERP" />
                   {% else %}
                   <img src="/static/img/team/erp.png" alt="ERP" />
                   {% endif %}
@@ -1685,6 +1754,8 @@ window.addEventListener('resize', handleResize);
                   <img src="/static/easter/img/erp.png" alt="ERP" />
                 {% elif current_theme == 'republic' %} 
                   <img src="/static/republic/img/erp.png" alt="ERP" />
+                {% elif current_theme == 'onam' %} 
+                  <img src="/static/onam/img/erp.png" alt="ERP" />
                 {% else %}
                 <img src="/static/img/team/erp.png" alt="ERP" />
                 {% endif %}
@@ -1716,6 +1787,8 @@ window.addEventListener('resize', handleResize);
                 <img src="/static/easter/img/crm.png" alt="CRM" />
                 {% elif current_theme == 'republic' %}
                 <img src="/static/republic/img/crm.png" alt="CRM" />
+                {% elif current_theme == 'onam' %}
+                <img src="/static/onam/img/crm.png" alt="CRM" />
                 {% else %}
                 <img src="/static/img/team/crm.png" alt="CRM" />
                 {% endif %}
@@ -1732,6 +1805,8 @@ window.addEventListener('resize', handleResize);
                   <img src="/static/easter/img/crm.png" alt="CRM" />
                   {% elif current_theme == 'republic' %}
                   <img src="/static/republic/img/crm.png" alt="CRM" />
+                  {% elif current_theme == 'onam' %}
+                  <img src="/static/onam/img/crm.png" alt="CRM" />
                   {% else %}
                   <img src="/static/img/team/crm.png" alt="CRM" />
                   {% endif %}
@@ -1949,6 +2024,12 @@ window.addEventListener('resize', handleResize);
                   <img width="220rem" src="{% static 'republic/decor/frames/normal_frame/frame_top_left.png' %}" alt="">
                 </div>
               </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
+                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
+                </div>
+              </div>
               {% endif %}
               <h4 style="color:rgb(62, 199, 206)">1</span> </h4>
               <p style="text-align: justify;"> Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. 
@@ -1986,6 +2067,12 @@ window.addEventListener('resize', handleResize);
                 <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
+                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
+                </div>
+              </div>
             {% endif %}
 
             <div class="box-contents" style="height: 50%;">
@@ -2052,6 +2139,12 @@ window.addEventListener('resize', handleResize);
               <div class="position-relative">
                 <div class="position-absolute" style="margin-left: -2.2rem;margin-top: -1.4rem;">
                   <img width="220rem" src="{% static 'republic/decor/frames/normal_frame/frame_top_left.png' %}" alt="">
+                </div>
+              </div>
+              {% elif current_theme == 'onam' %}
+              <div class="position-relative">
+                <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
+                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2297,6 +2390,12 @@ window.addEventListener('resize', handleResize);
 <div class="position-relative">
   <div class="position-absolute end-0 footer_decor_top">
     <img id="footer_decor" draggable="false" src="{% static 'republic/bg/republic_bg.png' %}" alt="">
+  </div>
+</div>
+{% elif current_theme == 'onam' %}
+<div class="position-relative">
+  <div class="position-absolute end-0 onam_footer_decor_top">
+    <img id="onam_footer_decor" draggable="false" src="{% static 'onam/decor/onam_footer_image.png' %}" alt="">
   </div>
 </div>
 {% endif %}
