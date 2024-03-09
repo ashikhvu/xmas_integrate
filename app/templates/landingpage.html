@@ -103,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
-
+    {% if current_theme == 'xmas' %}
     <!-- xmas Theme -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
@@ -112,7 +112,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- xmas them2 -->
     <link rel="stylesheet" href="{% static 'css/xmas2.css' %}">
     <script src="{% static 'js/xmas2.js' %}"></script>
-  
+    {% elif current_theme == 'onam' %}
+    <!-- onam Theme -->
+    <link rel="stylesheet" href="{% static 'css/onam.css' %}">
+    <script src="{% static 'js/onam.js' %}"></script>
+    {% endif %}
 
 
     <script>
@@ -770,6 +774,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-left: 0.75rem;
     }
   }
+  @media screen and (max-width:280px)
+  {
+    #vishu_flute{
+      width: 18rem;
+    }
+    .vishu_flute_top{
+      margin-top: -7rem;
+      margin-left: 0rem;
+    }
+  }
+  .vishu_why_choose_padding{
+    padding-left: 3.5rem;
+  }
+  @media screen and (max-width:280px){
+    .vishu_why_choose_padding{
+      padding-left: 0rem;
+    }
+  }
 </style>
 
 <style>
@@ -949,6 +971,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .fade_effect_top2{
       margin-bottom: 2.5rem;
       margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:280px) {
+    #fade_effect2{
+      width: 12rem ;
+    }
+    .fade_effect_top2{
+      margin-bottom: 1.5rem;
+      margin-right: -0rem;
     }
   }
   @media screen and (max-width:512px) {
@@ -1249,6 +1280,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .xmas_peek2_top{
       margin-right: -5rem;
+    }
+  }
+  @media screen and (max-width:280px) {
+    #xmas_peek2{
+      width: 2rem;
+    }
+    .xmas_peek2_top{
+      margin-right: -1rem;
     }
   }
   .decor_light2_full{
@@ -1736,6 +1775,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 2rem;
     }
   }
+  @media screen and (max-width:280px) {
+    #hands{
+      width: 7rem;
+    }
+    .hands_top{
+      margin-left: 0rem;
+      margin-top: -1rem;
+    }
+  }
   .fg_republic{
     background-image: url('/static/republic/decor/text_theme1.png');
     background-size: cover;
@@ -1796,7 +1844,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top: -3rem;
     margin-left: -3rem;
   }
-  #container_text .request-box .circle6 {
+  #container_text .request-box .circle7 {
     position: relative;
     display: inline-block;
     margin: 0;
@@ -1806,14 +1854,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 1.625rem;
     transition: all 0.4s ease-in-out;
   }
-  #container_text .request-box .circle6 .icon {
+  #container_text .request-box .circle7 .icon {
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto;
     background: #fff;
   }
-  #container_text .request-box .req-btn:hover .circle6 {
+  #container_text .request-box .req-btn:hover .circle7 {
     width: 100%;
   }
   #onam_icon{
@@ -1821,7 +1869,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .onam_icon_top{
     margin-top: -1.3rem;
-    margin-left: -2rem;
+    margin-left: -0.5rem;
   }
   #onam_cap1{
     width: 9rem;
@@ -1854,7 +1902,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .onam_ts{
     text-shadow: 2px 2px 2px black;
   }
+  .onam_text_sm_bg1{
+    background-image: url('/static/onam/bg/text_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
 
+  /* responsive */
   @media screen and (min-width:1154px) {
     .card_onam{
       background-size: cover;
@@ -1875,7 +1932,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .happy_onam1_top{
       margin-top: -3rem;
-      margin-left: -3rem;
+      margin-left: -2rem;
     }
   }
   @media screen and (max-width:620px) {
@@ -1896,6 +1953,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-left: -6rem;
     }
   }
+  @media screen and (max-width:280px) {
+    #happy_onam1{
+      width: 5rem;
+    }
+    .happy_onam1_top{
+      margin-top: -1.5rem;
+      margin-left: -1.5rem;
+    }
+  }
+</style>
+
+<style>
+  .contact_us_section_padding{
+    padding: 1rem 3rem;
+  }
+  @media screen and (max-width:280px) {
+    .contact_us_section_padding{
+      padding: 0rem;
+    }
+  }
+  @media (max-width:280px){
+    .other-branches .card{
+      height: fit-content;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  }
+  @media (max-width:280px){
+    .reset_pad_margin{
+      margin: 0;
+      padding: 0;
+    }
+  }
 </style>
 
   </head>
@@ -1911,6 +2001,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body>
 
     {% if current_theme == 'xmas' %}
+    <div class="position-relative" style="z-index: 1;">
+      <div class="position-absolute" style="width: 100%;height: 100%;">
+        <div class="snow-container"></div>
+      </div>
+    </div>
+    {% elif current_theme == 'onam' %}
     <div class="position-relative" style="z-index: 1;">
       <div class="position-absolute" style="width: 100%;height: 100%;">
         <div class="snow-container"></div>
@@ -2102,7 +2198,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li>
               <a 
               {% if current_theme == 'pongal' %} 
-              class="nav-link scrollto hom pongal_text_theme1" style="color: transparent;" 
+              class="nav-link scrollto hom hover_anchor_pongal" 
               {% elif current_theme == 'vishu' %}
                 class="nav-link scrollto hom hover_anchor_vishu" 
               {% elif current_theme == 'easter' %}
@@ -2431,7 +2527,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .img-box-tech {
           width: 300px;
           height: auto;
-          margin: auto;
+          margin: 0rem;
+          padding: 1rem;
         }
         .img-box-tech .hide-head {
           display: block;
@@ -3139,7 +3236,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% if current_theme == "xmas" %}
             class="content card_xmas p-2 rounded" 
           {% elif current_theme == "onam" %}
-            class="card_onam p-3"
+            class="card_onam p-2"
           {% else %} 
             class="content pt-2" 
           {% endif %}>
@@ -3356,7 +3453,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img draggable="false"id="vishu_flute" src="{% static 'vishu/gif/flute1.gif' %}" alt="">
               </div>
             </div>
-            <h4 class="section-head" style="color: rgb(243, 243, 243);padding-left: 3.5rem;">Why Choose Us</h4>
+            <h4 class="section-head vishu_why_choose_padding" style="color: rgb(243, 243, 243);">Why Choose Us</h4>
             {% elif current_theme == 'easter' %}
             <h4 class="section-head easter_text_bg1" style="color: transparent">Why Choose Us</h4>
             {% elif current_theme == 'xmas' %}
@@ -3400,7 +3497,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="row">
             <div class="col-lg-3">
               <div class="icon-box mt-5 mt-5 mt-lg-0">
-                <div class="icon-box-content">
+                <div class="icon-box-content" {% if current_theme == 'pongal' %}style="margin-left: 2rem;"{% endif %}>
                   {% if current_theme == 'pongal' %}
                   <i class="bx bx-receipt pongal_text_theme1" style="color: transparent;"></i>
                   {% elif current_theme == 'vishu' %} 
@@ -3434,6 +3531,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div style="visibility: hidden;" class="icon-box-content">
                     <i class="bx bx-receipt" style="color: #0fa49b"></i>
                   </div>
+                  {% elif current_theme == 'onam' %}
+                  <div class="position-relative">
+                    <div class="position-absolute onam_icon_top">
+                      <img id="onam_icon" src="{% static 'onam/decor/flowers/flowers1.png' %}" alt="">
+                    </div>
+                  </div>
+                  <div style="visibility: hidden;" class="icon-box-content">
+                    <i class="bx bx-receipt" style="color: #0fa49b"></i>
+                  </div>
                   {% else %}
                   <i class="bx bx-receipt" style="color: #0fa49b"></i>
                   {% endif %}
@@ -3452,7 +3558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div class="col-lg-3">
               <div class="icon-box">
-                <div class="icon-box-content mob_padd_for_why_chose_us_item">
+                <div class="icon-box-content mob_padd_for_why_chose_us_item" {% if current_theme == 'pongal' %}style="margin-left: 2rem;"{% endif %}>
                   <!-- <i class="bx bx-shield" style="color: #0fa49b"></i> -->
                   {% if current_theme == 'pongal' %}
                   <img draggable="false"style="width: 2.5rem;margin: 0rem 1.7rem 0rem 0rem" src="{% static 'pongal/icons/icon1.png' %}" alt="">
@@ -3494,6 +3600,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       style="color: #0fa49b"
                     ></ion-icon>
                   </div>
+                  {% elif current_theme == 'onam' %}
+                  <div class="position-relative">
+                    <div class="position-absolute onam_icon_top">
+                      <img id="onam_icon" src="{% static 'onam/decor/flowers/flowers2.png' %}" alt="">
+                    </div>
+                  </div>
+                  <div  style="visibility: hidden;" class="icon-box-content">
+                    <!-- <i class="bx bx-shield" style="color: #0fa49b"></i> -->
+                    <ion-icon
+                      name="layers-outline"
+                      style="color: #0fa49b"
+                    ></ion-icon>
+                  </div>
                   {% else %}
                   <ion-icon
                     name="layers-outline"
@@ -3516,7 +3635,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="icon-box mt-5 mt-lg-0">
                 <div class="icon-box-content">
                   {% if current_theme == 'pongal' %}
-                  <i class="bx bx-cube-alt pongal_text_theme1" style="color: transparent;"></i>
+                  <i class="bx bx-cube-alt pongal_text_theme1" style="color: transparent;padding-left: 2rem;"></i>
                   {% elif current_theme == 'vishu' %}
                   <div class="position-relative" style="z-index: 10;">
                     <div class="position-absolute start-50 translate-middle-x kp1_top"> 
@@ -3549,6 +3668,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div  style="visibility: hidden;" class="icon-box-content">
                     <i class="bx bx-cube-alt" style="color: #0fa49b"></i>
                   </div>
+                  {% elif current_theme == 'onam' %}
+                  <div class="position-relative">
+                    <div class="position-absolute onam_icon_top">
+                      <img id="onam_icon" src="{% static 'onam/decor/flowers/flowers3.png' %}" alt="">
+                    </div>
+                  </div>
+  
+                  <div  style="visibility: hidden;" class="icon-box-content">
+                    <i class="bx bx-cube-alt" style="color: #0fa49b"></i>
+                  </div>
                   {% else %}
                   <i class="bx bx-cube-alt" style="color: #0fa49b"></i>
                   {% endif %}
@@ -3567,7 +3696,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div class="col-lg-3">
               <div class="icon-box mt-5 mt-lg-0">
-                <div class="icon-box-content">
+                <div class="icon-box-content" {% if current_theme == 'pongal' %}style="margin-left: 2rem;"{% endif %}>
                   <!-- <i class="bx bx-cube-alt" style="color: #0fa49b"></i> -->
                   {% if current_theme == 'pongal' %}
                   <img draggable="false"style="width: 2.5rem;margin: 0rem 1.7rem 0rem 0rem" src="{% static 'pongal/icons/icon2.png' %}" alt="">
@@ -3587,7 +3716,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <i class="bx bx-shield" style="color: #0fa49b;visibility: hidden;"></i>
                   {% elif current_theme == 'xmas' %}
                   <div class="position-relative" style="z-index: 1;">
-                    <div class="position-absolute" style="margin-top: -2.5rem;margin-left: -2rem;">
+                    <div class="position-absolute" style="margin-top: -2.5rem;margin-left: -1.5rem;">
                       <img width="100rem" draggable="false" src="{% static 'xmas/decor/present.png' %}" alt="">
                    </div>
                    </div>
@@ -3602,6 +3731,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
   
+                  <div style="visibility: hidden;" class="icon-box-content">
+                    <!-- <i class="bx bx-cube-alt" style="color: #0fa49b"></i> -->
+                    <ion-icon name="people-outline" style="color: #0fa49b">
+                    </ion-icon>
+                  </div>
+                  {% elif current_theme == 'onam' %}
+                  <div class="position-relative">
+                    <div class="position-absolute onam_icon_top">
+                      <img id="onam_icon" src="{% static 'onam/decor/flowers/flowers4.png' %}" alt="">
+                    </div>
+                  </div>
                   <div style="visibility: hidden;" class="icon-box-content">
                     <!-- <i class="bx bx-cube-alt" style="color: #0fa49b"></i> -->
                     <ion-icon name="people-outline" style="color: #0fa49b">
@@ -3636,7 +3776,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Contact US Section -->
       <section id="contactus-section" class="">
-        <div class="contact-section w-100 px-5 py-3 pt-5">
+        <div class="contact-section w-100 contact_us_section_padding pt-5">
           <div class="container section-title d-flex justify-content-center mb-1 pb-1">
             <div class="contact-head">
               <h2>Connect</h2>
@@ -3650,6 +3790,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p class="xmas_text text-light">With Us</p>
               {% elif current_theme == 'republic' %}
               <p style="color: transparent;"><span class="fg_republic"> With</span><span class="fg_republic"> Us</span> </p>
+              {% elif current_theme == 'onam' %}
+              <p style="color: transparent;"><span class="onam_text_sm_bg1"> With</span><span class="onam_text_sm_bg1"> Us</span> </p>
               {% else %}
               <p style="color: rgb(39, 112, 141);">With Us</p>
               {% endif %}
@@ -3788,6 +3930,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <img id="fade_effect2" draggable="false" src="{% static 'easter/decor/bunny2.png' %}" alt="">
         </div>
       </div>
+      {% elif current_theme == 'onam' %}
+      <div class="position-relative" style="z-index: 10;">
+        <div class="position-absolute end-0 bottom-0 fade_effect_top2">
+          <img id="fade_effect2" draggable="false" src="{% static 'onam/decor/maveli.png' %}" alt="">
+        </div>
+      </div>
       {% endif %}
 
 
@@ -3806,6 +3954,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="xmas_text text-light">SERVICES</p>
             {% elif current_theme == 'republic' %}
             <p style="color: transparent;"><span class="fg_republic"> SERVICES</span></p>
+            {% elif current_theme == 'onam' %}
+            <p style="color: transparent;"><span class="onam_text_sm_bg1"> SERVICES</span></p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">SERVICES</p>
             {% endif %}
@@ -3857,6 +4007,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle5"
                     {% elif current_theme == 'republic' %}
                     class="circle6"
+                    {% elif current_theme == 'onam' %}
+                    class="circle7"
                     {% else %} 
                     class="circle" 
                     {% endif %}>
@@ -3909,6 +4061,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle5"
                   {% elif current_theme == 'republic' %}
                   class="circle6"
+                  {% elif current_theme == 'onam' %}
+                  class="circle7"
                    {% else %} 
                    class="circle" 
                    {% endif %}>
@@ -3959,6 +4113,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle5"
                     {% elif current_theme == 'republic' %}
                     class="circle6"
+                    {% elif current_theme == 'onam' %}
+                    class="circle7"
                     {% else %} 
                     class="circle" 
                     {% endif %}>
@@ -4009,6 +4165,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle5"
                     {% elif current_theme == 'republic' %}
                     class="circle6"
+                    {% elif current_theme == 'onam' %}
+                    class="circle7"
                    {% else %} 
                    class="circle" 
                    {% endif %}>
@@ -4090,6 +4248,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 style="color: transparent;">
               <span class="fg_republic">Our</span><span class="fg_republic"> Technologies</span>
             </h1>
+            {% elif current_theme == 'onam' %}
+            <h1 style="color: transparent;">
+              <span class="text-light">Our</span><span class="onam_text_sm_bg1"> Technologies</span>
+            </h1>
             {% else %}
             <h1 class="">
               Our<span style="color: rgb(39, 112, 141)"> Technologies</span>
@@ -4128,6 +4290,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4185,6 +4349,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/img/team/erp.png" alt="ERP" />
             {% elif current_theme == 'republic' %}
             <img src="static/republic/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -4211,6 +4377,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% elif current_theme == 'republic' %}
             <img src="static/republic/img/hrms.png" alt="HRMS" />
+            {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/hrms.png" alt="HRMS" />
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -4243,6 +4411,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4286,6 +4456,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4324,6 +4496,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4371,6 +4545,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4427,6 +4603,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/img/portfolio/3d.png" alt="3D Modeling" />
             {% elif current_theme == 'republic' %}
             <img src="static/republic/img/3d.png" alt="3D Modeling" />
+            {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/3d.png" alt="3D Modeling" />
             {% else %}
             <img src="static/img/team/3d.png" alt="3D" />
             {% endif %}
@@ -4453,6 +4631,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/img/team/arvr.jpg" alt="VR/AR" />
             {% elif current_theme == 'republic' %}
             <img src="static/republic/img/arvr.png" alt="VR/AR" />
+            {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/arvr.png" alt="VR/AR" />
             {% else %}
             <img src="static/img/team/arvr.jpg" alt="ARVR" />
             {% endif %}
@@ -4484,6 +4664,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle5"
                 {% elif current_theme == 'republic' %}
                 class="circle6"
+                {% elif current_theme == 'onam' %}
+                class="circle7"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4511,6 +4693,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 style="color: transparent;">
               <span class="fg_republic">Other</span><span class="fg_republic"> Branches</span>
             </h1>
+            {% elif current_theme == 'onam' %}
+            <h1 style="color: transparent;">
+              <span class="text-light">Other</span><span class="onam_text_sm_bg1"> Branches</span>
+            </h1>
             {% else %}
             <h1 class="">
               Other<span style="color: rgb(39, 112, 141)"> Branches</span>
@@ -4521,8 +4707,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </section>
       <section class="pt-4 other-branches">
         <div class="row container">
-          <div class="col-sm-12 col-md-6">
-            <div class="card" 
+          <div class="col-sm-12 col-md-6 reset_pad_margin">
+            <div class="card" style="margin-left: 0rem;margin-right: 0rem;"
             {% if current_theme == 'pongal' %}
             style="
             background: url('/static/pongal/bg/blur_bg.png');
@@ -4567,8 +4753,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           </div>
 
-          <div class="col-sm-12 col-md-6">
-            <div class="card"
+          <div class="col-sm-12 col-md-6 reset_pad_margin">
+            <div class="card" style="margin-left: 0rem;margin-right: 0rem;"
             {% if current_theme == 'pongal' %}
             style="
             background: url('/static/pongal/bg/blur_bg.png');
@@ -4630,6 +4816,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="xmas_text text-light">Locations</p>
             {% elif current_theme == 'republic' %}
             <p style="color: transparent;" class="fg_republic">Locations</p>
+            {% elif current_theme == 'onam' %}
+            <p style="color: transparent;" class="onam_text_sm_bg1">Locations</p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">Locations</p>
             {% endif %}
@@ -4666,6 +4854,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-geo-alt me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-geo-alt me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-geo-alt me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -4703,6 +4893,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-envelope me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-envelope me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-envelope me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-envelope me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -4733,6 +4925,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-phone me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-phone me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-phone me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-phone me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -4774,6 +4968,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-geo-alt me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-geo-alt me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-geo-alt me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -4811,6 +5007,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-envelope me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-envelope me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-envelope me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-envelope me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"
@@ -4841,6 +5039,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-phone me-2 text-light bg-danger"
                   {% elif current_theme == 'republic' %}
                   class="bi bi-phone me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
+                  {% elif current_theme == 'onam' %}
+                  class="bi bi-phone me-2 text-light" style="background-color: rgb(255, 128, 0);"
                   {% else %}
                   class="bi bi-phone me-2 text-dark" 
                   style="background-color:#0fa49b; color:rgb(0, 0, 0)"

@@ -573,7 +573,46 @@ font-weight: 800;
     margin-bottom: -2rem;
     margin-right: -1rem;
   }
- 
+ /* responsive */
+ @media screen and (max-width:767px) {
+    .onam_top_right_top{
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+    .onam_top_left_top{
+      margin-top: -2rem;
+      margin-left: -2rem;
+    }
+    .onam_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -2rem;
+    }
+    .onam_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    .onam_frame{
+      width: 5rem;
+    }
+    .onam_top_right_top{
+      margin-top: -2rem;
+      margin-right: -1rem;
+    }
+    .onam_top_left_top{
+      margin-top: -2rem;
+      margin-left: -1rem;
+    }
+    .onam_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -1rem;
+    }
+    .onam_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -1rem;
+    }
+  }
 </style>
 
   <main id="main">
@@ -613,8 +652,8 @@ font-weight: 800;
             </div>
 
             <div class="position-relative" id="display2">
-              <div class="position-absolute about_design1_top start-50 translate-middle-x" style="margin-top: 2rem;">
-                <img width="140rem" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
+              <div class="position-absolute about_design1_top start-50 translate-middle-x about_design1_top">
+                <img id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
               </div>
             </div>
             {% endif %}

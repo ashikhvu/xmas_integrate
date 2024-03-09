@@ -579,6 +579,14 @@ h5 {
     color: black;
     font-family: courier, sans;
   }
+  .cor{
+    background-image: url('/static/pongal/bg/bg_fire.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
@@ -1273,6 +1281,16 @@ h5 {
         box-shadow: 3px 3px 3px 3px black;
         transition: all 0.3s ease-out;
       }
+      .xmas_sm_tree_top{
+        margin-bottom: -10rem;
+        margin-right: 0.3rem;
+      }
+      @media screen and (max-width:280px) {
+        .xmas_sm_tree_top{
+          margin-bottom: 0.5rem;
+          margin-right: -9rem;
+        }
+      }
 </style>
 
 <!-- republic -->
@@ -1504,8 +1522,41 @@ h5 {
   width: 30rem;
 }
 .onam_footer_decor_top{
-  margin-top: -20rem;
-}
+    margin-top: -22rem;
+  }
+/* responsice */
+@media screen and (max-width:856px) {
+    #onam_footer_decor{
+      width: 25rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -20rem;
+    }
+  }
+  @media screen and (max-width:520px) {
+    #onam_footer_decor{
+      width: 20rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -17rem;
+    }
+  }
+  @media screen and (max-width:420px) {
+    #onam_footer_decor{
+      width: 15rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  @media screen and (max-width:367px) {
+    #onam_footer_decor{
+      width: 7rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -11rem;
+    }
+  }
 </style>
 
 <body>
@@ -1773,7 +1824,7 @@ h5 {
         <li>
           <a 
           {% if current_theme == 'pongal' %}
-          class="nav-link scrollto cor pongal_text_theme1" style="color: transparent;"
+          class="nav-link scrollto cor hover_anchor_pongal" style="color: transparent;"
           {% elif current_theme == 'vishu' %}
             class="nav-link scrollto cor " style="color: yellow;text-shadow: 0px 0px 10px black;"
           {% elif current_theme == 'easter' %}
@@ -2303,7 +2354,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2366,7 +2417,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2429,7 +2480,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2491,7 +2542,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2553,7 +2604,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2615,7 +2666,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2677,7 +2728,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2739,7 +2790,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2801,7 +2852,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2863,7 +2914,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -2925,7 +2976,7 @@ h5 {
         </a>
         {% if current_theme == 'xmas' %} 
         <div class="position-relative" style="z-index: 1;">
-          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+          <div class="position-absolute end-0 bottom-0 xmas_sm_tree_top" >
             <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
         </div>
         </div>
@@ -3201,6 +3252,8 @@ h5 {
             </div>
           {% elif current_theme == 'republic' %}
             <img src="static/republic/img/account.png" alt="ACCOUNTING" /> 
+          {% elif current_theme == 'onam' %}
+            <img src="static/onam/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}

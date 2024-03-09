@@ -280,6 +280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   </style>
   
+  <!-- pongal -->
   <style>
     .pongal_text_theme{
       background-image: url('/static/pongal/bg/bg_fire.png');
@@ -354,6 +355,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         margin-right: 1.5rem;
       }
     }
+    @media screen and (max-width:280px) {
+      #pongal_home2{
+        width: 5rem;
+      }
+      .pongal_home2_top{
+        margin-top: -3.5rem;
+        margin-right: 1.5rem;
+      }
+    }
     #frame_decor{
       width: 10rem;
     }
@@ -387,6 +397,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         margin-top: -0.2rem;
         margin-left: -0.2rem;
       }
+    }
+    .event{
+      background-image: url('/static/pongal/bg/bg_fire.png');
+      background-size: contain;
+      background-repeat: repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
   .navbar a:hover,
   .navbar .active,
@@ -427,6 +445,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       .pongal_footer_decor_top{
         margin-top: -12rem;
+      }
+    }
+    #pongal_gallery_frame
+    {
+      width: 15rem;
+    }
+    .pongal_gallery_frame_top{
+      margin-left: 1.2rem;
+    }
+    @media screen and (max-width:280px) {
+      #pongal_gallery_frame
+      {
+        width: 14rem;
+      }
+      .pongal_gallery_frame_top{
+        margin-bottom: 1rem;
+        margin-left: 1.2rem;
       }
     }
   </style>
@@ -589,6 +624,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-right: -1rem;
     margin-bottom: -1rem;
   }
+  @media screen and (max-width:500px) {
+    .easter_frame_corner{
+      width: 5rem;
+    }
+    .easter_frame_corner_top{
+      margin-right: -1rem;
+      margin-bottom: -1rem;
+    }
+  }
   #footer_decor_easter{
     width: 30rem;
   }
@@ -715,6 +759,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .easter_ballon1_top{
       margin-top: -3rem;
       margin-right: 0rem;
+    }
+  }
+  .easter_gallery_frame_top{
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    width: 18.5rem;
+  }
+  @media screen and (max-width:280px) {
+    .easter_gallery_frame_top{
+      margin-bottom: -1rem;
+      margin-left: -0.75rem;
+      width: 17.5rem;
+      height: 16rem;
     }
   }
 </style>
@@ -883,6 +940,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-right: 15rem;
     }
   }
+  @media screen and (max-width:280px) {
+    #xmas_elf2{
+      width: 3rem;
+    }
+    .xmas_elf2_top{
+      margin-top: -3rem;
+      margin-right: 2rem;
+    }
+  }
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
@@ -894,7 +960,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: white;
     text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
   }
-  
+  .xmas_ball3{
+    width: 5rem;
+  }
+  .xmas_ball3_top{
+    margin-top: -0.1rem;
+    margin-right: -0.1rem;
+  }
+  @media screen and (max-width:280px) {
+    .xmas_ball3_top{
+      margin-top: -0.1rem;
+      margin-right: -0.1rem;
+    }
+  }
+  .xmas_gallery_frame{
+    
+  }
+  .xmas_gallery_frame_top{
+    height: 13.9rem;
+    width: 17rem;
+  }
+  @media screen and (max-width:280px) {
+    .xmas_gallery_frame_top{
+      height: 13.9rem;
+      width: 16.5rem;
+      margin-left: -0.5rem;
+    }
+  }
 </style>
 
 <!-- republic -->
@@ -1028,6 +1120,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-clip: text;
     -webkit-background-clip: text;
   }
+  /* .republic_gallery_frame{
+    height: 13.9rem;
+    width: 17rem;
+  }
+  .republic_gallery_frame_top{
+    margin-left: 1.2rem;
+  } */
 </style>
 
 <!-- onam -->
@@ -1036,7 +1135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 30rem;
   }
   .onam_footer_decor_top{
-    margin-top: -20rem;
+    margin-top: -22rem;
   }
   .onam_frame_corner{
     width: 7rem;
@@ -1052,7 +1151,109 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top: -10.5rem;
     margin-right: 6rem;
   }
+  /* responsive */
+  @media screen and (max-width:400px) {
+    .onam_frame_corner{
+      width: 3rem;
+    }
+  }
   
+  @media screen and (max-width:1399px) {
+    #maveli_2{
+      width: 22rem;
+    }
+    .maveli_2_top{
+      margin-top: -10.5rem;
+      margin-right: 2rem;
+    }
+  }
+  @media screen and (max-width:1199px) {
+    #maveli_2{
+      width: 21rem;
+    }
+    .maveli_2_top{
+      margin-top: -10rem;
+      margin-right: 11rem;
+    }
+  }
+  @media screen and (max-width:991px) {
+    #maveli_2{
+      width: 16rem;
+    }
+    .maveli_2_top{
+      margin-top: -8rem;
+      margin-right: 5rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #maveli_2{
+      width: 16rem;
+    }
+    .maveli_2_top{
+      margin-top: -8rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:479px) {
+    #maveli_2{
+      width: 12rem;
+    }
+    .maveli_2_top{
+      margin-top: -6rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:369px) {
+    #maveli_2{
+      width: 7rem;
+    }
+    .maveli_2_top{
+      margin-top: -3.5rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:856px) {
+    #onam_footer_decor{
+      width: 25rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -20rem;
+    }
+  }
+  @media screen and (max-width:520px) {
+    #onam_footer_decor{
+      width: 20rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -17rem;
+    }
+  }
+  @media screen and (max-width:420px) {
+    #onam_footer_decor{
+      width: 15rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  @media screen and (max-width:367px) {
+    #onam_footer_decor{
+      width: 7rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -11rem;
+    }
+  }
+  #onam_gallery_frame{
+    height: 13.9rem;
+    width: 17rem;
+  }
+  @media screen and (max-width:280px) {
+    #onam_gallery_frame{
+      height: 13.9rem;
+      width: 16rem;
+    }
+  }
 </style>
 
 
@@ -1378,7 +1579,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li>
             <a 
             {% if current_theme == 'pongal' %}
-            class="nav-link scrollto event pongal_text_theme1" style="color: transparent;"
+            class="nav-link scrollto event hover_anchor_pongal" style="color: transparent;"
             {% elif current_theme == 'vishu' %}
             class="nav-link scrollto event " style="color: yellow;text-shadow: 0px 0px 10px black;"
             {% elif current_theme == 'easter' %}
@@ -1660,8 +1861,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   </div>
                   {% elif current_theme == 'xmas' %} 
                   <div class="position-relative">
-                    <div class="position-absolute end-0" style="margin-top: -0.1rem;margin-right: -0.1rem;">
-                      <img draggable="false" width="100rem" src="{% static 'xmas/decor/xmas_ball3.png' %}" alt="">
+                    <div class="position-absolute end-0 xmas_ball3_top">
+                      <img draggable="false" class="xmas_ball3" src="{% static 'xmas/decor/xmas_ball3.png' %}" alt="">
                     </div>
                   </div>
                   {% elif current_theme == 'republic' %}
@@ -1772,8 +1973,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             {% if current_theme == 'republic' %}
             <div class="position-relative">
-              <div class="position-absolute" style="margin-left: 1.2rem;">
-                <img draggable="false" style="height: 13.9rem;width: 17rem;" src="{% static 'republic/decor/frame4.png' %}" alt="">
+              <div class="position-absolute republic_gallery_frame_top">
+                <img draggable="false" class="republic_gallery_frame" src="{% static 'republic/decor/frame5.png' %}" alt="">
               </div>
             </div>
             {% endif %}
@@ -1781,32 +1982,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             {% if current_theme == 'pongal' %}
             <div class="position-relative">
-              <div class="position-absolute bottom-0 start-0" style="margin-left: 1.2rem;">
-                <img draggable="false" style="width: 15rem;" src="{% static 'pongal/frame/frame2.png' %}" alt="">
+              <div class="position-absolute bottom-0 start-0 pongal_gallery_frame_top">
+                <img draggable="false" id="pongal_gallery_frame" src="{% static 'pongal/frame/frame2.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'vishu' %}
             <div class="position-relative">
-              <div class="position-absolute bottom-0 start-0" style="margin-left: 0.5rem;">
-                <img draggable="false" style="width: 16rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame.png' %}" alt="">
+              <div class="position-absolute bottom-0 start-0 vishu_gallery_frame_top">
+                <img draggable="false" class="vishu_gallery_frame" src="{% static 'vishu/decor/frame_decor/gallery_frame.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'easter' %}
             <div class="position-relative">
-              <div class="position-absolute bottom-0 start-0" style="margin-bottom: -1rem;margin-left: -1rem;">
-                <img draggable="false" style="width: 18.5rem;" src="{% static 'easter/decor/frame/photo_frame.png' %}" alt="">
+              <div class="position-absolute bottom-0 start-0 easter_gallery_frame_top">
+                <img draggable="false" class="easter_gallery_frame" src="{% static 'easter/decor/frame/photo_frame.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'xmas' %}
             <div class="position-relative">
-              <div class="position-absolute bottom-0 start-0">
-                <img draggable="false" style="height: 13.9rem;width: 17rem;" src="{% static 'xmas/decor/event_image_frame.png' %}" alt="">
+              <div class="position-absolute bottom-0 start-0 xmas_gallery_frame_top">
+                <img draggable="false" id="xmas_gallery_frame" src="{% static 'xmas/decor/event_image_frame.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'onam' %}
             <div class="position-relative">
               <div class="position-absolute bottom-0 start-0">
-                <img draggable="false" style="height: 13.9rem;width: 17rem;" src="{% static 'onam/decor/frame4/frame_gallery.png' %}" alt="">
+                <img draggable="false" id="onam_gallery_frame" src="{% static 'onam/decor/frame4/frame_gallery.png' %}" alt="">
               </div>
             </div>
             {% endif %}

@@ -111,6 +111,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-clip: text;
     -webkit-background-clip: text;
   }
+  .serv{
+    background-image: url('/static/pongal/bg/bg_fire.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
@@ -179,6 +187,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .pongal_footer_decor_top{
       margin-top: -12rem;
+    }
+  }
+  #pongal_whatsapp_frame{
+    width: 21.6rem;height: 25.5rem;
+  }
+  .pongal_whatsapp_frame_top{
+    margin-top: -3rem;margin-left: -4rem;
+  }
+  @media screen and (max-width:337px) {
+    #pongal_whatsapp_frame{
+      width: 20.2rem;height: 27rem;
+    }
+    .pongal_whatsapp_frame_top{
+      margin-top: -3rem;margin-left: -4rem;
     }
   }
 </style>
@@ -251,6 +273,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       .happy_vishu_top1{
         margin-top: -12rem;
+      }
+    }
+    #vishu_whatsapp_frame{
+      width: 19rem;
+    }
+    .vishu_whatsapp_frame_top{
+      margin-top: -2rem;
+      margin-left: -2.6rem;
+    }
+    @media screen and (max-width:280px) {
+      #vishu_whatsapp_frame{
+        width: 17.3rem;
+        height: 25rem;
+      }
+      .vishu_whatsapp_frame_top{
+        margin-top: -2rem;
+        margin-left: -2.6rem;
       }
     }
 </style>
@@ -364,6 +403,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-right: -0.5rem;
     }
   }
+  .easter_whatsapp_frame{
+    width: 21.5rem;
+  }
+  .easter_whatsapp_frame_top{
+    margin-top: -2.5rem;
+    margin-left: -4rem;
+  }
+  @media screen and (max-width:280px) {
+    .easter_whatsapp_frame{
+      width: 20rem;
+      height: 26.5rem;
+    }
+    .easter_whatsapp_frame_top{
+      margin-top: -2.5rem;
+      margin-left: -4rem;
+    }
+  }
 </style>
 
 <!-- xmas -->
@@ -445,6 +501,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .red_top_top{
     margin-left: -0.2rem;
     margin-top: -1.45rem;
+  }
+  @media screen and (max-width:280px) {
+    .red_top_top{
+      margin-left: -0.2rem;
+      margin-top: -1rem;
+    }
   }
   #blue_top{
     width: 7rem;
@@ -864,10 +926,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 18rem;
   }
   .onam_footer_decor_top{
-    margin-top: -15rem;
+    margin-top: -16rem;
     margin-right: -0rem;
   }
-  
+  /* responsive */
+  @media screen and (max-width:856px) {
+    #onam_footer_decor{
+      width: 25rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -20rem;
+    }
+  }
+  @media screen and (max-width:520px) {
+    #onam_footer_decor{
+      width: 20rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -17rem;
+    }
+  }
+  @media screen and (max-width:420px) {
+    #onam_footer_decor{
+      width: 15rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  @media screen and (max-width:367px) {
+    #onam_footer_decor{
+      width: 7rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -11rem;
+    }
+  }
+  @media screen and (min-width:992px) and (max-width:1140px) {
+    #onam_footer_decor{
+      width: 17.5rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -15rem;
+    }
+  }
+  .onam_frame{
+    width: 17rem;
+  }
+  @media screen and (max-width:280px) {
+    .onam_frame{
+      width: 15.6rem;
+      margin-top: 3.5rem;
+    }
+  }
 </style>
 
 </head>
@@ -1127,7 +1238,7 @@ gtag('config', 'G-3RLTXDEGMP');
       <li>
         <a 
         {% if current_theme == 'pongal' %}
-        class="nav-link scrollto serv pongal_text_theme1" style="color: transparent;" 
+        class="nav-link scrollto serv hover_anchor_pongal" style="color: transparent;" 
         {% elif current_theme == 'vishu' %} 
         class="nav-link scrollto hom hover_anchor_vishu" style="color: yellow;"
         {% elif current_theme == 'easter' %}
@@ -1993,20 +2104,20 @@ window.addEventListener('resize', handleResize);
 
             {% if current_theme == 'pongal' %}
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
-                <img style="width: 21.6rem;height: 25.5rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 pongal_whatsapp_frame_top">
+                <img id="pongal_whatsapp_frame" src="{% static 'pongal/frame/frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'vishu' %} 
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -2.6rem;">
-                <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 vishu_whatsapp_frame_top" >
+                <img id="vishu_whatsapp_frame" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'easter' %} 
             <div class="position-relative" style="z-index: 10;">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
-                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 easter_whatsapp_frame_top">
+                <img class="easter_whatsapp_frame" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
             {% endif %}
@@ -2027,7 +2138,7 @@ window.addEventListener('resize', handleResize);
               {% elif current_theme == 'onam' %}
               <div class="position-relative">
                 <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
-                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
+                  <img class="onam_frame" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2051,26 +2162,26 @@ window.addEventListener('resize', handleResize);
 
             {% if current_theme == 'pongal' %}
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
-                <img style="width: 21.6rem;height: 25.5rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 pongal_whatsapp_frame_top">
+                <img id="pongal_whatsapp_frame" src="{% static 'pongal/frame/frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'vishu' %} 
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -2.6rem;">
-                <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 vishu_whatsapp_frame_top">
+                <img id="vishu_whatsapp_frame" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'easter' %} 
             <div class="position-relative" style="z-index: 10;">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
-                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 easter_whatsapp_frame_top">
+                <img class="easter_whatsapp_frame" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'onam' %}
               <div class="position-relative">
                 <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
-                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
+                  <img class="onam_frame" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
                 </div>
               </div>
             {% endif %}
@@ -2110,20 +2221,20 @@ window.addEventListener('resize', handleResize);
 
             {% if current_theme == 'pongal' %}
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
-                <img style="width: 21.6rem;height: 25.5rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 pongal_whatsapp_frame_top">
+                <img id="pongal_whatsapp_frame" src="{% static 'pongal/frame/frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'vishu' %} 
             <div class="position-relative">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -2.6rem;">
-                <img style="width: 19rem;" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 vishu_whatsapp_frame_top">
+                <img id="vishu_whatsapp_frame" src="{% static 'vishu/decor/frame_decor/gallery_frame3.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'easter' %} 
             <div class="position-relative" style="z-index: 10;">
-              <div class="position-absolute start-0 top-0" style="margin-top: -2.5rem;margin-left: -4rem;">
-                <img style="width: 21.5rem;" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
+              <div class="position-absolute start-0 top-0 easter_whatsapp_frame_top">
+                <img class="easter_whatsapp_frame" src="{% static 'easter/decor/frame/whatsapp_frame.png' %}" alt="">
               </div>
             </div>
             {% endif %}
@@ -2144,7 +2255,7 @@ window.addEventListener('resize', handleResize);
               {% elif current_theme == 'onam' %}
               <div class="position-relative">
                 <div class="position-absolute" style="margin-left: -1.8rem;margin-top: -1.2rem;">
-                  <img style="width: 17rem;" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
+                  <img class="onam_frame" src="{% static 'onam/decor/frame6/onam_whatsapp_frame.png' %}" alt="">
                 </div>
               </div>
               {% endif %}

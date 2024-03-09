@@ -118,6 +118,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-clip: text;
     -webkit-background-clip: text;
   }
+  .serv{
+    background-image: url('/static/pongal/bg/bg_fire.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
@@ -204,6 +212,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .happy_vishu_top1{
       margin-top: -12rem;
     }
+  }
+  #multi_peacock_feather{
+    width: 10rem;
+  }
+  .multi_peacock_feather_top{
+    margin-top: 20rem;
+    margin-left: 9rem;
+  }
+  @media screen and (max-width:280px) {
+    #multi_peacock_feather{
+    width: 7rem;
+  }
+  .multi_peacock_feather_top{
+    margin-top: 21.5rem;
+    margin-left: 7.5rem;
+  }
   }
 </style>
 <!-- easter -->
@@ -455,6 +479,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .top_flag{
     margin-top: -1.6rem;
   }
+  .fg_republic{
+    background-image: url('/static/republic/decor/text_theme1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+   }
   @media screen and (max-width:240px) {
       #footer_decor{
         width: 5rem;
@@ -564,7 +595,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 30rem;
   }
   .onam_footer_decor_top{
-    margin-top: -20rem;
+    margin-top: -22rem;
+  }
+  /* responsive */
+  @media screen and (max-width:856px) {
+    #onam_footer_decor{
+      width: 25rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -20rem;
+    }
+  }
+  @media screen and (max-width:520px) {
+    #onam_footer_decor{
+      width: 20rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -17rem;
+    }
+  }
+  @media screen and (max-width:420px) {
+    #onam_footer_decor{
+      width: 15rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  @media screen and (max-width:367px) {
+    #onam_footer_decor{
+      width: 7rem;
+    }
+    .onam_footer_decor_top{
+      margin-top: -11rem;
+    }
+  }
+</style>
+
+<style>
+  .overflow_for_card_p{
+    overflow-y: auto;
+    height: 15rem;
   }
 </style>
 
@@ -825,7 +896,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a 
           {% if current_theme == 'pongal' %}
-          class="nav-link scrollto serv pongal_text_theme1" style="color: transparent;"
+          class="nav-link scrollto serv hover_anchor_pongal" style="color: transparent;"
           {% elif current_theme == 'vishu' %}
             class="nav-link scrollto serv " style="color: yellow;text-shadow: 0px 0px 10px black;"
           {% elif current_theme == 'easter' %}
@@ -1138,20 +1209,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               channels to reach a target audience, engage them, and drive desired actions.</p>
           </div>
 
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}
-          " style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
-                  <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
-                </div>
-              </div>
-
               <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
@@ -1159,14 +1237,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div> -->
               {% elif current_theme == 'vishu' %}
               <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame1_1.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1181,58 +1259,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div>   -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
   
               <div class="icon"> <ion-icon name="search"{% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %} ></ion-icon></div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>SEO Optimization</h4>
-              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>The Process Of Improving Your Site To Increase Its Visibility When People
-                Search For Products Or Services
-                Related To Your Business In Google, Bing, And Other Search Engines.
-              </p>
+              <div class="overflow_for_card_p">
+                <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>The Process Of Improving Your Site To Increase Its Visibility When People
+                  Search For Products Or Services
+                  Related To Your Business In Google, Bing, And Other Search Engines.
+                </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
             
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame2_2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1247,57 +1344,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
 
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               
               <div class="icon"> <i class="bx bx-tachometer" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></i></div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Content Marketing</span> </h4>
-              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Content marketing is a marketing strategy used to attract, engage, and retain an audience
-                by creating and sharing relevant articles, videos, podcasts, and other media.
-              </p>
+              <div class="overflow_for_card_p">
+                <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Content marketing is a marketing strategy used to attract, engage, and retain an audience
+                  by creating and sharing relevant articles, videos, podcasts, and other media.
+                </p>
             </div>
-            <div class="position-relative">
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
+            </div>
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame3_3.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1312,57 +1428,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
 
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon"><ion-icon name="phone-portrait" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
   
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>App store Optimization</span></h4>
-              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>It is the process of optimizing mobile apps to rank higher in
-                an app store's search results. The higher your app ranks , the more visible it is to potential customers.
-              </p>
+              <div class="overflow_for_card_p">
+                <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>It is the process of optimizing mobile apps to rank higher in
+                  an app store's search results. The higher your app ranks , the more visible it is to potential customers.
+                </p>
+                </div>
+                <div class="request-box">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+                </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
   
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame5.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame5_5.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1377,56 +1512,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="archive" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
   
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Email Marketing</h4>
-              <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Email marketing is a form of marketing that can make the
-                customers on your email list aware of new products, discounts, and other services.
-              </p>
+              <div class="overflow_for_card_p">
+                <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Email marketing is a form of marketing that can make the
+                  customers on your email list aware of new products, discounts, and other services.
+                </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
   
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame6.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame6_6.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1441,55 +1595,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="chatbox-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>SMS Marketing</span> </h4>
+              <div class="overflow_for_card_p">
               <p {% if current_theme == 'onam' %} style="color: black;" {% endif %}>SMS is one of the most convenient channels for communicating
                 with your customers, and one of the most preferred mediums by customers themselves.
               </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
   
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame4.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame4_4.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1504,55 +1677,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon"> <ion-icon name="chatbubbles-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon></div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>WhatsApp Marketing</h4>
-              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> You can use it to send reminders about abandoned shopping carts,
-                share special offers and coupons, or even answer customer questions in real time.
-              </p>
+              <div class="overflow_for_card_p">
+                <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> You can use it to send reminders about abandoned shopping carts,
+                  share special offers and coupons, or even answer customer questions in real time.
+                </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
   
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame8.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame8_8.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1567,58 +1759,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="share-social-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Social Media Marketing </span> </h4>
-              <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Increase your brand awareness, drive more traffic to your website by creating &
-                managing social media accounts, developing content strategies, running social media
-                advertising campaigns, and analyzing data to track your progress and make data-driven decisions.
-              </p>
+              <div class="overflow_for_card_p">
+                <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Increase your brand awareness, drive more traffic to your website by creating &
+                  managing social media accounts, developing content strategies, running social media
+                  advertising campaigns, and analyzing data to track your progress and make data-driven decisions.
+                </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame2_2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1633,57 +1844,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="logo-linkedin" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>LinkedIn Marketing</span> </h4>
+              <div class="overflow_for_card_p">
               <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> It is using the platform to market your business or company.
                 It can be used as a marketing tool too as it allows you to easily segment your target audience.
               </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame2_2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1698,58 +1928,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="logo-youtube" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>YouTube Marketing </span> </h4>
+              <div class="overflow_for_card_p">
               <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> From creating a channel, content creation, paid promotion, etc, we work with a
                 variety of industries and can create customized strategies for each one. Let us
                 help you utilize this powerful platform for businesses to reach the targeted audience.
               </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame3_3.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1764,60 +2013,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="archive" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Email Marketing Tools </span> </h4>
+              <div class="overflow_for_card_p">
               <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
                 Our email marketing tool is a powerful and easy-to-use platform designed to help you create,
                 send, and analyze email campaigns. Our customizable templates and segmentation tools make
                 it easy to target your audience and optimize your campaigns.
   
               </p>
+              </div>
+              <div class="request-box">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
   
-          <div class="box-service
-          {% if current_theme == 'onam' %}
-          bg-light rounded
-          {% endif %}" style="height: 450px;">
+          <div {% if current_theme == 'onam' %}
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
             <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame1_1.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -1832,37 +2100,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
               <div class="icon">
                 <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
               </div>
               <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Whatsapp Marketing Tools </span> </h4>
+              <div class="overflow_for_card_p">
               <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
                 Our WhatsApp marketing tool allows you to connect with your audience on the world's most
                 popular messaging platform. Our customizable solutions allow you to send personalized
                 messages, manage your contacts, and track performance
   
               </p>
+              </div>
+              <div class="request-box">
+                <a href="{% url 'whatsappmarkettools' %}" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+              </div>
             </div>
 
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-50 translate-middle-x">
                 <div class="request-box">
                   <a href="{% url 'whatsappmarkettools' %}" {% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             
           </div>
@@ -1883,8 +2156,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -1912,8 +2185,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -1939,8 +2212,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -1966,8 +2239,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -1994,8 +2267,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2022,8 +2295,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2049,8 +2322,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2076,8 +2349,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
            {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% endif %}
@@ -2126,28 +2399,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div> -->
 
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame5.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame5_5.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -2162,58 +2450,78 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>BPO </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}> Our business process outsourcing services can help you streamline your operations, reduce
               costs, and increase efficiency. We provide a range of services, including customer support, data
               entry, and back-office operations.
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-          <div class="position-relative">
+          <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           
           <div class="box-contents" style="height: 380px;">
             {% if current_theme == 'pongal' %}
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                 <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
               </div>
-            </div>
+            </div> -->
             {% elif current_theme == 'vishu' %}
               <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame1.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame1_1.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -2228,61 +2536,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
             {% endif %}
 
             <div class="icon">
               <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>CRM </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our customer relationship management services are designed to help businesses build and
               maintain strong relationships with their clients. Our customizable solutions allow you to manage
               and analyze customer data, track sales, and automate processes.
 
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-         <div class="position-relative">
+         <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame6.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame6_6.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -2297,22 +2625,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="grid" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Entry </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data entry services can help you manage and organize large amounts of data quickly and
               accurately. We use advanced technology and experienced professionals to ensure that your
@@ -2320,37 +2649,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-         <div class="position-relative">
+         <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           <div class="box-contents" style="height: 380px;">
             {% if current_theme == 'pongal' %}
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                 <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
               </div>
-            </div>
+            </div> -->
             {% elif current_theme == 'vishu' %}
               <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
             {% elif current_theme == 'easter' %}
             <div class="position-relative">
               <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame2.png' %}" alt="">
+                <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame2_2.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'xmas' %}
@@ -2365,23 +2713,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
             {% endif %}
 
             <div class="icon">
               <ion-icon name="cloud-done-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Analysis </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data analysis services provide valuable insights into your business operations, helping you
               make informed decisions and improve performance. We use advanced analytics tools and
@@ -2389,39 +2738,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-         <div class="position-relative">
+         <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
              {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame8.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame8_8.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -2436,62 +2804,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="analytics-outline" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
 
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Data Analysis Tools </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our data analysis tools are designed to help you extract valuable insights from your data quickly
               and easily. Our customizable solutions allow you to analyze data from multiple sources and
               generate reports and visualizations
 
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-         <div class="position-relative">
+         <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
 
-        <div class="box-service
+        <div 
         {% if current_theme == 'onam' %}
-        bg-light rounded
-        {% endif %}" style="height: 450px;">
+          class="box-service bg-light rounded"
+          style="height: 450px;background-image: url('/static/onam/decor/frame2/service_frame2.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'pongal' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/pongal/frame/frame3_1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'republic' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% else %}
+          class="box-service" style="height: 450px;"
+          {% endif %}>
           <div class="box-contents" style="height: 380px;">
 
               {% if current_theme == 'pongal' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -3rem;margin-left: -4rem;">
                   <img style="width: 22.6rem;" src="{% static 'pongal/frame/frame3.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'vishu' %}
                <div class="position-relative">
-                <div class="position-absolute start-0 top-0" style="margin-top: 1.8rem;margin-left: 0.5rem;">
-                  <img style="width: 18.6rem;" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame.png' %}" alt="">
+                <div class="position-absolute start-0 top-0 multi_peacock_feather_top">
+                  <img id="multi_peacock_feather" src="{% static 'vishu/decor/frame_decor/peacock_feather_frame2.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'easter' %}
               <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2rem;margin-left: -3.5rem;">
-                  <img style="width: 21rem;" src="{% static 'easter/decor/frame/service_frame3.png' %}" alt="">
+                  <img style="width: 6.5rem;" src="{% static 'easter/decor/frame/service_frame3_3.png' %}" alt="">
                 </div>
               </div>
               {% elif current_theme == 'xmas' %}
@@ -2506,36 +2894,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               </div> -->
               {% elif current_theme == 'republic' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -1rem;margin-left: -1.7rem;">
                   <img width="290rem" src="{% static 'republic/decor/frames/service/frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% elif current_theme == 'onam' %}
-              <div class="position-relative">
+              <!-- <div class="position-relative">
                 <div class="position-absolute start-0 top-0" style="margin-top: -2.3rem;margin-left: -2.8rem;">
                   <img width="327rem" src="{% static 'onam/decor/frame2/service_frame1.png' %}" alt="">
                 </div>
-              </div>
+              </div> -->
               {% endif %}
             <div class="icon">
               <ion-icon name="logo-web-component" {% if current_theme == 'onam' %} style="color: #ff9500" {% else %} style="color: #ffb700" {% endif %}></ion-icon>
             </div>
             <h4 {% if current_theme == 'onam' %} style="color: orange;" class="onam_ts" {% else %} style="color: #ffb700" {% endif %}>Website Development </span> </h4>
+            <div class="overflow_for_card_p">
             <p  {% if current_theme == 'onam' %} style="color: black;" {% endif %}>
               Our website development services can help you build a professional and effective online
               presence. We provide customized solutions to meet your unique needs, including design,
               development, and maintenance services.
 
             </p>
+            </div>
+            <div class="request-box">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
+            </div>
           </div>
-         <div class="position-relative">
+         <!-- <div class="position-relative">
             <div class="position-absolute start-50 translate-middle-x">
               <div class="request-box">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form"{% if current_theme == 'onam' %} style="font-weight: bold;" {% endif %}>Know More </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- <div class="box-service" style="height: 450px;">
