@@ -632,6 +632,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- diwali -->
+
+<style>
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.diwali_nav {
+    background: linear-gradient(to right,red,rgb(240, 125, 125));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .diwali_nav_text{
+    background: linear-gradient(to right,red,rgb(240, 125, 125));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  #diwali_footer_decor{
+    width: 15rem;
+  }
+  .diwali_footer_decor_top{
+    margin-top: -21rem;
+  }
+  @media screen and (max-width:367px) {
+     #diwali_footer_decor{
+      width: 7rem;
+    }
+    .diwali_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+</style>
+
 <style>
   .overflow_for_card_p{
     overflow-y: auto;
@@ -835,6 +873,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
+    {% elif current_theme == 'diwali' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -2.5rem;">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+          </div>
+        </div>
+      </div>
   {% endif %}
   <div class="container d-flex align-items-center justify-content-lg-between">
 
@@ -865,6 +922,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom republic_nav_text"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto hom onam_hover"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto hom diwali_nav"
           {% else %} 
           class="nav-link scrollto hom hover_anchor" 
           {% endif %} 
@@ -886,6 +945,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto abot republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto abot onam_hover"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto abot diwali_nav"
               {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
               {% endif %} 
@@ -907,6 +968,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto serv" style="color: orange"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto serv" style="color: orange"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto hom diwali_nav_text" style="color: transparent"
           {% else %}
           class="nav-link scrollto serv hover_anchor" 
           {% endif %}
@@ -928,6 +991,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cor republic_nav_text"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto cor onam_hover"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto cor diwali_nav"
           {% else %}
           class="nav-link scrollto cor hover_anchor" 
           {% endif %}
@@ -949,6 +1014,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cors republic_nav_text"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto cors onam_hover"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto cors diwali_nav"
           {% else %}
           class="nav-link scrollto cors hover_anchor" 
           {% endif %}
@@ -971,6 +1038,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto event republic_nav_text"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto event onam_hover"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto event diwali_nav"
           {% else %}
           class="nav-link scrollto event hover_anchor" 
           {% endif %}
@@ -992,6 +1061,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto cont republic_nav_text"
           {% elif current_theme == 'onam' %}
             class="nav-link scrollto cont onam_hover"
+          {% elif current_theme == 'diwali' %}
+            class="nav-link scrollto cont diwali_nav"
           {% else %}
           class="nav-link scrollto cont hover_anchor" 
           {% endif %}
@@ -1191,6 +1262,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p style="color: transparent;"><span class="fg_republic">Check</span> <span class="fg_republic">our</span> <span class="fg_republic">Services</span></p>
         {% elif current_theme == 'onam' %}
         <p class="onam_ts">Check our <span style="color: orange;">Services</span></p>
+        {% elif current_theme == 'diwali' %}
+        <p class="text-light">Check our <span class="diwali_nav_text" style="color: transparent;">Services</span></p>
         {% else %}
         <p>Check our <span style="color: rgb(39, 112, 141);">Services</span></p>
         {% endif %}
@@ -1222,6 +1295,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -1309,6 +1387,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -1391,6 +1474,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -1477,6 +1565,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -1558,6 +1651,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -1642,6 +1740,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -1722,6 +1825,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -1809,6 +1917,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -1891,6 +2004,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -1978,6 +2096,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -2063,6 +2186,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -2415,6 +2543,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -2499,6 +2632,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -2590,6 +2728,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -2677,6 +2820,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -2769,6 +2917,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
           {% else %}
           class="box-service" style="height: 450px;"
           {% endif %}>
@@ -2857,6 +3010,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% elif current_theme == 'republic' %}
           class="box-service bg-dark rounded"
           style="height: 450px;background-image: url('/static/republic/decor/frames/service/frame1.png');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;"
+          {% elif current_theme == 'diwali' %}
+          class="box-service bg-dark rounded"
+          style="height: 450px;background-image: url('/static/diwali/decor/service_frame/diwali_service_frame.png');
           background-size: 100% 100%;
           background-repeat: no-repeat;"
           {% else %}
@@ -3310,6 +3468,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
       <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
     </div>
+    {% elif current_theme == 'diwali' %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+    </div>
   {% endif %}
 
 <!-- ======= Footer ======= -->
@@ -3426,6 +3637,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="position-relative">
   <div class="position-absolute end-0 onam_footer_decor_top">
     <img id="onam_footer_decor" draggable="false" src="{% static 'onam/decor/onam_footer_image.png' %}" alt="">
+  </div>
+</div>
+{% elif current_theme == 'diwali' %}
+<div class="position-relative">
+  <div class="position-absolute end-0 diwali_footer_decor_top">
+    <img id="diwali_footer_decor" draggable="false" src="{% static 'diwali/decor/diwali_footer_image.png' %}" alt="">
   </div>
 </div>
 {% endif %}

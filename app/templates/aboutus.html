@@ -629,7 +629,65 @@ font-weight: 800;
 <!-- diwali -->
 
 <style>
-  
+  .diwali_frame{
+    width: 7rem;
+  }
+  .diwali_top_right_top{
+    margin-top: -2rem;
+    margin-right: -1rem;
+  }
+  .diwali_top_left_top{
+    margin-top: -2rem;
+    margin-left: -2rem;
+  }
+  .diwali_bottom_left_top{
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+  }
+  .diwali_bottom_right_top{
+    margin-bottom: -2rem;
+    margin-right: -1rem;
+  }
+ /* responsive */
+ @media screen and (max-width:767px) {
+    .diwali_top_right_top{
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+    .diwali_top_left_top{
+      margin-top: -2rem;
+      margin-left: -2rem;
+    }
+    .diwali_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -2rem;
+    }
+    .diwali_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    .diwali_frame{
+      width: 5rem;
+    }
+    .diwali_top_right_top{
+      margin-top: -2rem;
+      margin-right: -1rem;
+    }
+    .diwali_top_left_top{
+      margin-top: -2rem;
+      margin-left: -1rem;
+    }
+    .diwali_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -1rem;
+    }
+    .diwali_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -1rem;
+    }
+  }
 </style>
 
   <main id="main">
@@ -861,20 +919,20 @@ font-weight: 800;
                   and in terms of customer experience.
                   </p>
                   
-                  <div class="position-absolute top-0 end-0 onam_top_right_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                  <div class="position-absolute top-0 end-0 diwali_top_right_top">
+                    <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
                   </div>
 
-                  <div class="position-absolute top-0 start-0 onam_top_left_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                  <div class="position-absolute top-0 start-0 diwali_top_left_top">
+                    <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
                   </div>
 
-                  <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                  <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
+                    <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
                   </div>
 
-                  <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                  <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
+                    <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
                   </div>
 
 
@@ -1066,6 +1124,36 @@ font-weight: 800;
 
 
               </div>
+              {% elif current_theme == 'diwali' %}
+              <div class="position-relative">
+                <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
+                
+                <div class="position-absolute top-0 end-0 diwali_top_right_top">
+                  <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute top-0 start-0 diwali_top_left_top">
+                  <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
+                  <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
+                  <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+                </div>
+
+
+              </div>
             {% else %}
               <p class="fst-normal mob_margin_top" data-aos="fade-up"
               data-aos-duration="2000">
@@ -1247,6 +1335,36 @@ font-weight: 800;
 
             <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
               <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+            </div>
+
+
+          </div>
+          {% elif current_theme == 'diwali' %}
+          <div class="position-relative">
+            <p class="fst-normal mob_margin_top" data-aos="fade-up"
+            data-aos-duration="2000">
+            Our expertise lies in website and software development, 
+            where we have gained extensive experience by delivering a 
+            wide range of projects, including websites, web applications, 
+            mobile applications, 3D modeling services, and digital marketing 
+            services, to clients across different industries and of varying sizes.
+            
+            </p>
+            
+            <div class="position-absolute top-0 end-0 diwali_top_right_top">
+              <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute top-0 start-0 diwali_top_left_top">
+              <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
+              <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
+              <img draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
             </div>
 
 
