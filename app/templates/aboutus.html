@@ -273,6 +273,17 @@ font-weight: 800;
     font-weight: 800;
   }
 </style>
+{% elif current_theme == 'diwali' %}
+<style>
+    #navbar .abot{
+      background: linear-gradient(to right,red,rgb(240, 125, 125));
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+</style>
 {% else %}
 <style>
 
@@ -615,6 +626,12 @@ font-weight: 800;
   }
 </style>
 
+<!-- diwali -->
+
+<style>
+  
+</style>
+
   <main id="main">
     <div class="container-fluid" id="about-us">
         <section id="about_box">
@@ -670,6 +687,8 @@ font-weight: 800;
                 <h4 class="pb-4 mt-5 mb-5">About Us</h4>
                 {% elif current_theme == 'republic' %}
                 <h4 class="pb-4 mt-5 mb-5" style="color: transparent;"><span class="fg_republic">About</span> <span class="fg_republic">Us</span></h4>
+                {% elif current_theme == 'diwali' %}
+                <h4 class="pb-4 mt-5 mb-5" style="color: transparent;"><span class="diwali_nav_text">About</span> <span class="diwali_nav_text">Us</span></h4>
                 {% else %}
                 <h4 style="color: white;">About Us</h4>
                 {% endif %}
@@ -805,6 +824,34 @@ font-weight: 800;
 
                 </div>
                 {% elif current_theme == 'onam' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                  
+                  <div class="position-absolute top-0 end-0 onam_top_right_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 onam_top_left_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
+                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                  </div>
+
+
+                </div>
+                {% elif current_theme == 'diwali' %}
                 <div class="position-relative">
                   <p class="fst-normal mob_margin_top" data-aos="fade-left"
                   data-aos-duration="2000">
@@ -1325,6 +1372,59 @@ font-weight: 800;
         <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
         <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
         <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+      </div>
+      {% elif current_theme == 'diwali' %}
+      <div class="d-flex" style="overflow: auto;background-color: #151515">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
       </div>
     {% endif %}
 
