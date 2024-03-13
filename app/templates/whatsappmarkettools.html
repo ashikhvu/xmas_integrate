@@ -981,6 +981,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- diwali -->
+<style>
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.diwali_nav {
+    background: linear-gradient(to right,red,rgb(240, 125, 125));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .diwali_nav_text{
+    background: linear-gradient(to right,red,rgb(240, 125, 125));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  #diwali_footer_decor{
+    width: 15rem;
+  }
+  .diwali_footer_decor_top{
+    margin-top: -21rem;
+  }
+  @media screen and (max-width:367px) {
+     #diwali_footer_decor{
+      width: 7rem;
+    }
+    .diwali_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+  #diwali_fire_cracker2{
+    width: 18rem;
+  }
+  .diwali_fire_cracker2_top{
+    margin-top: -5rem;
+  }
+  @media screen and (max-width:1250px) {
+    #diwali_fire_cracker2{
+      width: 15rem;
+    }
+    .diwali_fire_cracker2_top{
+      margin-top: -10rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #diwali_fire_cracker2{
+      width: 12rem;
+    }
+    .diwali_fire_cracker2_top{
+      margin-top: -9rem;
+    }
+  }
+</style>
+
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
@@ -1176,6 +1236,25 @@ gtag('config', 'G-3RLTXDEGMP');
           </div>
         </div>
       </div>
+      {% elif current_theme == 'diwali' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -2.5rem;">
+          <div class="d-flex">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+          </div>
+        </div>
+      </div>
     {% endif %}
 
 <div class="container d-flex align-items-center justify-content-lg-between">
@@ -1207,6 +1286,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto hom republic_nav_text"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto hom onam_hover"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto hom diwali_nav"
         {% else %} 
         class="nav-link scrollto hom hover_anchor" 
         {% endif %} 
@@ -1228,6 +1309,8 @@ gtag('config', 'G-3RLTXDEGMP');
               class="nav-link scrollto abot republic_nav_text"
             {% elif current_theme == 'onam' %}
               class="nav-link scrollto abot onam_hover"
+            {% elif current_theme == 'diwali' %}
+              class="nav-link scrollto abot diwali_nav"
             {% else %} 
               class="nav-link scrollto abot hover_anchor" 
             {% endif %} 
@@ -1249,6 +1332,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto serv " style="color: orange"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto serv " style="color: orange"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto serv diwali_nav_text" style="color: transparent"
         {% else %}
         class="nav-link scrollto serv hover_anchor" 
         {% endif %}
@@ -1270,6 +1355,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cor republic_nav_text"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto cor onam_hover"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto cor diwali_nav"
         {% else %}
         class="nav-link scrollto cor hover_anchor" 
         {% endif %}
@@ -1291,6 +1378,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cors republic_nav_text"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto cors onam_hover"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto cors diwali_nav"
         {% else %}
         class="nav-link scrollto cors hover_anchor" 
         {% endif %}
@@ -1313,6 +1402,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto event republic_nav_text"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto event onam_hover"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto event diwali_nav"
         {% else %}
         class="nav-link scrollto event hover_anchor" 
         {% endif %}
@@ -1334,6 +1425,8 @@ gtag('config', 'G-3RLTXDEGMP');
           class="nav-link scrollto cont republic_nav_text"
         {% elif current_theme == 'onam' %}
           class="nav-link scrollto cont onam_hover"
+        {% elif current_theme == 'diwali' %}
+          class="nav-link scrollto cont diwali_nav"
         {% else %}
         class="nav-link scrollto cont hover_anchor" 
         {% endif %}
@@ -1748,6 +1841,16 @@ window.addEventListener('resize', handleResize);
           <span class="onam_text_sm_bg1" style="color: transparent;">Audience </span>
           <span class="onam_text_sm_bg1" style="color: transparent;">with </span>   </span> <br> <span style="font-size: 10vh;" class="onam_text_sm_bg1"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none onam_text_sm_bg1" style="color: transparent;">Improve Your Audience with</span> <br> <span class="text-light"> ALT Whatsapp Module </span></p>
+        {% elif current_theme == 'diwali' %}
+        <div class="position-relative">
+          <div class="position-absolute diwali_fire_cracker2_top">
+            <img id="diwali_fire_cracker2" loading="lazy" src="{% static 'diwali/gif/fire_cracker2.gif' %}" alt="">
+          </div>
+        </div>
+        <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">
+          <span class="diwali_nav_text" style="color: transparent;">Improve Your Audience with</span></span> 
+          <br> <span style="font-size: 10vh;"> ALT Whatsapp Module </span></p>
+        <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none diwali_nav_text" style="color: transparent;">Improve Your Audience with</span> <br> <span class="text-light"> ALT Whatsapp Module </span></p>
         {% else %}
         <p data-aos="fade-up" data-aos-duration="750" class="d-none d-sm-block"> <span style="font-size: 5vh;">Improve Your Audience with</span> <br> <span style="font-size: 10vh; color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
         <p data-aos="fade-up" data-aos-duration="750" class="d-lg-none d-md-none" >Improve Your Audience with</span> <br> <span style="color:rgb(62, 199, 206)"> ALT Whatsapp Module </span></p>
@@ -1776,6 +1879,9 @@ window.addEventListener('resize', handleResize);
         {% elif current_theme == 'onam' %}
         <a role="button" href="#" class="color-button text-light onam_ts" data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(222, 162, 103),rgb(217, 144, 71),rgb(255, 115, 0));">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-light onam_ts"  data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(222, 162, 103),rgb(217, 144, 71),rgb(255, 115, 0));">Get Started</a>
+        {% elif current_theme == 'diwali' %}
+        <a role="button" href="#" class="color-button text-light onam_ts" data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(244, 56, 56),rgb(255, 132, 132),rgb(255, 193, 193));">Request Product Demo</a>
+        <a role="button" href="#" class="color-button text-light onam_ts"  data-aos="fade-up" data-aos-duration="750" style="background-image:linear-gradient(135deg,rgb(244, 56, 56),rgb(255, 132, 132),rgb(255, 193, 193));">Get Started</a>
         {% else %}
         <a role="button" href="#" class="color-button text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
         <a role="button" href="#" class="color-button text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
