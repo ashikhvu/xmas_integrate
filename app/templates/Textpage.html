@@ -2465,6 +2465,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 10px;
     transition: all 0.2s linear;
   }
+  @media screen and (max-width:360px) {
+    .card_diwali_margin{
+      margin-top: 3rem;
+    }
+  }
+  @media screen and (width:1024px) and (height:600px) {
+    .card_diwali_margin{
+      margin-top: 3rem;
+    }
+  }
   @media screen and (min-width:1722px) {
     .card_diwali{
       background-size: cover;
@@ -2560,7 +2570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   .diwali_icon_top{
     margin-top: -1.3rem;
-    margin-left: -2rem;
+    margin-left: -1.5rem;
   }
   @media screen and (max-width:932px)  {
     #diwali_icon{
@@ -2615,6 +2625,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .diwali_footer_decor_top{
       margin-top: -14rem;
+    }
+  }
+  #diwali_fire_cracker{
+    width: 25rem;
+  }
+  .diwali_fire_cracker_top{
+    margin-top: 5rem;
+  }
+  @media screen and (max-width:1024px) {
+    #diwali_fire_cracker{
+      width: 20rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 5rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #diwali_fire_cracker{
+      width: 20rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 5rem;
+    }
+  }
+  @media screen and (max-width:375px) {
+    #diwali_fire_cracker{
+      width: 15rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 3rem;
     }
   }
 </style>
@@ -3677,8 +3717,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <img draggable="false"id="happy_pongal" src="{% static 'pongal/decor/company_suggestion/z-removebg-preview.png' %}" alt="">
         </div>
       </div>
+      {% elif current_theme == 'diwali' %}
+      <div class="position-relative" style="z-index: 2;">
+        <div class="position-absolute start-0 top-100 diwali_fire_cracker_top">
+          <img draggable="false"id="diwali_fire_cracker" src="{% static 'diwali/gif/fire_cracker4.gif' %}" alt="">
+        </div>
+      </div>
       {% endif %}
       
+      <div class="card_diwali_margin"></div>
       <section id="readmore1" {% if current_theme == 'xmas' or current_theme == 'onam' %}style="z-index: 3;" class="card_top_margin"{% endif %}>
         <div class="content 
         {% if current_theme == 'xmas' %} 
@@ -3902,7 +3949,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 Altos Technologies Success Story of 2023 
             </h5>
             <div class='ResponsiveYTPlayer'>
-              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               
             </div>
 

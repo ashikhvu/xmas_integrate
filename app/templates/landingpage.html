@@ -2026,14 +2026,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       padding: 0;
     }
   }
+  .reset_pad_margin{
+    margin-top: 1rem;
+  }
 </style>
 
-<!-- diwali- -->
+<!-- diwali -->
 <style>
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>.diwali-_nav {
+  .navbar li:hover>.diwali_nav {
     background: linear-gradient(to right,red,rgb(240, 125, 125));
     background-size: cover;
     background-clip: text;
@@ -2041,7 +2044,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: transparent;
     text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
   }
-  .diwali-_nav_text{
+  .diwali_nav_text{
     background: linear-gradient(to right,red,rgb(240, 125, 125));
     background-size: cover;
     background-clip: text;
@@ -2049,8 +2052,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: transparent;
     text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
   } 
-  .card_diwali-{
-    background-image: url('/static/diwali-/bg/diwali-_card_bg.png');
+  .card_diwali{
+    background-image: url('/static/diwali/bg/diwali_card_bg.png');
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
@@ -2059,67 +2062,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-radius: 10px;
     transition: all 0.2s linear;
   }
-  @media screen and (min-width:1722px) {
-    .card_diwali-{
-      background-size: cover;
+  @media screen and (max-width:1400px) {
+    .card_diwali{
+      background-size: contain;
     }
   }
-  #happy_diwali-1{
+  @media screen and (min-width:1401px) {
+    .card_diwali{
+      background-size: cover;
+      /* margin: 2px; */
+    }
+  }
+  #happy_diwali1{
     width: 14rem;
   }
-  .happy_diwali-1_top{
+  .happy_diwali1_top{
     margin-top: -3rem;
     margin-left: -3rem;
   }
   @media screen and (max-width:1620px) {
-    #happy_diwali-1{
+    #happy_diwali1{
       width: 12rem;
     }
-    .happy_diwali-1_top{
+    .happy_diwali1_top{
       margin-top: -3rem;
       margin-left: -3rem;
     }
   }
   @media screen and (max-width:1190px) {
-    #happy_diwali-1{
+    #happy_diwali1{
       width: 10rem;
     }
-    .happy_diwali-1_top{
+    .happy_diwali1_top{
       margin-top: -3rem;
       margin-left: -3rem;
     }
   }
   @media screen and (max-width:1090px) {
-    #happy_diwali-1{
+    #happy_diwali1{
       width: 7rem;
     }
-    .happy_diwali-1_top{
+    .happy_diwali1_top{
       margin-top: -3rem;
       margin-left: -2rem;
     }
   }
   @media screen and (min-width:436px) and (max-width:600px)  {
-    #happy_diwali-1{
+    #happy_diwali1{
       width: 5rem;
     }
-    .happy_diwali-1_top{
+    .happy_diwali1_top{
       margin-top: -2rem;
       margin-left: -2rem;
     }
   }
   @media screen and (max-width:280px)  {
-    #happy_diwali-1{
+    #happy_diwali1{
       width: 5rem;
     }
-    .happy_diwali-1_top{
+    .happy_diwali1_top{
       margin-top: -1rem;
       margin-left: -1rem;
     }
   }
-  #diwali-_icon{
+  #diwali_icon{
       width: 5rem;
     }
-  .diwali-_icon_top{
+  .diwali_icon_top{
     margin-top: -1.3rem;
     margin-left: -0.5rem;
   }
@@ -2158,6 +2167,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   #container_text .request-box .circle8 .text-conte{
     text-shadow: 1px 1px 1px black;
+  }
+  #diwali_fire_cracker{
+    width: 25rem;
+  }
+  .diwali_fire_cracker_top{
+    margin-top: 5rem;
+  }
+  @media screen and (max-width:1024px) {
+    #diwali_fire_cracker{
+      width: 20rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 5rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #diwali_fire_cracker{
+      width: 20rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 5rem;
+    }
+  }
+  @media screen and (max-width:375px) {
+    #diwali_fire_cracker{
+      width: 15rem;
+    }
+    .diwali_fire_cracker_top{
+      margin-top: 3rem;
+    }
   }
 </style>
 
@@ -2357,22 +2396,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
-      {% elif current_theme == 'diwali-' %}
+      {% elif current_theme == 'diwali' %}
       <div class="position-relative" style="z-index: 998;">
         <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -2.5rem;">
           <div class="d-flex">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img loading="lazy" draggable="false" src="{% static 'diwali-/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
           </div>
         </div>
       </div>
@@ -2402,8 +2441,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto hom republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto hom onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto hom diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto hom diwali_nav"
               {% else %} 
               class="nav-link scrollto hom hover_anchor" 
               {% endif %} 
@@ -2425,8 +2464,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="nav-link scrollto abot republic_nav_text"
                   {% elif current_theme == 'onam' %}
                     class="nav-link scrollto abot onam_hover"
-                  {% elif current_theme == 'diwali-' %}
-                    class="nav-link scrollto abot diwali-_nav"
+                  {% elif current_theme == 'diwali' %}
+                    class="nav-link scrollto abot diwali_nav"
                   {% else %} 
                     class="nav-link scrollto abot hover_anchor" 
                   {% endif %} 
@@ -2448,8 +2487,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto serv republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto serv onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto serv diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto serv diwali_nav"
               {% else %}
               class="nav-link scrollto serv hover_anchor" 
               {% endif %}
@@ -2471,8 +2510,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cor republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto cor onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto cor diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto cor diwali_nav"
               {% else %}
               class="nav-link scrollto cor hover_anchor" 
               {% endif %}
@@ -2494,8 +2533,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cors republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto cors onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto cors diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto cors diwali_nav"
               {% else %}
               class="nav-link scrollto cors hover_anchor" 
               {% endif %}
@@ -2518,8 +2557,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto event republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto event onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto event diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto event diwali_nav"
               {% else %}
               class="nav-link scrollto event hover_anchor" 
               {% endif %}
@@ -2541,8 +2580,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cont republic_nav_text"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto cont onam_hover"
-              {% elif current_theme == 'diwali-' %}
-                class="nav-link scrollto cont diwali-_nav"
+              {% elif current_theme == 'diwali' %}
+                class="nav-link scrollto cont diwali_nav"
               {% else %}
               class="nav-link scrollto cont hover_anchor" 
               {% endif %}
@@ -3371,6 +3410,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         text-align: center;
         border: none;
       }
+      @media screen and (max-width:280px) {
+        #services-items .card .card-body, .card-footer {
+          text-align: center;
+          border: none;
+          padding: 0rem;
+        }
+        .circle,.circle1,.circle2,.circle3,.circle4,.circle5,.circle6,.circle7,.circle8{
+          width: 75%;
+        }
+      }
       #services-items .card .card-header{
         border: none;
         display: flex;
@@ -3436,6 +3485,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <img draggable="false"id="happy_pongal" src="{% static 'pongal/decor/company_suggestion/z-removebg-preview.png' %}" alt="">
         </div>
       </div>
+      {% elif current_theme == 'diwali' %}
+      <div class="position-relative" style="z-index: 2;">
+        <div class="position-absolute start-0 top-100 diwali_fire_cracker_top">
+          <img draggable="false"id="diwali_fire_cracker" src="{% static 'diwali/gif/fire_cracker4.gif' %}" alt="">
+        </div>
+      </div>
       {% endif %}
       
       <section id="readmore1">
@@ -3444,8 +3499,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="content card_xmas p-2 rounded" 
           {% elif current_theme == "onam" %}
             class="card_onam p-2"
-          {% elif current_theme == "diwali-" %}
-            class="card_diwali- p-2"
+          {% elif current_theme == "diwali" %}
+            class="card_diwali p-2"
           {% else %} 
             class="content pt-2" 
           {% endif %}>
@@ -3478,10 +3533,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <img draggable="false"id="happy_onam1" src="{% static 'onam/decor/happy_onam.png' %}" alt="">
             </div>  
           </div>
-          {% elif current_theme == "diwali-" %}
+          {% elif current_theme == "diwali" %}
           <div class="position-relative" style="z-index: 1;">
-            <div class="position-absolute top-100 happy_diwali-1_top">
-              <img draggable="false"id="happy_diwali-1" src="{% static 'diwali-/bg/happy_diwali-.png' %}" alt="">
+            <div class="position-absolute top-100 happy_diwali1_top">
+              <img loading="lazy" draggable="false"id="happy_diwali1" src="{% static 'diwali/bg/happy_diwali.png' %}" alt="">
             </div>  
           </div>
           {% endif %}
@@ -3541,7 +3596,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               >Professional IT Solutions</span
             >
           </h3>
-          {% elif current_theme == 'diwali-' %}
+          {% elif current_theme == 'diwali' %}
           <h1 class="mb-4 main-head" style="color: rgb(255, 132, 132);text-shadow: 1px 1px 3px black;"><b>ALTOS TECHNOLOGIES</b></h1><h3 class="mt-3 sub-head" style="color: black;" >
             <span style="text-shadow: none;text-shadow: 2px 2px 2px rgb(159, 230, 255);">We Deal With The Aspects Of</span>
             <span style="color: rgb(145, 145, 255);text-shadow: 2px 2px 2px black;"
@@ -3558,7 +3613,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </h3>
           {% endif %}
 
-          <p class="fst-normal" {% if current_theme == 'onam' or current_theme == 'diwali-' %}style="color:black;text-shadow:none"{% endif %}>
+          <p class="fst-normal" {% if current_theme == 'onam' or current_theme == 'diwali' %}style="color:black;text-shadow:none"{% endif %}>
             Elevate your business with Altos Technologies. As a software
             development company in India, we craft custom websites and software
             solutions to fit your unique business needs.
@@ -3571,7 +3626,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <span class="text-conte">Read More</span>
             </a>
           </div> -->
-          {% if current_theme == "xmas" or current_theme == "onam" or current_theme == "diwali-" %}
+          {% if current_theme == "xmas" or current_theme == "onam" or current_theme == "diwali" %}
           <br><br><br><br>
           {% endif %}
 
@@ -3581,10 +3636,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <img id="onam_pookalam" draggable="false" src="{% static 'onam/decor/bg_object_pookkalam.png' %}" alt="">
           </div>
           </div>
-          {% elif current_theme == 'diwali-' %}
+          {% elif current_theme == 'diwali' %}
           <div class="position-relative" style="z-index: 1;">
             <div class="position-absolute end-0 bottom-0 card_firecracker_top">
-              <img id="card_firecracker" draggable="false" src="{% static 'diwali-/bg/card_fire_cracker1.png' %}" alt="">
+              <img loading="lazy" id="card_firecracker" draggable="false" src="{% static 'diwali/bg/card_fire_cracker1.png' %}" alt="">
           </div>
           </div>
           {% endif %}
@@ -3640,7 +3695,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 Altos Technologies Success Story of 2023 
             </h5>
             <div class='ResponsiveYTPlayer'>
-              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               
             </div>
 
@@ -3777,10 +3832,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div style="visibility: hidden;" class="icon-box-content">
                     <i class="bx bx-receipt" style="color: #0fa49b"></i>
                   </div>
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   <div class="position-relative">
-                    <div class="position-absolute diwali-_icon_top">
-                      <img id="diwali-_icon" src="{% static 'diwali-/decor/fire_crackers/fire_crackers1.png' %}" alt="">
+                    <div class="position-absolute diwali_icon_top">
+                      <img loading="lazy" id="diwali_icon" src="{% static 'diwali/decor/fire_crackers/fire_crackers1.png' %}" alt="">
                     </div>
                   </div>
                   <div style="visibility: hidden;" class="icon-box-content">
@@ -3859,10 +3914,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       style="color: #0fa49b"
                     ></ion-icon>
                   </div>
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   <div class="position-relative">
-                    <div class="position-absolute diwali-_icon_top">
-                      <img id="diwali-_icon" src="{% static 'diwali-/decor/fire_crackers/fire_crackers8.png' %}" alt="">
+                    <div class="position-absolute diwali_icon_top">
+                      <img loading="lazy" id="diwali_icon" src="{% static 'diwali/decor/fire_crackers/fire_crackers8.png' %}" alt="">
                     </div>
                   </div>
                   <div  style="visibility: hidden;" class="icon-box-content">
@@ -3937,10 +3992,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div  style="visibility: hidden;" class="icon-box-content">
                     <i class="bx bx-cube-alt" style="color: #0fa49b"></i>
                   </div>
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   <div class="position-relative">
-                    <div class="position-absolute diwali-_icon_top">
-                      <img id="diwali-_icon" src="{% static 'diwali-/decor/fire_crackers/fire_crackers5.png' %}" alt="">
+                    <div class="position-absolute diwali_icon_top">
+                      <img loading="lazy" id="diwali_icon" src="{% static 'diwali/decor/fire_crackers/fire_crackers5.png' %}" alt="">
                     </div>
                   </div>
   
@@ -4016,10 +4071,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <ion-icon name="people-outline" style="color: #0fa49b">
                     </ion-icon>
                   </div>
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   <div class="position-relative">
-                    <div class="position-absolute diwali-_icon_top">
-                      <img id="diwali-_icon" src="{% static 'diwali-/decor/fire_crackers/fire_crackers7.png' %}" alt="">
+                    <div class="position-absolute diwali_icon_top">
+                      <img loading="lazy" id="diwali_icon" src="{% static 'diwali/decor/fire_crackers/fire_crackers7.png' %}" alt="">
                     </div>
                   </div>
                   <div style="visibility: hidden;" class="icon-box-content">
@@ -4072,8 +4127,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p style="color: transparent;"><span class="fg_republic"> With</span><span class="fg_republic"> Us</span> </p>
               {% elif current_theme == 'onam' %}
               <p style="color: transparent;"><span class="onam_text_sm_bg1"> With</span><span class="onam_text_sm_bg1"> Us</span> </p>
-              {% elif current_theme == 'diwali-' %}
-              <p style="color: transparent;"><span class="diwali-_nav_text"> With Us</span></p>
+              {% elif current_theme == 'diwali' %}
+              <p style="color: transparent;"><span class="diwali_nav_text"> With Us</span></p>
               {% else %}
               <p style="color: rgb(39, 112, 141);">With Us</p>
               {% endif %}
@@ -4218,10 +4273,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <img id="fade_effect2" draggable="false" src="{% static 'onam/decor/maveli.png' %}" alt="">
         </div>
       </div>
-      {% elif current_theme == 'diwali-' %}
+      {% elif current_theme == 'diwali' %}
       <div class="position-relative" style="z-index: 10;">
         <div class="position-absolute end-0 bottom-0 fade_effect_top2">
-          <img id="fade_effect2" draggable="false" src="{% static 'diwali-/decor/diwali-_character_no_bg.png' %}" alt="">
+          <img loading="lazy" id="fade_effect2" draggable="false" src="{% static 'diwali/decor/diwali_character_no_bg.png' %}" alt="">
         </div>
       </div>
       {% endif %}
@@ -4244,8 +4299,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p style="color: transparent;"><span class="fg_republic"> SERVICES</span></p>
             {% elif current_theme == 'onam' %}
             <p style="color: transparent;"><span class="onam_text_sm_bg1"> SERVICES</span></p>
-            {% elif current_theme == 'diwali-' %}
-            <p style="color: transparent;"><span class="diwali-_nav_text"> SERVICES</span></p>
+            {% elif current_theme == 'diwali' %}
+            <p style="color: transparent;"><span class="diwali_nav_text"> SERVICES</span></p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">SERVICES</p>
             {% endif %}
@@ -4258,8 +4313,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-sm-12 col-md-3 card" 
             {% if current_theme == 'pongal' %}  
             style="background: url('/static/pongal/bg/blur_bg.png');"
-            {% elif current_theme == 'diwali-' %}  
-            style="background: url('/static/diwali-/bg/landing_card_bg.png');
+            {% elif current_theme == 'diwali' %}  
+            style="background: url('/static/diwali/bg/landing_card_bg.png');
             background-size: cover;"
             {% endif %}>
 
@@ -4305,7 +4360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle6"
                     {% elif current_theme == 'onam' %}
                     class="circle7"
-                    {% elif current_theme == 'diwali-' %}
+                    {% elif current_theme == 'diwali' %}
                     class="circle8"
                     {% else %} 
                     class="circle"
@@ -4321,8 +4376,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-sm-12 col-md-3 card" 
             {% if current_theme == 'pongal' %}  
             style="background: url('/static/pongal/bg/blur_bg.png');"
-            {% elif current_theme == 'diwali-' %}  
-            style="background: url('/static/diwali-/bg/landing_card_bg.png');
+            {% elif current_theme == 'diwali' %}  
+            style="background: url('/static/diwali/bg/landing_card_bg.png');
             background-size: cover;"
             {% endif %}>
               
@@ -4367,7 +4422,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="circle6"
                   {% elif current_theme == 'onam' %}
                   class="circle7"
-                    {% elif current_theme == 'diwali-' %}
+                    {% elif current_theme == 'diwali' %}
                     class="circle8"
                    {% else %} 
                    class="circle" 
@@ -4383,8 +4438,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-sm-12 col-md-3 card" 
             {% if current_theme == 'pongal' %}  
             style="background: url('/static/pongal/bg/blur_bg.png');"
-            {% elif current_theme == 'diwali-' %}  
-            style="background: url('/static/diwali-/bg/landing_card_bg.png');
+            {% elif current_theme == 'diwali' %}  
+            style="background: url('/static/diwali/bg/landing_card_bg.png');
             background-size: cover;"
             {% endif %}>
               {% if current_theme == 'easter' %}
@@ -4427,7 +4482,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle6"
                     {% elif current_theme == 'onam' %}
                     class="circle7"
-                    {% elif current_theme == 'diwali-' %}
+                    {% elif current_theme == 'diwali' %}
                     class="circle8"
                     {% else %} 
                     class="circle" 
@@ -4443,8 +4498,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-sm-12 col-md-3 card" 
             {% if current_theme == 'pongal' %}  
             style="background: url('/static/pongal/bg/blur_bg.png');"
-            {% elif current_theme == 'diwali-' %}  
-            style="background: url('/static/diwali-/bg/landing_card_bg.png');
+            {% elif current_theme == 'diwali' %}  
+            style="background: url('/static/diwali/bg/landing_card_bg.png');
             background-size: cover;"
             {% endif %}>
               {% if current_theme == 'easter' %}
@@ -4487,7 +4542,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="circle6"
                     {% elif current_theme == 'onam' %}
                     class="circle7"
-                    {% elif current_theme == 'diwali-' %}
+                    {% elif current_theme == 'diwali' %}
                     class="circle8"
                    {% else %} 
                    class="circle" 
@@ -4574,9 +4629,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 style="color: transparent;">
               <span class="text-light">Our</span><span class="onam_text_sm_bg1"> Technologies</span>
             </h1>
-            {% elif current_theme == 'diwali-' %}
+            {% elif current_theme == 'diwali' %}
             <h1 style="color: transparent;">
-              <span class="text-light">Our</span><span class="diwali-_nav_text"> Technologies</span>
+              <span class="text-light">Our</span><span class="diwali_nav_text"> Technologies</span>
             </h1>
             {% else %}
             <h1 class="">
@@ -4618,7 +4673,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
+                    {% elif current_theme == 'diwali' %}
                     class="circle8"
                 {% else %} 
                 class="circle" 
@@ -4679,8 +4734,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/republic/img/erp.png" alt="ERP" />
             {% elif current_theme == 'onam' %}
             <img src="static/onam/img/erp.png" alt="ERP" />
-            {% elif current_theme == 'diwali-' %}
-            <img src="static/diwali-/img/erp.png" alt="ERP" />
+            {% elif current_theme == 'diwali' %}
+            <img loading="lazy" src="static/diwali/img/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -4709,8 +4764,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/republic/img/hrms.png" alt="HRMS" />
             {% elif current_theme == 'onam' %}
             <img src="static/onam/img/hrms.png" alt="HRMS" />
-            {% elif current_theme == 'diwali-' %}
-            <img src="static/diwali-/img/hrms.png" alt="HRMS" />
+            {% elif current_theme == 'diwali' %}
+            <img loading="lazy" src="static/diwali/img/hrms.png" alt="HRMS" />
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -4745,8 +4800,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
-                    class="circle8"
+                {% elif current_theme == 'diwali' %}
+                class="circle8"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4792,8 +4847,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
-                    class="circle8"
+                {% elif current_theme == 'diwali' %}
+                class="circle8"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4834,8 +4889,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
-                    class="circle8"
+                {% elif current_theme == 'diwali' %}
+                class="circle8"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4885,8 +4940,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
-                    class="circle8"
+                {% elif current_theme == 'diwali' %}
+                class="circle8"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -4945,8 +5000,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/republic/img/3d.png" alt="3D Modeling" />
             {% elif current_theme == 'onam' %}
             <img src="static/onam/img/3d.png" alt="3D Modeling" />
-            {% elif current_theme == 'diwali-' %}
-            <img src="static/diwali-/img/3d.png" alt="3D Modeling" />
+            {% elif current_theme == 'diwali' %}
+            <img loading="lazy" src="static/diwali/img/3d.png" alt="3D Modeling" />
             {% else %}
             <img src="static/img/team/3d.png" alt="3D" />
             {% endif %}
@@ -4975,8 +5030,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="static/republic/img/arvr.png" alt="VR/AR" />
             {% elif current_theme == 'onam' %}
             <img src="static/onam/img/arvr.png" alt="VR/AR" />
-            {% elif current_theme == 'diwali-' %}
-            <img src="static/diwali-/img/arvr.png" alt="VR/AR" />
+            {% elif current_theme == 'diwali' %}
+            <img loading="lazy" src="static/diwali/img/arvr.png" alt="VR/AR" />
             {% else %}
             <img src="static/img/team/arvr.jpg" alt="ARVR" />
             {% endif %}
@@ -5010,8 +5065,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
                 {% elif current_theme == 'onam' %}
                 class="circle7"
-                    {% elif current_theme == 'diwali-' %}
-                    class="circle8"
+                {% elif current_theme == 'diwali' %}
+                class="circle8"
                 {% else %} 
                 class="circle" 
                 {% endif %}>
@@ -5043,9 +5098,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <h1 style="color: transparent;">
               <span class="text-light">Other</span><span class="onam_text_sm_bg1"> Branches</span>
             </h1>
-            {% elif current_theme == 'diwali-' %}
+            {% elif current_theme == 'diwali' %}
             <h1 style="color: transparent;">
-              <span class="text-light">Other</span><span class="diwali-_nav_text"> Branches</span>
+              <span class="text-light">Other</span><span class="diwali_nav_text"> Branches</span>
             </h1>
             {% else %}
             <h1 class="">
@@ -5072,9 +5127,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-repeat: no-repeat;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.304);
             text-shadow: 0px 0px 5px black;"
-            {% elif current_theme == 'diwali-' %}
+            {% elif current_theme == 'diwali' %}
             style="margin-left: 0rem;margin-right: 0rem;
-            background: url('/static/diwali-/bg/landing_card_bg2.png') ;
+            background: url('/static/diwali/bg/landing_card_bg2.png') ;
             background-size: cover;
             background-repeat: no-repeat;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.304);
@@ -5127,9 +5182,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-repeat: no-repeat;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.304);
             text-shadow: 0px 0px 5px black;"
-            {% elif current_theme == 'diwali-' %}
+            {% elif current_theme == 'diwali' %}
             style="margin-left: 0rem;margin-right: 0rem;
-            background: url('/static/diwali-/bg/landing_card_bg2.png') ;
+            background: url('/static/diwali/bg/landing_card_bg2.png') ;
             background-size: cover;
             background-repeat: no-repeat;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.304);
@@ -5186,8 +5241,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p style="color: transparent;" class="fg_republic">Locations</p>
             {% elif current_theme == 'onam' %}
             <p style="color: transparent;" class="onam_text_sm_bg1">Locations</p>
-            {% elif current_theme == 'diwali-' %}
-            <p style="color: transparent;" class="diwali-_nav_text">Locations</p>
+            {% elif current_theme == 'diwali' %}
+            <p style="color: transparent;" class="diwali_nav_text">Locations</p>
             {% else %}
             <p style="color: rgb(39, 112, 141);">Locations</p>
             {% endif %}
@@ -5226,7 +5281,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-geo-alt me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-geo-alt me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-geo-alt me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
@@ -5267,7 +5322,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-envelope me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-envelope me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-envelope me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-envelope me-2 text-dark" 
@@ -5301,7 +5356,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-phone me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-phone me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-phone me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-phone me-2 text-dark" 
@@ -5346,7 +5401,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-geo-alt me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-geo-alt me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-geo-alt me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-geo-alt me-2 text-dark" 
@@ -5387,7 +5442,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-envelope me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-envelope me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-envelope me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-envelope me-2 text-dark" 
@@ -5421,7 +5476,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="bi bi-phone me-2" style="background-image:linear-gradient(135deg,rgb(255, 115, 0),white,green); color:rgb(0, 0, 0)"
                   {% elif current_theme == 'onam' %}
                   class="bi bi-phone me-2 text-light" style="background-color: rgb(255, 128, 0);"
-                  {% elif current_theme == 'diwali-' %}
+                  {% elif current_theme == 'diwali' %}
                   class="bi bi-phone me-2 text-light" style="background: linear-gradient(45deg,rgb(255, 89, 89),rgb(255, 163, 163));text-shadow: 1px 1px 1px black;"
                   {% else %}
                   class="bi bi-phone me-2 text-dark" 

@@ -1681,19 +1681,49 @@ h5 {
       margin-top: 4.3rem;
     }
   }
+  @media screen and (max-width:1232px) {
+      #diwali_kolam1_left{
+        width: 2.7rem;
+      }
+      .diwali_kolam1_left_top{
+        margin-left: -2.65rem;
+        margin-top: 4.3rem;
+      }
+      #diwali_kolam1_right{
+        width: 2.7rem;
+      }
+      .diwali_kolam1_right_top{
+        margin-right: -3.65rem;
+        margin-top: 4.3rem;
+      }
+      #diwali_kolam2_left{
+        width: 2.7rem;
+      }
+      .diwali_kolam2_left_top{
+        margin-left: -27.5rem;
+        margin-top: 4.3rem;
+      }
+      #diwali_kolam2_right{
+        width: 2.7rem;
+      }
+      .diwali_kolam2_right_top{
+        margin-right: -20.8rem;
+        margin-top: 4.3rem;
+      }
+  }
   @media screen and (max-width:1199px) {
     #diwali_kolam2_left{
-      width: 3.7rem;
+      width: 2.7rem;
     }
     .diwali_kolam2_left_top{
-      margin-left: -23rem;
+      margin-left: -22.5rem;
       margin-top: 4.3rem;
     }
     #diwali_kolam2_right{
-      width: 3.7rem;
+      width: 2.7rem;
     }
     .diwali_kolam2_right_top{
-      margin-right: -15.5rem;
+      margin-right: -15rem;
       margin-top: 4.3rem;
     }
   }
@@ -1729,7 +1759,7 @@ h5 {
       margin-top: 4.3rem;
     }
   } 
-  @media screen and (max-width:644px) {
+  @media screen and (max-width:1040px) {
 
     #diwali_kolam1_left{
       width: 0rem;
@@ -2012,18 +2042,18 @@ h5 {
       <div class="position-relative" style="z-index: 998;">
         <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -2.5rem;">
           <div class="d-flex">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
-            <img draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'diwali/decor/navbar_decor.png' %}" width="400vw" alt="">
           </div>
         </div>
       </div>
@@ -2261,7 +2291,7 @@ h5 {
             {% elif current_theme == 'onam' %}
               <img src="static/onam/img/erp.png" alt="ERP" />
             {% elif current_theme == 'diwali' %}
-              <img src="static/diwali/img/erp.png" alt="ERP" />
+              <img loading="lazy" src="static/diwali/img/erp.png" alt="ERP" />
             {% else %}
               <img src="static/img/team/erp.png" alt="ERP" />
             {% endif %}
@@ -2322,7 +2352,7 @@ h5 {
             {% elif current_theme == 'onam' %}
               <img src="static/onam/img/erp.png" alt="ERP" />
             {% elif current_theme == 'diwali' %}
-              <img src="static/diwali/img/erp.png" alt="ERP" />
+              <img loading="lazy" src="static/diwali/img/erp.png" alt="ERP" />
             {% else %}
             <img src="static/img/team/erp.png" alt="ERP"/>
             {% endif %}
@@ -2393,7 +2423,7 @@ h5 {
             {% elif current_theme == 'onam' %}
               <img src="static/onam/img/crm.png" alt="CRM" /> 
             {% elif current_theme == 'diwali' %}
-              <img src="static/diwali/img/crm.png" alt="CRM" /> 
+              <img loading="lazy" src="static/diwali/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -2433,7 +2463,7 @@ h5 {
             {% elif current_theme == 'onam' %}
               <img src="static/onam/img/crm.png" alt="CRM" /> 
             {% elif current_theme == 'diwali' %}
-              <img src="static/diwali/img/crm.png" alt="CRM" /> 
+              <img loading="lazy" src="static/diwali/img/crm.png" alt="CRM" /> 
             {% else %}
             <img src="static/img/team/crm.png" alt="CRM" />
             {% endif %}
@@ -2494,7 +2524,7 @@ h5 {
       {% if current_theme == 'diwali' %}
       <div class="position-relative " style="z-index: 1;">
         <div class="position-absolute diwali_kolam1_left_top">
-          <img id="diwali_kolam1_left" draggable="false" src="{% static 'diwali/decor/kolam1_left_half.png' %}" alt="">
+          <img loading="lazy" id="diwali_kolam1_left" draggable="false" src="{% static 'diwali/decor/kolam1_left_half.png' %}" alt="">
       </div>
       </div>
       {% endif %}
@@ -2594,7 +2624,7 @@ h5 {
       {% if current_theme == 'diwali' %}
       <div class="position-relative " style="z-index: 1;">
         <div class="position-absolute end-0 bottom-0 diwali_kolam1_right_top">
-          <img id="diwali_kolam1_right" draggable="false" src="{% static 'diwali/decor/kolam1_right_half.png' %}" alt="">
+          <img loading="lazy" id="diwali_kolam1_right" draggable="false" src="{% static 'diwali/decor/kolam1_right_half.png' %}" alt="">
       </div>
       </div>
       {% endif %}
@@ -2609,7 +2639,7 @@ h5 {
       {% if current_theme == 'diwali' %}
       <div class="position-relative " style="z-index: 1;">
         <div class="position-absolute start-0 top-0 diwali_kolam2_left_top" >
-          <img id="diwali_kolam2_left"  draggable="false" src="{% static 'diwali/decor/kolam2_left_half.png' %}" alt="">
+          <img loading="lazy" id="diwali_kolam2_left"  draggable="false" src="{% static 'diwali/decor/kolam2_left_half.png' %}" alt="">
       </div>
       </div>
       {% endif %}
@@ -3381,7 +3411,7 @@ h5 {
         {% elif current_theme == 'diwali' %}
         <div class="position-relative " style="z-index: 1;">
           <div class="position-absolute end-0 bottom-0 diwali_kolam2_right_top" >
-            <img id="diwali_kolam2_right" draggable="false" src="{% static 'diwali/decor/kolam2_right_half.png' %}" alt="">
+            <img loading="lazy" id="diwali_kolam2_right" draggable="false" src="{% static 'diwali/decor/kolam2_right_half.png' %}" alt="">
         </div>
         </div>
         {% endif %}
@@ -3436,7 +3466,7 @@ h5 {
             {% elif current_theme == 'onam' %}
               <img src="static/onam/img/hrms.png" alt="HRMS" /> 
             {% elif current_theme == 'diwali' %}
-              <img src="static/diwali/img/hrms.png" alt="HRMS" /> 
+              <img loading="lazy" src="static/diwali/img/hrms.png" alt="HRMS" /> 
             {% else %}
             <img src="static/img/team/hrms.png" alt="HRMS" />
             {% endif %}
@@ -3512,7 +3542,7 @@ h5 {
           {% elif current_theme == 'onam' %}
             <img src="static/onam/img/hrms.png" alt="HRMS" /> 
           {% elif current_theme == 'diwali' %}
-            <img src="static/diwali/img/hrms.png" alt="HRMS" /> 
+            <img loading="lazy" src="static/diwali/img/hrms.png" alt="HRMS" /> 
           {% else %}
           <img src="static/img/team/hrms.png" alt="HRMS" />
           {% endif %}
@@ -3627,7 +3657,7 @@ h5 {
           {% elif current_theme == 'onam' %}
             <img src="static/onam/img/account.png" alt="ACCOUNTING" /> 
           {% elif current_theme == 'diwali' %}
-            <img src="static/diwali/img/account.png" alt="ACCOUNTING" /> 
+            <img loading="lazy" src="static/diwali/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -3667,7 +3697,7 @@ h5 {
           {% elif current_theme == 'onam' %}
             <img src="static/onam/img/account.png" alt="ACCOUNTING" /> 
           {% elif current_theme == 'diwali' %}
-            <img src="static/diwali/img/account.png" alt="ACCOUNTING" /> 
+            <img loading="lazy" src="static/diwali/img/account.png" alt="ACCOUNTING" /> 
           {% else %}
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
           {% endif %}
@@ -3953,56 +3983,56 @@ h5 {
     </div>
     {% elif current_theme == 'diwali' %}
     <div class="d-flex" style="overflow: auto;background-color: #151515">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-      <img width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+      <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
     </div>
     {% endif %}
 
@@ -4114,7 +4144,7 @@ h5 {
 {% elif current_theme == 'diwali' %}
 <div class="position-relative">
   <div class="position-absolute end-0 diwali_footer_decor_top">
-    <img id="diwali_footer_decor" draggable="false" src="{% static 'diwali/decor/diwali_footer_image.png' %}" alt="">
+    <img loading="lazy" id="diwali_footer_decor" draggable="false" src="{% static 'diwali/decor/diwali_footer_image.png' %}" alt="">
   </div>
 </div>
 {% endif %}
