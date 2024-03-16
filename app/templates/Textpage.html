@@ -2466,12 +2466,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: all 0.2s linear;
   }
   @media screen and (max-width:360px) {
-    .card_diwali_margin{
+    .card_margin{
       margin-top: 3rem;
     }
   }
   @media screen and (width:1024px) and (height:600px) {
-    .card_diwali_margin{
+    .card_margin{
       margin-top: 3rem;
     }
   }
@@ -2658,6 +2658,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
 </style>
+
+<!-- ramadan -->
+<style>
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.ramadan_nav_text {
+    background: linear-gradient(to right,rgb(6, 89, 0),rgb(125, 255, 108));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .ramadan_text{
+    background: linear-gradient(to right,rgb(6, 88, 0),rgb(125, 255, 108));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .card_ramadan{
+    background-image: url('/static/ramadan/bg/ramadan_bg.png');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  @media screen and (max-width:360px) {
+    .card_margin{
+      margin-top: 3rem;
+    }
+  }
+  @media screen and (width:1024px) and (height:600px) {
+    .card_margin{
+      margin-top: 3rem;
+    }
+  }
+  #container_text .request-box .circle8 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 3px solid rgb(132, 132, 132);
+    border-radius: 1.625rem;
+    transition: all 0.4s ease-in-out;
+  }
+  #container_text .request-box .circle8 .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  #container_text .request-box .req-btn:hover .circle8 {
+    width: 100%;
+  }
+  #ramadan_mooon{
+    width: 12rem;
+  }
+  .ramadan_mooon_top{
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  #ramadan_church{
+    width: 14rem;
+  }
+  .ramadan_church_top{
+    margin-left: 0rem;
+  }
+  @media screen and (max-wdith:1472px) {
+    #ramadan_mooon{
+      width: 8rem;
+    }
+    .ramadan_mooon_top{
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    #ramadan_church{
+      width: 12rem;
+    }
+    .ramadan_church_top{
+      margin-left: 0rem;
+    }
+  }
+</style>
+
 
   </head>
  <!-- Google tag (gtag.js) -->
@@ -2894,6 +2987,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+      {% elif current_theme == 'ramadan' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -1.5rem;">
+          <div class="d-flex">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+          </div>
+        </div>
+      </div>
       {% endif %}
 
 
@@ -2927,6 +3039,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto hom " style="color: orange;"
               {% elif current_theme == 'diwali' %}
                 class="nav-link scrollto hom diwali_nav_text" style="color: transparent;"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto hom ramadan_text" style="color: transparent;"
               {% else %}
               class="nav-link scrollto hom" 
               {% endif %} 
@@ -2950,6 +3064,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     class="nav-link scrollto abot onam_hover"
                   {% elif current_theme == 'diwali' %}
                     class="nav-link scrollto abot diwali_nav"
+                  {% elif current_theme == 'ramadan' %}
+                    class="nav-link scrollto abot ramadan_nav_text"
                   {% else %} 
                     class="nav-link scrollto abot hover_anchor" 
                   {% endif %} 
@@ -2973,6 +3089,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto serv onam_hover"
               {% elif current_theme == 'diwali' %}
                 class="nav-link scrollto serv diwali_nav"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto serv ramadan_nav_text"
               {% else %}
               class="nav-link scrollto serv hover_anchor" 
               {% endif %}
@@ -2996,6 +3114,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cor onam_hover"
               {% elif current_theme == 'diwali' %}
                 class="nav-link scrollto cor diwali_nav"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto cor ramadan_nav_text"
               {% else %}
               class="nav-link scrollto cor hover_anchor" 
               {% endif %}
@@ -3019,6 +3139,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cors onam_hover"
               {% elif current_theme == 'diwali' %}
                 class="nav-link scrollto cors diwali_nav"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto cors ramadan_nav_text"
               {% else %}
               class="nav-link scrollto cors hover_anchor" 
               {% endif %}
@@ -3043,6 +3165,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto event diwali_nav"
               {% elif current_theme == 'onam' %}
                 class="nav-link scrollto event onam_hover"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto event ramadan_nav_text"
               {% else %}
               class="nav-link scrollto event hover_anchor" 
               {% endif %}
@@ -3066,6 +3190,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="nav-link scrollto cont onam_hover"
               {% elif current_theme == 'diwali' %}
                 class="nav-link scrollto cont diwali_nav"
+              {% elif current_theme == 'ramadan' %}
+                class="nav-link scrollto cont ramadan_nav_text"
               {% else %}
               class="nav-link scrollto cont hover_anchor" 
               {% endif %}
@@ -3725,7 +3851,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       {% endif %}
       
-      <div class="card_diwali_margin"></div>
+      <div class="card_margin"></div>
       <section id="readmore1" {% if current_theme == 'xmas' or current_theme == 'onam' %}style="z-index: 3;" class="card_top_margin"{% endif %}>
         <div class="content 
         {% if current_theme == 'xmas' %} 
@@ -3734,6 +3860,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         card_onam p-1
         {% elif current_theme == 'diwali' %}
         card_diwali p-1
+        {% elif current_theme == 'ramadan' %}
+        card_ramadan p-1
         {% endif %}">
 
           {% if current_theme == 'pongal' %}
@@ -3769,6 +3897,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="position-relative" style="z-index: 1;">
             <div class="position-absolute top-100 happy_diwali1_top">
               <img draggable="false"id="happy_diwali1" src="{% static 'diwali/bg/happy_diwali.png' %}" alt="">
+            </div>  
+          </div>
+          {% elif current_theme == "ramadan" %}
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute end-0 top-100 ramadan_mooon_top">
+              <img draggable="false"id="ramadan_mooon" src="{% static 'ramadan/decor/moon.png' %}" alt="">
+            </div>  
+          </div>
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute start-0 top-100 ramadan_church_top">
+              <img draggable="false"id="ramadan_church" src="{% static 'ramadan/decor/church.png' %}" alt="">
             </div>  
           </div>
           {% endif %}
@@ -3837,6 +3976,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               >Professional IT Solutions</span
             >
           </h3>
+          {% elif current_theme == 'ramadan' %}
+          <h1 class="mb-4 main-head pt-5 pb-3" style="color: white"><b id="hide_for_mob">
+            <span class="">ALTOS</span>
+            <span class="">TECHNOLOGIES</span>  </b>
+            <!-- <b id="hide_for_mob1" style="font-size: 0.8em;">ALTOS TECHNOLOGIES</b> -->
+          </h1>
+            <h3 class="mt-3 sub-head" >
+            <span style="text-shadow: 2px 2px 2px rgb(0, 0, 0);color: rgb(255, 197, 103);">We Deal With The Aspects Of</span>
+            <span style="color: rgb(255, 80, 80);;text-shadow: 2px 2px 2px black;"
+              >Professional IT Solutions</span
+            >
+          </h3>
           {% else %}
           <h3 class="main-head" style="color: rgb(22, 125, 165)"><b>ALTOS Technologies</b></h3>
           <h3 class="mt-3 sub-head">
@@ -3871,6 +4022,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 class="circle6"
               {% elif current_theme == 'diwali' %} 
                 class="circle7"
+              {% elif current_theme == 'ramadan' %} 
+                class="circle8"
               {% else %} 
                 class="circle" 
               {% endif %}>
@@ -3949,7 +4102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 Altos Technologies Success Story of 2023 
             </h5>
             <div class='ResponsiveYTPlayer'>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QhmWvn-E0?si=3MDfmDdNzWTp3jw3&amp;controls=1&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
               
             </div>
 

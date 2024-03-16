@@ -1061,7 +1061,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .happy_diwali{
       width: 30rem;
       margin-left: 0rem;
-      margin-top: 0rem;
+      margin-bottom: 0rem;
     }
   }
   @media screen and (max-width:600px) {
@@ -1078,13 +1078,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 0rem;
     }
   }
-  @media screen and (max-width:312px) {
+  /* @media screen and (max-width:312px) {
     .happy_diwali{
       width: 12rem;
       margin-left: 0rem;
       margin-top: 0rem;
     }
-  }
+  } */
   @media screen and (max-width:1300px) {
     .happy_diwali{
       width: 25rem;
@@ -1097,7 +1097,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 10rem;
     }
   }
-  @media screen and (max-width:280px) {
+  @media screen and (max-width:320px) {
     .happy_diwali{
       width: 12rem;
       margin-top: 10rem;
@@ -1115,6 +1115,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .diwali_footer_decor_top{
       margin-top: -14rem;
+    }
+  }
+  @media screen and (max-width:932px) {
+    .diwali_display_rep1{
+      display: none;
+    }
+    .diwali_display_rep2{
+      display: block;
+      margin-top: -9rem;
+    }
+  }
+  @media screen and (min-width:933px) {
+    .diwali_display_rep1{
+      display: block;
+    }
+    .diwali_display_rep2{
+      display: none;
     }
   }
 </style>
@@ -1904,11 +1921,11 @@ font-size: 0.91.5em;
           <img class="happy_onam" draggable="false" src="{% static 'onam/decor/happy_onam3.png' %}" alt="">
         </div>
         {% elif current_theme == 'diwali' %}
-        <div class="display_rep1">
+        <div class="diwali_display_rep1">
           <img loading="lazy" class="happy_diwali" draggable="false" src="{% static 'diwali/decor/happy_diwali3.png' %}" alt="">
         </div>
 
-        <div class="text-center display_rep2">
+        <div class="text-center diwali_display_rep2">
           <img loading="lazy" class="happy_diwali" draggable="false" src="{% static 'diwali/decor/happy_diwali3.png' %}" alt="">
         </div>
         {% endif %}

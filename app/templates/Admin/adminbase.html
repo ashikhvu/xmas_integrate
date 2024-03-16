@@ -122,49 +122,55 @@
                         <a id="theme1" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Default</span> 
-                                <span hidden id="theme1span" class="fa fa-check" ></span>
+                                <span hidden id="theme1span" class="fa fa-check pt-1" ></span>
                             </div>
                         </a>
                         <a id="theme2" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Christmas</span>
-                                <span hidden id="theme2span" class="fa fa-check"></span>
+                                <span hidden id="theme2span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme3" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Onam</span> 
-                                <span hidden id="theme3span" class="fa fa-check"></span>
+                                <span hidden id="theme3span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme4" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Diwali</span> 
-                                <span hidden id="theme4span" class="fa fa-check"></span>
+                                <span hidden id="theme4span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme5" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Pongal</span>
-                                <span hidden id="theme5span" class="fa fa-check"></span>
+                                <span hidden id="theme5span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme6" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Vishu</span>
-                                <span hidden id="theme6span" class="fa fa-check"></span>
+                                <span hidden id="theme6span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme7" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Easter</span>
-                                <span hidden id="theme7span" class="fa fa-check"></span>
+                                <span hidden id="theme7span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                         <a id="theme8" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="d-flex justify-content-between">
                                 <span>Republic</span>
-                                <span hidden id="theme8span" class="fa fa-check"></span>
+                                <span hidden id="theme8span" class="fa fa-check pt-1"></span>
+                            </div>
+                        </a>
+                        <a id="theme9" class="collapse-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="d-flex justify-content-between">
+                                <span>Ramadan</span>
+                                <span hidden id="theme9span" class="fa fa-check pt-1"></span>
                             </div>
                         </a>
                     </div>
@@ -714,8 +720,12 @@
             $('#yes_button_onclick_change').attr('onclick','change_theme("easter")')
         })
         $('#theme8').on('click',function(){
-            $('#modal_h1_text').text('Are you sure you want to change the theme  to "republic" ?')
+            $('#modal_h1_text').text('Are you sure you want to change the theme  to "Republic" ?')
             $('#yes_button_onclick_change').attr('onclick','change_theme("republic")')
+        })
+        $('#theme9').on('click',function(){
+            $('#modal_h1_text').text('Are you sure you want to change the theme  to "Ramadan" ?')
+            $('#yes_button_onclick_change').attr('onclick','change_theme("ramadan")')
         })
     })
     $(document).ready(function(){
@@ -754,6 +764,10 @@
                 else if(response.current_theme === "republic" )
                 {
                     $('#theme8span').attr('hidden',false)
+                }
+                else if(response.current_theme === "ramadan" )
+                {
+                    $('#theme9span').attr('hidden',false)
                 }
             },
             error: function(error){

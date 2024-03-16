@@ -1031,6 +1031,10 @@ def change_theme(request,theme):
         new_theme = ThemeModel.objects.first()
         new_theme.theme_name = 'republic'
         new_theme.save()
+    elif(theme == 'ramadan'):
+        new_theme = ThemeModel.objects.first()
+        new_theme.theme_name = 'ramadan'
+        new_theme.save()
     return redirect('dashboard')
 
 from django.http import JsonResponse
