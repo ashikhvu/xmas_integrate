@@ -284,6 +284,17 @@ font-weight: 800;
       text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
   }
 </style>
+{% elif current_theme == 'ramadan' %}
+<style>
+  #navbar .abot{
+    background: linear-gradient(to right,rgb(6, 88, 0),rgb(125, 255, 108));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+</style>
 {% else %}
 <style>
 
@@ -690,6 +701,139 @@ font-weight: 800;
   }
 </style>
 
+<!-- ramadan -->
+<style>
+  .ramdan_frame{
+    width: 7rem;
+  }
+  .ramdan_top_right_top{
+    margin-top: -2rem;
+    margin-right: -1rem;
+  }
+  .ramdan_top_left_top{
+    margin-top: -2rem;
+    margin-left: -2rem;
+  }
+  .ramdan_bottom_left_top{
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+  }
+  .ramdan_bottom_right_top{
+    margin-bottom: -2rem;
+    margin-right: -1rem;
+  }
+ /* responsive */
+ @media screen and (max-width:767px) {
+    .ramdan_top_right_top{
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+    .ramdan_top_left_top{
+      margin-top: -2rem;
+      margin-left: -2rem;
+    }
+    .ramdan_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -2rem;
+    }
+    .ramdan_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    .ramdan_frame{
+      width: 5rem;
+    }
+    .ramdan_top_right_top{
+      margin-top: -2rem;
+      margin-right: -1rem;
+    }
+    .ramdan_top_left_top{
+      margin-top: -2rem;
+      margin-left: -1rem;
+    }
+    .ramdan_bottom_left_top{
+      margin-bottom: -2rem;
+      margin-left: -1rem;
+    }
+    .ramdan_bottom_right_top{
+      margin-bottom: -2rem;
+      margin-right: -1rem;
+    }
+  }
+  #ramadan_lantern{
+    width: 22rem;
+  }
+  .ramadan_lantern_top{
+    margin-top: -4rem;
+    margin-right: 10rem;
+  }
+  @media screen and (max-width:1399px) {
+    #ramadan_lantern{
+      width: 20rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -4rem;
+      margin-right: 7rem;
+    }
+  }
+  @media screen and (max-width:1199px) {
+    #ramadan_lantern{
+      width: 18rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -4rem;
+      margin-right: 4rem;
+    }
+  }
+  @media screen and (max-width:991px) {
+    #ramadan_lantern{
+      width: 12rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -4rem;
+      margin-right: -4rem;
+    }
+  }
+  @media screen and (max-width:832px) {
+    #ramadan_lantern{
+      width: 10rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:767px) {
+    #ramadan_lantern{
+      width: 7rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+  }
+  @media screen and (max-width:575px) {
+    #ramadan_lantern{
+      width: 7rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -2rem;
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (max-width:395px) {
+    #ramadan_lantern{
+      width: 4rem;
+    }
+    .ramadan_lantern_top{
+      margin-top: -2rem;
+      margin-right: 0rem;
+    }
+  }
+</style>
+
   <main id="main">
     <div class="container-fluid" id="about-us">
         <section id="about_box">
@@ -731,6 +875,13 @@ font-weight: 800;
                 <img id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
               </div>
             </div>
+            {% elif current_theme == 'ramadan' %}
+
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute end-0 ramadan_lantern_top">
+                <img id="ramadan_lantern" draggable="false" src="{% static 'ramadan/decor/ramadan_lantern.png' %}" alt="">
+             </div>
+             </div>
             {% endif %}
 
             <div class="row">
@@ -933,6 +1084,34 @@ font-weight: 800;
 
                   <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
                     <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+                  </div>
+
+
+                </div>
+                {% elif current_theme == 'ramadan' %}
+                <div class="position-relative">
+                  <p class="fst-normal mob_margin_top" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
+                  
+                  <div class="position-absolute top-0 end-0 ramdan_top_right_top">
+                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute top-0 start-0 ramdan_top_left_top">
+                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
+                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
+                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
                   </div>
 
 
@@ -1154,6 +1333,36 @@ font-weight: 800;
 
 
               </div>
+              {% elif current_theme == 'ramadan' %}
+              <div class="position-relative">
+                <p class="fst-normal mob_margin_top" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
+                
+                <div class="position-absolute top-0 end-0 ramdan_top_right_top">
+                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute top-0 start-0 ramdan_top_left_top">
+                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
+                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+                </div>
+
+                <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
+                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
+                </div>
+
+
+              </div>
             {% else %}
               <p class="fst-normal mob_margin_top" data-aos="fade-up"
               data-aos-duration="2000">
@@ -1313,11 +1522,11 @@ font-weight: 800;
           <div class="position-relative">
             <p class="fst-normal mob_margin_top" data-aos="fade-up"
             data-aos-duration="2000">
-            Our expertise lies in website and software development, 
-            where we have gained extensive experience by delivering a 
-            wide range of projects, including websites, web applications, 
-            mobile applications, 3D modeling services, and digital marketing 
-            services, to clients across different industries and of varying sizes.
+            At ALTOS Technologies, we understand the critical role that user 
+            experience plays in the success of your website or software. That's 
+            why we put a strong emphasis on designing and developing products 
+            that are user-friendly, intuitive, and enjoyable to use, ensuring 
+            your customers or employees have a seamless experience.
             
             </p>
             
@@ -1343,11 +1552,11 @@ font-weight: 800;
           <div class="position-relative">
             <p class="fst-normal mob_margin_top" data-aos="fade-up"
             data-aos-duration="2000">
-            Our expertise lies in website and software development, 
-            where we have gained extensive experience by delivering a 
-            wide range of projects, including websites, web applications, 
-            mobile applications, 3D modeling services, and digital marketing 
-            services, to clients across different industries and of varying sizes.
+            At ALTOS Technologies, we understand the critical role that user 
+            experience plays in the success of your website or software. That's 
+            why we put a strong emphasis on designing and developing products 
+            that are user-friendly, intuitive, and enjoyable to use, ensuring 
+            your customers or employees have a seamless experience.
             
             </p>
             
@@ -1365,6 +1574,36 @@ font-weight: 800;
 
             <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
               <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+            </div>
+
+
+          </div>
+          {% elif current_theme == 'ramadan' %}
+          <div class="position-relative">
+            <p class="fst-normal mob_margin_top" data-aos="fade-up"
+            data-aos-duration="2000">
+            At ALTOS Technologies, we understand the critical role that user 
+            experience plays in the success of your website or software. That's 
+            why we put a strong emphasis on designing and developing products 
+            that are user-friendly, intuitive, and enjoyable to use, ensuring 
+            your customers or employees have a seamless experience.
+            
+            </p>
+            
+            <div class="position-absolute top-0 end-0 ramdan_top_right_top">
+              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute top-0 start-0 ramdan_top_left_top">
+              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
+              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+            </div>
+
+            <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
+              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
             </div>
 
 
@@ -1544,6 +1783,59 @@ font-weight: 800;
         <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
         <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
       </div>
+      {% elif current_theme == 'ramadan' %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+    </div>
     {% endif %}
 
           <!-- ======= Counts Section ======= -->

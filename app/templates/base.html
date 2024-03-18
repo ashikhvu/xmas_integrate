@@ -696,6 +696,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<!-- ramadan -->
+<style>
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>.ramadan_nav_text {
+    background: linear-gradient(to right,rgb(6, 89, 0),rgb(125, 255, 108));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .ramadan_text{
+    background: linear-gradient(to right,rgb(6, 88, 0),rgb(125, 255, 108));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  .ramadan_text1{
+    background: linear-gradient(to right,rgb(11, 151, 1),rgb(139, 255, 123));
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(132, 0, 255, 0.374);
+  }
+  #ramadan_footer_decor{
+    width: 15rem;
+  }
+  .ramadan_footer_decor_top{
+    margin-top: -21rem;
+  }
+  @media screen and (max-width:367px) {
+     #ramadan_footer_decor{
+      width: 7rem;
+    }
+    .ramadan_footer_decor_top{
+      margin-top: -14rem;
+    }
+  }
+</style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9279EQWMW1"></script>
@@ -911,6 +956,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
       </div>
+      {% elif current_theme == 'ramadan' %}
+      <div class="position-relative" style="z-index: 998;">
+        <div class="position-absolute start-0 top-0 top_flag" style="margin-top: -1.5rem;">
+          <div class="d-flex">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+            <img loading="lazy" draggable="false" src="{% static 'ramadan/decor/ramadan_nav_decor.png' %}" width="900vw" alt="">
+          </div>
+        </div>
+      </div>
     {% endif %}
     <div class="container d-flex align-items-center justify-content-lg-between">
 
@@ -943,6 +1007,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto hom onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto hom diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto hom ramadan_nav_text"
             {% else %} 
             class="nav-link scrollto hom hover_anchor" 
             {% endif %} 
@@ -966,6 +1032,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   class="nav-link scrollto abot onam_hover"
                 {% elif current_theme == 'diwali' %}
                   class="nav-link scrollto abot diwali_nav"
+                {% elif current_theme == 'ramadan' %}
+                  class="nav-link scrollto abot ramadan_nav_text"
                 {% else %} 
                 class="nav-link scrollto abot hover_anchor" 
                 {% endif %} 
@@ -989,6 +1057,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             class="nav-link scrollto serv onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto serv diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto serv ramadan_nav_text"
             {% else %}
             class="nav-link scrollto serv hover_anchor" 
             {% endif %}
@@ -1012,6 +1082,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cor onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto cor diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto cor ramadan_nav_text"
             {% else %}
             class="nav-link scrollto cor hover_anchor" 
             {% endif %}
@@ -1035,6 +1107,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cors onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto cors diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto cors ramadan_nav_text"
             {% else %}
             class="nav-link scrollto cors hover_anchor" 
             {% endif %}
@@ -1059,6 +1133,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto event onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto event diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto event ramadan_nav_text"
             {% else %}
             class="nav-link scrollto event hover_anchor" 
             {% endif %}
@@ -1082,6 +1158,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               class="nav-link scrollto cont onam_hover"
             {% elif current_theme == 'diwali' %}
               class="nav-link scrollto cont diwali_nav"
+            {% elif current_theme == 'ramadan' %}
+              class="nav-link scrollto cont ramadan_nav_text"
             {% else %}
             class="nav-link scrollto cont hover_anchor" 
             {% endif %}
@@ -1259,6 +1337,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
       <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
     </div>
+    {% elif current_theme == 'ramadan' %}
+    <div class="d-flex" style="overflow: auto;background-color: #151515">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+    </div>
   {% endif %}
 {% endif %}
 
@@ -1379,6 +1510,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="position-relative">
     <div class="position-absolute end-0 diwali_footer_decor_top">
       <img loading="lazy" id="diwali_footer_decor" draggable="false" src="{% static 'diwali/decor/diwali_footer_image.png' %}" alt="">
+    </div>
+  </div>
+  {% elif current_theme == 'ramadan' %}
+  <div class="position-relative">
+    <div class="position-absolute end-0 ramadan_footer_decor_top">
+      <img id="ramadan_footer_decor" draggable="false" src="{% static 'ramadan/decor/happy_ramadan1.png' %}" alt="">
     </div>
   </div>
   {% endif %}
