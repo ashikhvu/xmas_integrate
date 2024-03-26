@@ -842,44 +842,44 @@ font-weight: 800;
             {% if current_theme == 'easter' %}
             <div class="position-relative">
               <div class="position-absolute end-0 top-0 about_decor_top">
-                <img draggable="false" class="about_decor" src="{% static 'easter/decor/about_decor/about_decor1.png' %}" alt="">
+                <img loading="lazy" draggable="false" class="about_decor" src="{% static 'easter/decor/about_decor/about_decor1.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'xmas' %}
             <div id="new_year_left" class="position-relative" style="z-index: 1;">
               <div class="position-absolute end-0 xmas_new_year_gif_top">
-                <img id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
+                <img loading="lazy" id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
              </div>
              </div>
              
             <div id="new_year_right" class="position-relative" style="z-index: 1;">
               <div class="position-absolute start-0 xmas_new_year_gif_top">
-                <img id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
+                <img loading="lazy" id="xmas_new_year_gif" draggable="false" src="{% static 'xmas/gifs/new_year1.gif' %}" alt="">
              </div>
              </div>
 
             <div class="position-relative" style="z-index: 1;">
               <div class="position-absolute end-0 xmas_star_gif_top">
-                <img id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
+                <img loading="lazy" id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
              </div>
              </div>
              {% elif current_theme == 'republic' %}
              <div class="position-relative" id="display1">
               <div class="position-absolute about_design1_top end-0">
-                <img id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
+                <img loading="lazy" id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
               </div>
             </div>
 
             <div class="position-relative" id="display2">
               <div class="position-absolute about_design1_top start-50 translate-middle-x about_design1_top">
-                <img id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
+                <img loading="lazy" id="about_design1" draggable="false" src="{% static 'republic/decor/about_design1.png' %}" alt="">
               </div>
             </div>
             {% elif current_theme == 'ramadan' %}
 
             <div class="position-relative" style="z-index: 1;">
               <div class="position-absolute end-0 ramadan_lantern_top">
-                <img id="ramadan_lantern" draggable="false" src="{% static 'ramadan/decor/ramadan_lantern.png' %}" alt="">
+                <img loading="lazy" id="ramadan_lantern" draggable="false" src="{% static 'ramadan/decor/ramadan_lantern.png' %}" alt="">
              </div>
              </div>
             {% endif %}
@@ -914,26 +914,26 @@ font-weight: 800;
                   
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
                   </div>
                  </div>
                  {% elif current_theme == 'vishu' %}
                  <div class="position-relative">
 
                   <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
-                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
                   </div> -->
 
                   <p class="fst-normal mob_margin_top" data-aos="fade-left"
@@ -945,7 +945,7 @@ font-weight: 800;
                   </p>
 
                   <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
-                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
                   </div>
                   
                 </div>
@@ -962,19 +962,19 @@ font-weight: 800;
                   </p>
 
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
                   </div>
                   
                 </div>
@@ -990,17 +990,17 @@ font-weight: 800;
                   
                   
                   <div class="position-absolute end-0 top-0" style="margin-right: -1.5rem;margin-top: -3.8rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
                   </div>
                   <div class="position-absolute start-0 top-0" style="margin-left: -2.1rem;margin-top: -3.8rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute start-0 bottom-0" style="margin-left: -2.1rem;margin-bottom: -3.8rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
                   </div>
                   <div class="position-absolute end-0 bottom-0" style="margin-right: -1.5rem;margin-bottom: -3.8rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
                   </div>
 
                </div>
@@ -1015,19 +1015,19 @@ font-weight: 800;
                   </p>
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
                   </div>
 
 
@@ -1043,19 +1043,19 @@ font-weight: 800;
                   </p>
                   
                   <div class="position-absolute top-0 end-0 onam_top_right_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 onam_top_left_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
-                    <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
                   </div>
 
 
@@ -1071,19 +1071,19 @@ font-weight: 800;
                   </p>
                   
                   <div class="position-absolute top-0 end-0 diwali_top_right_top">
-                    <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 diwali_top_left_top">
-                    <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
-                    <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
-                    <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
                   </div>
 
 
@@ -1099,19 +1099,19 @@ font-weight: 800;
                   </p>
                   
                   <div class="position-absolute top-0 end-0 ramdan_top_right_top">
-                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 ramdan_top_left_top">
-                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
-                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
-                    <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
                   </div>
 
 
@@ -1147,19 +1147,19 @@ font-weight: 800;
 
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
                   </div>
             
                
@@ -1168,7 +1168,7 @@ font-weight: 800;
                  <div class="position-relative">
 
                   <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
-                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
                   </div> -->
 
                   <p class="fst-normal mob_margin_top" data-aos="fade-left"
@@ -1180,7 +1180,7 @@ font-weight: 800;
                   </p>
 
                   <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
-                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
                   </div>
                   
                 </div>
@@ -1199,19 +1199,19 @@ font-weight: 800;
 
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
                   </div>
               
               </div>
@@ -1230,16 +1230,16 @@ font-weight: 800;
 
                   
                   <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
                   </div>
                   <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
                   </div>
                   <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
                   </div>
                   <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
                   </div>
             
               </div>
@@ -1257,19 +1257,19 @@ font-weight: 800;
                 </p>
 
               <div class="position-absolute top-0 end-0 top_right_top">
-                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_right_corner.png' %}" alt="">
+                <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_right_corner.png' %}" alt="">
               </div>
 
               <div class="position-absolute top-0 start-0 top_left_top">
-                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_left_corner.png' %}" alt="">
+                <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_top_left_corner.png' %}" alt="">
               </div>
 
               <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_left_corner.png' %}" alt="">
+                <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_left_corner.png' %}" alt="">
               </div>
 
               <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_right_corner.png' %}" alt="">
+                <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/green/green_bottom_right_corner.png' %}" alt="">
               </div>
              
             </div>
@@ -1286,19 +1286,19 @@ font-weight: 800;
                 </p>
                 
                 <div class="position-absolute top-0 end-0 onam_top_right_top">
-                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute top-0 start-0 onam_top_left_top">
-                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
-                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
-                  <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
                 </div>
 
 
@@ -1316,19 +1316,19 @@ font-weight: 800;
                 </p>
                 
                 <div class="position-absolute top-0 end-0 diwali_top_right_top">
-                  <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute top-0 start-0 diwali_top_left_top">
-                  <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
-                  <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
-                  <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
                 </div>
 
 
@@ -1346,19 +1346,19 @@ font-weight: 800;
                 </p>
                 
                 <div class="position-absolute top-0 end-0 ramdan_top_right_top">
-                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute top-0 start-0 ramdan_top_left_top">
-                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
-                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
-                  <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
+                  <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
                 </div>
 
 
@@ -1393,19 +1393,19 @@ font-weight: 800;
 
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="corner_width" src="{% static 'pongal/frame/bamboo_frame/pongal_bamboo_frame_bottom_right.png' %}" alt="">
                   </div>
                  
 
@@ -1414,7 +1414,7 @@ font-weight: 800;
                  <div class="position-relative">
 
                   <!-- <div class="position-absolute start-50 top-0 translate-middle-x vishu_frame_top_top">
-                    <img draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_top" src="{% static 'vishu/decor/frame_decor/top_decor.png' %}" alt="">
                   </div> -->
 
                   <p class="fst-normal mob_margin_top" data-aos="fade-left"
@@ -1426,7 +1426,7 @@ font-weight: 800;
                   </p>
 
                   <div class="position-absolute start-50 bottom-0 translate-middle-x vishu_frame_bottom_top">
-                    <img draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="vishu_frame_bottom" src="{% static 'vishu/decor/frame_decor/bottom_decor.png' %}" alt="">
                   </div>
                   
                 </div>
@@ -1444,19 +1444,19 @@ font-weight: 800;
 
                   
                   <div class="position-absolute top-0 end-0 top_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_right.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute top-0 start-0 top_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_top_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_left.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                    <img draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
+                    <img loading="lazy" draggable="false" class="easter_corner_width" src="{% static 'easter/decor/frame/blue_frame_bottom_right.png' %}" alt="">
                   </div>
                  
 
@@ -1475,17 +1475,17 @@ font-weight: 800;
 
                   
                   <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
                   </div>
                   <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
                   </div>
 
                   <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
                   </div>
                   <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                    <img loading="lazy" id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
                   </div>
                  
               </div>
@@ -1502,19 +1502,19 @@ font-weight: 800;
                 </p>
 
                 <div class="position-absolute top-0 end-0 top_right_top">
-                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_right_corner.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute top-0 start-0 top_left_top">
-                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_top_left_corner.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 start-0 bottom_left_top">
-                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_left_corner.png' %}" alt="">
                 </div>
 
                 <div class="position-absolute bottom-0 end-0 bottom_right_top">
-                  <img draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
+                  <img loading="lazy" draggable="false" class="corner_width" src="{% static 'republic/decor/frames/red/red_bottom_right_corner.png' %}" alt="">
                 </div>
 
           </div>
@@ -1531,19 +1531,19 @@ font-weight: 800;
             </p>
             
             <div class="position-absolute top-0 end-0 onam_top_right_top">
-              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
+              <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_right.png' %}" alt="">
             </div>
 
             <div class="position-absolute top-0 start-0 onam_top_left_top">
-              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
+              <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_top_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 start-0 onam_bottom_left_top">
-              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
+              <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 end-0 onam_bottom_right_top">
-              <img draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
+              <img loading="lazy" draggable="false" class="onam_frame" src="{% static 'onam/decor/frame/onam_frame_bottom_right.png' %}" alt="">
             </div>
 
 
@@ -1561,19 +1561,19 @@ font-weight: 800;
             </p>
             
             <div class="position-absolute top-0 end-0 diwali_top_right_top">
-              <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_right.png' %}" alt="">
             </div>
 
             <div class="position-absolute top-0 start-0 diwali_top_left_top">
-              <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_top_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 start-0 diwali_bottom_left_top">
-              <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 end-0 diwali_bottom_right_top">
-              <img loading="lazy" draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="diwali_frame" src="{% static 'diwali/decor/frame/diwali_frame_bottom_right.png' %}" alt="">
             </div>
 
 
@@ -1591,19 +1591,19 @@ font-weight: 800;
             </p>
             
             <div class="position-absolute top-0 end-0 ramdan_top_right_top">
-              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_right.png' %}" alt="">
             </div>
 
             <div class="position-absolute top-0 start-0 ramdan_top_left_top">
-              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_top_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 start-0 ramdan_bottom_left_top">
-              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_left.png' %}" alt="">
             </div>
 
             <div class="position-absolute bottom-0 end-0 ramdan_bottom_right_top">
-              <img loading="lazy" draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
+              <img loading="lazy"  draggable="false" class="ramdan_frame" src="{% static 'ramadan/decor/frame/ramdan_frame_bottom_right.png' %}" alt="">
             </div>
 
 
@@ -1631,210 +1631,210 @@ font-weight: 800;
 
       {% if current_theme == "easter" %}
       <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
-        <img draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
-        <img draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
+        <img loading="lazy" draggable="false"style="width: 15rem;margin-left: 0rem;opacity: 0.5;" draggable="false" src="{% static 'easter/decor/footer_top_easter.png' %}" alt="">
       </div>
       {% elif current_theme == "xmas" %}
       <div class="d-flex" style="overflow: auto;background-color: #151515;z-index: inherit;margin-bottom: -2rem;">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-        <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+        <img loading="lazy" width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
         
       </div>
       {% elif current_theme == 'republic' %}
       <div class="d-flex" style="overflow: auto;background-color: #151515">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
-        <img width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
+        <img loading="lazy" width="120rem" draggable="false" src="{% static 'republic/decor/ribbon.png' %}" alt="">
       </div>
       {% elif current_theme == 'diwali' %}
       <div class="d-flex" style="overflow: auto;background-color: #151515">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
-        <img loading="lazy" width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
+        <img loading="lazy"  width="120rem" draggable="false" src="{% static 'diwali/decor/triangle_banner.png' %}" alt="">
       </div>
       {% elif current_theme == 'ramadan' %}
     <div class="d-flex" style="overflow: auto;background-color: #151515">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
-      <img loading="lazy" width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
+      <img loading="lazy"  width="280rem" draggable="false" src="{% static 'ramadan/decor/ramadan_footer_decor.png' %}" alt="">
     </div>
     {% endif %}
 
